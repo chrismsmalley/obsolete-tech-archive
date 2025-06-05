@@ -49,6 +49,10 @@ function Homepage() {
   return (
     <>
     <style jsx>{`
+      @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+      }
       @keyframes typing {
         from { width: 0 }
         to { width: 100% }
@@ -63,17 +67,27 @@ function Homepage() {
         50% { border-color: #4a4a4a }
       }
 
+      .hide-before-animate {
+        visibility: hidden;
+        animation: fadeIn 0.2s ease-in forwards;
+        animation-delay: 0.1s;
+      }
+
       .typing-text {
         display: inline-block;
         overflow: hidden;
         white-space: nowrap;
         border-right: 0.15em solid #4a4a4a;
-        animation: typing 2.5s steps(30, end), blink-caret 0.75s step-end 3;
+        animation:
+          typing 2.5s steps(30, end),
+          blink-caret 0.75s step-end 3;
         animation-fill-mode: forwards;
         font-size: 6rem;
         font-weight: 700;
         color: #4a4a4a;
         font-family: "Courier New", Courier, monospace !important;
+        visibility: visible !important;
+        position: relative;
       }
     `}</style>
     <main style={{
@@ -93,14 +107,15 @@ function Homepage() {
       }}>
         <div style={{
           display: "flex",
-          justifyContent: "center",
-          marginBottom: "0rem"
+          flexDirection: "column",
+          alignItems: "center",
+          marginBottom: "2rem"
         }}>
           <img src="/images/OT image.png" alt="Site Symbol" style={{ width: "120px", height: "auto", marginBottom: "1.5rem" }} />
+          <h1 style={{ margin: 0 }}>
+            <span className="typing-text">Welcome to Obsolete Tech</span>
+          </h1>
         </div>
-        <h1>
-          <span className="typing-text">Welcome to Obsolete Tech</span>
-        </h1>
         <p style={{
           fontSize: "1.25rem",
           maxWidth: "900px",

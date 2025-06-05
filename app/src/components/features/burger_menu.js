@@ -131,29 +131,55 @@ export default function BurgerMenu() {
             <li
               onClick={() => setShowCategories(!showCategories)}
               style={{
-                fontFamily: "'Press Start 2P', monospace",
+                fontFamily: '"Courier New", Courier, monospace',
                 fontWeight: 'normal',
-                fontSize: '0.75rem',
+                fontSize: '0.9rem',
                 letterSpacing: '0.5px',
                 textTransform: 'uppercase',
                 marginTop: '1rem',
                 cursor: 'pointer',
                 color: '#666',
-                transition: 'color 0.2s',
+                transition: 'all 0.2s',
                 display: 'flex',
                 alignItems: 'center',
-                justifyContent: 'flex-start',
+                justifyContent: 'space-between',
+                borderBottom: '1px solid transparent',
+              }}
+              onMouseEnter={e => {
+                e.currentTarget.style.color = '#222';
+                e.currentTarget.style.borderBottom = '1px solid #666';
+              }}
+              onMouseLeave={e => {
+                e.currentTarget.style.color = '#666';
+                e.currentTarget.style.borderBottom = '1px solid transparent';
               }}
             >
-              <span>Browse</span>
+              <span
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '0.5rem',
+                }}
+              >
+                Browse{' '}
+                <span
+                  style={{
+                    transform: showCategories ? 'rotate(90deg)' : 'rotate(180deg)',
+                    transition: 'transform 0.2s',
+                    display: 'inline-block',
+                  }}
+                >
+                  ❯
+                </span>
+              </span>
             </li>
             {showCategories && (
               <>
                 <li
                   style={{
-                    fontFamily: "'Press Start 2P', monospace",
+                    fontFamily: '"Courier New", Courier, monospace',
                     fontWeight: 'normal',
-                    fontSize: '0.75rem',
+                    fontSize: '0.9rem',
                     letterSpacing: '0.5px',
                     textTransform: 'uppercase',
                     color: '#555',
@@ -165,8 +191,8 @@ export default function BurgerMenu() {
                     style={{
                       textDecoration: 'none',
                       color: '#555',
-                      fontFamily: "'Press Start 2P', monospace",
-                      fontSize: '0.75rem',
+                      fontFamily: '"Courier New", Courier, monospace',
+                      fontSize: '0.9rem',
                       letterSpacing: '0.5px',
                       textTransform: 'uppercase',
                       padding: '0.25rem 0.5rem',
@@ -188,9 +214,9 @@ export default function BurgerMenu() {
                 </li>
                 <li
                   style={{
-                    fontFamily: "'Press Start 2P', monospace",
+                    fontFamily: '"Courier New", Courier, monospace',
                     fontWeight: 'normal',
-                    fontSize: '0.75rem',
+                    fontSize: '0.9rem',
                     letterSpacing: '0.5px',
                     textTransform: 'uppercase',
                     color: '#555',
@@ -202,8 +228,8 @@ export default function BurgerMenu() {
                     style={{
                       textDecoration: 'none',
                       color: '#555',
-                      fontFamily: "'Press Start 2P', monospace",
-                      fontSize: '0.75rem',
+                      fontFamily: '"Courier New", Courier, monospace',
+                      fontSize: '0.9rem',
                       letterSpacing: '0.5px',
                       textTransform: 'uppercase',
                       padding: '0.25rem 0.5rem',
@@ -225,9 +251,9 @@ export default function BurgerMenu() {
                 </li>
                 <li
                   style={{
-                    fontFamily: "'Press Start 2P', monospace",
+                    fontFamily: '"Courier New", Courier, monospace',
                     fontWeight: 'normal',
-                    fontSize: '0.75rem',
+                    fontSize: '0.9rem',
                     letterSpacing: '0.5px',
                     textTransform: 'uppercase',
                     color: '#555',
@@ -239,8 +265,8 @@ export default function BurgerMenu() {
                     style={{
                       textDecoration: 'none',
                       color: '#555',
-                      fontFamily: "'Press Start 2P', monospace",
-                      fontSize: '0.75rem',
+                      fontFamily: '"Courier New", Courier, monospace',
+                      fontSize: '0.9rem',
                       letterSpacing: '0.5px',
                       textTransform: 'uppercase',
                       padding: '0.25rem 0.5rem',
@@ -263,7 +289,7 @@ export default function BurgerMenu() {
                 {/*
                 <li
                   style={{
-                    fontFamily: "'Press Start 2P', monospace",
+                    fontFamily: '"Courier New", Courier, monospace',
                     fontWeight: 'normal',
                     fontSize: '0.75rem',
                     letterSpacing: '0.5px',
@@ -277,7 +303,7 @@ export default function BurgerMenu() {
                     style={{
                       textDecoration: 'none',
                       color: '#555',
-                      fontFamily: "'Press Start 2P', monospace",
+                      fontFamily: '"Courier New", Courier, monospace',
                       fontSize: '0.75rem',
                       letterSpacing: '0.5px',
                       textTransform: 'uppercase',
@@ -301,9 +327,9 @@ export default function BurgerMenu() {
                 */}
                 <li
                   style={{
-                    fontFamily: "'Press Start 2P', monospace",
+                    fontFamily: '"Courier New", Courier, monospace',
                     fontWeight: 'normal',
-                    fontSize: '0.75rem',
+                    fontSize: '0.9rem',
                     letterSpacing: '0.5px',
                     textTransform: 'uppercase',
                     color: '#555',
@@ -315,13 +341,14 @@ export default function BurgerMenu() {
                     style={{
                       textDecoration: 'none',
                       color: '#555',
-                      fontFamily: "'Press Start 2P', monospace",
-                      fontSize: '0.75rem',
+                      fontFamily: '"Courier New", Courier, monospace',
+                      fontSize: '0.9rem',
                       letterSpacing: '0.5px',
                       textTransform: 'uppercase',
                       padding: '0.25rem 0.5rem',
                       display: 'inline-block',
                       transition: 'color 0.2s ease, transform 0.2s ease',
+                      fontWeight: 'normal',
                     }}
                     onClick={() => setIsOpen(false)}
                     onMouseEnter={e => {
@@ -544,29 +571,55 @@ export default function BurgerMenu() {
             <li
               onClick={() => setShowExplore(!showExplore)}
               style={{
-                fontFamily: "'Press Start 2P', monospace",
+                fontFamily: '"Courier New", Courier, monospace',
                 fontWeight: 'normal',
-                fontSize: '0.75rem',
+                fontSize: '0.9rem',
                 letterSpacing: '0.5px',
                 textTransform: 'uppercase',
                 marginTop: '1rem',
                 cursor: 'pointer',
                 color: '#666',
-                transition: 'color 0.2s',
+                transition: 'all 0.2s',
                 display: 'flex',
                 alignItems: 'center',
-                justifyContent: 'flex-start',
+                justifyContent: 'space-between',
+                borderBottom: '1px solid transparent',
+              }}
+              onMouseEnter={e => {
+                e.currentTarget.style.color = '#222';
+                e.currentTarget.style.borderBottom = '1px solid #666';
+              }}
+              onMouseLeave={e => {
+                e.currentTarget.style.color = '#666';
+                e.currentTarget.style.borderBottom = '1px solid transparent';
               }}
             >
-              <span>Get Involved</span>
+              <span
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '0.5rem',
+                }}
+              >
+                Get Involved{' '}
+                <span
+                  style={{
+                    transform: showExplore ? 'rotate(90deg)' : 'rotate(180deg)',
+                    transition: 'transform 0.2s',
+                    display: 'inline-block',
+                  }}
+                >
+                  ❯
+                </span>
+              </span>
             </li>
             {showExplore && (
               <>
                 <li
                   style={{
-                    fontFamily: "'Press Start 2P', monospace",
+                    fontFamily: '"Courier New", Courier, monospace',
                     fontWeight: 'normal',
-                    fontSize: '0.75rem',
+                    fontSize: '0.9rem',
                     letterSpacing: '0.5px',
                     textTransform: 'uppercase',
                     color: 'black',
@@ -578,8 +631,8 @@ export default function BurgerMenu() {
                     style={{
                       textDecoration: 'none',
                       color: 'black',
-                      fontFamily: "'Press Start 2P', monospace",
-                      fontSize: '0.75rem',
+                      fontFamily: '"Courier New", Courier, monospace',
+                      fontSize: '0.9rem',
                       letterSpacing: '0.5px',
                       textTransform: 'uppercase',
                       padding: '0.25rem 0.5rem',
@@ -601,9 +654,9 @@ export default function BurgerMenu() {
                 </li>
                 <li
                   style={{
-                    fontFamily: "'Press Start 2P', monospace",
+                    fontFamily: '"Courier New", Courier, monospace',
                     fontWeight: 'normal',
-                    fontSize: '0.75rem',
+                    fontSize: '0.9rem',
                     letterSpacing: '0.5px',
                     textTransform: 'uppercase',
                     color: 'black',
@@ -615,8 +668,8 @@ export default function BurgerMenu() {
                     style={{
                       textDecoration: 'none',
                       color: 'black',
-                      fontFamily: "'Press Start 2P', monospace",
-                      fontSize: '0.75rem',
+                      fontFamily: '"Courier New", Courier, monospace',
+                      fontSize: '0.9rem',
                       letterSpacing: '0.5px',
                       textTransform: 'uppercase',
                       padding: '0.25rem 0.5rem',
@@ -642,29 +695,55 @@ export default function BurgerMenu() {
             <li
               onClick={() => setShowAbout(!showAbout)}
               style={{
-                fontFamily: "'Press Start 2P', monospace",
+                fontFamily: '"Courier New", Courier, monospace',
                 fontWeight: 'normal',
-                fontSize: '0.75rem',
+                fontSize: '0.9rem',
                 letterSpacing: '0.5px',
                 textTransform: 'uppercase',
                 marginTop: '1rem',
                 cursor: 'pointer',
                 color: '#666',
-                transition: 'color 0.2s',
+                transition: 'all 0.2s',
                 display: 'flex',
                 alignItems: 'center',
-                justifyContent: 'flex-start',
+                justifyContent: 'space-between',
+                borderBottom: '1px solid transparent',
+              }}
+              onMouseEnter={e => {
+                e.currentTarget.style.color = '#222';
+                e.currentTarget.style.borderBottom = '1px solid #666';
+              }}
+              onMouseLeave={e => {
+                e.currentTarget.style.color = '#666';
+                e.currentTarget.style.borderBottom = '1px solid transparent';
               }}
             >
-              <span>Info</span>
+              <span
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '0.5rem',
+                }}
+              >
+                Info{' '}
+                <span
+                  style={{
+                    transform: showAbout ? 'rotate(90deg)' : 'rotate(180deg)',
+                    transition: 'transform 0.2s',
+                    display: 'inline-block',
+                  }}
+                >
+                  ❯
+                </span>
+              </span>
             </li>
             {showAbout && (
               <>
                 <li
                   style={{
-                    fontFamily: "'Press Start 2P', monospace",
+                    fontFamily: '"Courier New", Courier, monospace',
                     fontWeight: 'normal',
-                    fontSize: '0.75rem',
+                    fontSize: '0.9rem',
                     letterSpacing: '0.5px',
                     textTransform: 'uppercase',
                     color: 'black',
@@ -676,8 +755,8 @@ export default function BurgerMenu() {
                     style={{
                       textDecoration: 'none',
                       color: 'black',
-                      fontFamily: "'Press Start 2P', monospace",
-                      fontSize: '0.75rem',
+                      fontFamily: '"Courier New", Courier, monospace',
+                      fontSize: '0.9rem',
                       letterSpacing: '0.5px',
                       textTransform: 'uppercase',
                       padding: '0.25rem 0.5rem',
@@ -699,9 +778,9 @@ export default function BurgerMenu() {
                 </li>
                 <li
                   style={{
-                    fontFamily: "'Press Start 2P', monospace",
+                    fontFamily: '"Courier New", Courier, monospace',
                     fontWeight: 'normal',
-                    fontSize: '0.75rem',
+                    fontSize: '0.9rem',
                     letterSpacing: '0.5px',
                     textTransform: 'uppercase',
                     color: 'black',
@@ -715,8 +794,8 @@ export default function BurgerMenu() {
                     style={{
                       textDecoration: 'none',
                       color: 'black',
-                      fontFamily: "'Press Start 2P', monospace",
-                      fontSize: '0.75rem',
+                      fontFamily: '"Courier New", Courier, monospace',
+                      fontSize: '0.9rem',
                       letterSpacing: '0.5px',
                       textTransform: 'uppercase',
                       padding: '0.25rem 0.5rem',
