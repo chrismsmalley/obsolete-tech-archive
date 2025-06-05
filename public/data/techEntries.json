@@ -1,0 +1,17 @@
+[
+  {
+    "image": "/images/Compact_Disc_image.png",
+    "title": "Compact Disc",
+    "description": "A popular digital storage medium from the late 20th century, used for music, data, and software."
+  },
+  {
+    "image": "/images/Floppy_disk_2009_G1_image.jpg",
+    "title": "Floppy Disk",
+    "description": "A magnetic storage device once widely used for transferring files and booting systems."
+  },
+  {
+    "image": "/images/napster_logo_1585915729_image.png",
+    "title": "Napster",
+    "description": "A peer-to-peer file sharing service that revolutionized digital music access before being shut down."
+  }
+]
