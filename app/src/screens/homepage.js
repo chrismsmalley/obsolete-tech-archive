@@ -1,11 +1,11 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import { techEntries } from "../data/techEntries";
 import Link from "next/link";
 import TechCard from "../components/cards/techCard";
 
-export default function Homepage() {
+function Homepage() {
   const entries = Array.isArray(techEntries) ? techEntries : [];
   const [currentPage, setCurrentPage] = useState(1);
   const [selectedCategory, setSelectedCategory] = useState(null);
@@ -193,5 +193,13 @@ export default function Homepage() {
       </div>
     </main>
     </>
+  );
+}
+
+export default function HomepageWrapper() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <Homepage />
+    </Suspense>
   );
 }
