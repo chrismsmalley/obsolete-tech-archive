@@ -8,15 +8,29 @@ export default function BurgerMenu() {
   const [showExplore, setShowExplore] = useState(false);
   const [showAbout, setShowAbout] = useState(false);
   const menuRef = useRef();
+  const toggleRef = useRef();
 
   const toggleMenu = () => {
+    if (isOpen) {
+      setShowCategories(false);
+      setShowExplore(false);
+      setShowAbout(false);
+    }
     setIsOpen(!isOpen);
   };
 
   useEffect(() => {
     function handleClickOutside(event) {
-      if (menuRef.current && !menuRef.current.contains(event.target)) {
+      if (
+        menuRef.current &&
+        !menuRef.current.contains(event.target) &&
+        toggleRef.current &&
+        !toggleRef.current.contains(event.target)
+      ) {
         setIsOpen(false);
+        setShowCategories(false);
+        setShowExplore(false);
+        setShowAbout(false);
       }
     }
     document.addEventListener('mousedown', handleClickOutside);
@@ -28,6 +42,7 @@ export default function BurgerMenu() {
   return (
     <div style={{ position: 'relative' }}>
       <button
+        ref={toggleRef}
         onClick={toggleMenu}
         aria-label="Toggle menu"
         aria-expanded={isOpen}
@@ -87,9 +102,9 @@ export default function BurgerMenu() {
             position: 'fixed',
             top: '60px',
             right: '450px',
-            backgroundColor: '#ffffffee',
+            backgroundColor: 'white',
             borderRadius: '8px',
-            border: '1px solid #ddd',
+            border: '1px solid #ccc',
             padding: '1rem',
             zIndex: 10000,
             boxShadow: '0 10px 25px rgba(0,0,0,0.1)',
@@ -116,32 +131,51 @@ export default function BurgerMenu() {
             <li
               onClick={() => setShowCategories(!showCategories)}
               style={{
-                fontWeight: 'bold',
+                fontFamily: "'Press Start 2P', monospace",
+                fontWeight: 'normal',
+                fontSize: '0.75rem',
+                letterSpacing: '0.5px',
+                textTransform: 'uppercase',
                 marginTop: '1rem',
                 cursor: 'pointer',
-                fontFamily: "'Courier New', Courier, monospace"
+                color: '#666',
+                transition: 'color 0.2s',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'flex-start',
               }}
             >
-              Browse {showCategories ? '▾' : '▸'}
+              <span>Browse</span>
             </li>
             {showCategories && (
               <>
-                <li>
+                <li
+                  style={{
+                    fontFamily: "'Press Start 2P', monospace",
+                    fontWeight: 'normal',
+                    fontSize: '0.75rem',
+                    letterSpacing: '0.5px',
+                    textTransform: 'uppercase',
+                    color: '#555',
+                  }}
+                >
                   <Link
                     role="menuitem"
-                    href="/?category=media"
+                    href="/?filterCategory=media&sort=recent"
                     style={{
                       textDecoration: 'none',
-                      color: 'black',
-                      fontWeight: '500',
+                      color: '#555',
+                      fontFamily: "'Press Start 2P', monospace",
+                      fontSize: '0.75rem',
+                      letterSpacing: '0.5px',
+                      textTransform: 'uppercase',
                       padding: '0.25rem 0.5rem',
                       display: 'inline-block',
                       transition: 'color 0.2s ease, transform 0.2s ease',
-                      fontFamily: "'Courier New', Courier, monospace"
                     }}
                     onClick={() => setIsOpen(false)}
                     onMouseEnter={e => {
-                      e.currentTarget.style.color = '#0070f3';
+                      e.currentTarget.style.color = '#2f4f4f';
                       e.currentTarget.style.transform = 'translateX(5px)';
                     }}
                     onMouseLeave={e => {
@@ -152,22 +186,33 @@ export default function BurgerMenu() {
                     Media
                   </Link>
                 </li>
-                <li>
+                <li
+                  style={{
+                    fontFamily: "'Press Start 2P', monospace",
+                    fontWeight: 'normal',
+                    fontSize: '0.75rem',
+                    letterSpacing: '0.5px',
+                    textTransform: 'uppercase',
+                    color: '#555',
+                  }}
+                >
                   <Link
                     role="menuitem"
-                    href="/?category=storage"
+                    href="/?filterCategory=storage&sort=recent"
                     style={{
                       textDecoration: 'none',
-                      color: 'black',
-                      fontWeight: '500',
+                      color: '#555',
+                      fontFamily: "'Press Start 2P', monospace",
+                      fontSize: '0.75rem',
+                      letterSpacing: '0.5px',
+                      textTransform: 'uppercase',
                       padding: '0.25rem 0.5rem',
                       display: 'inline-block',
                       transition: 'color 0.2s ease, transform 0.2s ease',
-                      fontFamily: "'Courier New', Courier, monospace"
                     }}
                     onClick={() => setIsOpen(false)}
                     onMouseEnter={e => {
-                      e.currentTarget.style.color = '#0070f3';
+                      e.currentTarget.style.color = '#2f4f4f';
                       e.currentTarget.style.transform = 'translateX(5px)';
                     }}
                     onMouseLeave={e => {
@@ -178,22 +223,33 @@ export default function BurgerMenu() {
                     Storage
                   </Link>
                 </li>
-                <li>
+                <li
+                  style={{
+                    fontFamily: "'Press Start 2P', monospace",
+                    fontWeight: 'normal',
+                    fontSize: '0.75rem',
+                    letterSpacing: '0.5px',
+                    textTransform: 'uppercase',
+                    color: '#555',
+                  }}
+                >
                   <Link
                     role="menuitem"
-                    href="/?category=communication"
+                    href="/?filterCategory=communication&sort=recent"
                     style={{
                       textDecoration: 'none',
-                      color: 'black',
-                      fontWeight: '500',
+                      color: '#555',
+                      fontFamily: "'Press Start 2P', monospace",
+                      fontSize: '0.75rem',
+                      letterSpacing: '0.5px',
+                      textTransform: 'uppercase',
                       padding: '0.25rem 0.5rem',
                       display: 'inline-block',
                       transition: 'color 0.2s ease, transform 0.2s ease',
-                      fontFamily: "'Courier New', Courier, monospace"
                     }}
                     onClick={() => setIsOpen(false)}
                     onMouseEnter={e => {
-                      e.currentTarget.style.color = '#0070f3';
+                      e.currentTarget.style.color = '#2f4f4f';
                       e.currentTarget.style.transform = 'translateX(5px)';
                     }}
                     onMouseLeave={e => {
@@ -204,22 +260,34 @@ export default function BurgerMenu() {
                     Communication
                   </Link>
                 </li>
-                {/* <li>
+                {/*
+                <li
+                  style={{
+                    fontFamily: "'Press Start 2P', monospace",
+                    fontWeight: 'normal',
+                    fontSize: '0.75rem',
+                    letterSpacing: '0.5px',
+                    textTransform: 'uppercase',
+                    color: '#555',
+                  }}
+                >
                   <Link
                     role="menuitem"
                     href="/random"
                     style={{
                       textDecoration: 'none',
-                      color: 'black',
-                      fontWeight: '500',
+                      color: '#555',
+                      fontFamily: "'Press Start 2P', monospace",
+                      fontSize: '0.75rem',
+                      letterSpacing: '0.5px',
+                      textTransform: 'uppercase',
                       padding: '0.25rem 0.5rem',
                       display: 'inline-block',
                       transition: 'color 0.2s ease, transform 0.2s ease',
-                      fontFamily: "'Courier New', Courier, monospace"
                     }}
                     onClick={() => setIsOpen(false)}
                     onMouseEnter={e => {
-                      e.currentTarget.style.color = '#0070f3';
+                      e.currentTarget.style.color = '#2f4f4f';
                       e.currentTarget.style.transform = 'translateX(5px)';
                     }}
                     onMouseLeave={e => {
@@ -229,23 +297,35 @@ export default function BurgerMenu() {
                   >
                     Random Entry
                   </Link>
-                </li> */}
-                <li>
+                </li>
+                */}
+                <li
+                  style={{
+                    fontFamily: "'Press Start 2P', monospace",
+                    fontWeight: 'normal',
+                    fontSize: '0.75rem',
+                    letterSpacing: '0.5px',
+                    textTransform: 'uppercase',
+                    color: '#555',
+                  }}
+                >
                   <Link
                     role="menuitem"
-                    href="/"
+                    href="/?sort=recent"
                     style={{
                       textDecoration: 'none',
-                      color: 'black',
-                      fontWeight: '500',
+                      color: '#555',
+                      fontFamily: "'Press Start 2P', monospace",
+                      fontSize: '0.75rem',
+                      letterSpacing: '0.5px',
+                      textTransform: 'uppercase',
                       padding: '0.25rem 0.5rem',
                       display: 'inline-block',
                       transition: 'color 0.2s ease, transform 0.2s ease',
-                      fontFamily: "'Courier New', Courier, monospace"
                     }}
                     onClick={() => setIsOpen(false)}
                     onMouseEnter={e => {
-                      e.currentTarget.style.color = '#0070f3';
+                      e.currentTarget.style.color = '#2f4f4f';
                       e.currentTarget.style.transform = 'translateX(5px)';
                     }}
                     onMouseLeave={e => {
@@ -464,32 +544,51 @@ export default function BurgerMenu() {
             <li
               onClick={() => setShowExplore(!showExplore)}
               style={{
-                fontWeight: 'bold',
+                fontFamily: "'Press Start 2P', monospace",
+                fontWeight: 'normal',
+                fontSize: '0.75rem',
+                letterSpacing: '0.5px',
+                textTransform: 'uppercase',
                 marginTop: '1rem',
                 cursor: 'pointer',
-                fontFamily: "'Courier New', Courier, monospace"
+                color: '#666',
+                transition: 'color 0.2s',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'flex-start',
               }}
             >
-              Get Involved {showExplore ? '▾' : '▸'}
+              <span>Get Involved</span>
             </li>
             {showExplore && (
               <>
-                <li>
+                <li
+                  style={{
+                    fontFamily: "'Press Start 2P', monospace",
+                    fontWeight: 'normal',
+                    fontSize: '0.75rem',
+                    letterSpacing: '0.5px',
+                    textTransform: 'uppercase',
+                    color: 'black',
+                  }}
+                >
                   <Link
                     role="menuitem"
                     href="/newsletter"
                     style={{
                       textDecoration: 'none',
                       color: 'black',
-                      fontWeight: '500',
+                      fontFamily: "'Press Start 2P', monospace",
+                      fontSize: '0.75rem',
+                      letterSpacing: '0.5px',
+                      textTransform: 'uppercase',
                       padding: '0.25rem 0.5rem',
                       display: 'inline-block',
                       transition: 'color 0.2s ease, transform 0.2s ease',
-                      fontFamily: "'Courier New', Courier, monospace"
                     }}
                     onClick={() => setIsOpen(false)}
                     onMouseEnter={e => {
-                      e.currentTarget.style.color = '#0070f3';
+                      e.currentTarget.style.color = '#2f4f4f';
                       e.currentTarget.style.transform = 'translateX(5px)';
                     }}
                     onMouseLeave={e => {
@@ -500,22 +599,33 @@ export default function BurgerMenu() {
                     Newsletter
                   </Link>
                 </li>
-                <li>
+                <li
+                  style={{
+                    fontFamily: "'Press Start 2P', monospace",
+                    fontWeight: 'normal',
+                    fontSize: '0.75rem',
+                    letterSpacing: '0.5px',
+                    textTransform: 'uppercase',
+                    color: 'black',
+                  }}
+                >
                   <Link
                     role="menuitem"
                     href="/submit"
                     style={{
                       textDecoration: 'none',
                       color: 'black',
-                      fontWeight: '500',
+                      fontFamily: "'Press Start 2P', monospace",
+                      fontSize: '0.75rem',
+                      letterSpacing: '0.5px',
+                      textTransform: 'uppercase',
                       padding: '0.25rem 0.5rem',
                       display: 'inline-block',
                       transition: 'color 0.2s ease, transform 0.2s ease',
-                      fontFamily: "'Courier New', Courier, monospace"
                     }}
                     onClick={() => setIsOpen(false)}
                     onMouseEnter={e => {
-                      e.currentTarget.style.color = '#0070f3';
+                      e.currentTarget.style.color = '#2f4f4f';
                       e.currentTarget.style.transform = 'translateX(5px)';
                     }}
                     onMouseLeave={e => {
@@ -532,32 +642,51 @@ export default function BurgerMenu() {
             <li
               onClick={() => setShowAbout(!showAbout)}
               style={{
-                fontWeight: 'bold',
+                fontFamily: "'Press Start 2P', monospace",
+                fontWeight: 'normal',
+                fontSize: '0.75rem',
+                letterSpacing: '0.5px',
+                textTransform: 'uppercase',
                 marginTop: '1rem',
                 cursor: 'pointer',
-                fontFamily: "'Courier New', Courier, monospace"
+                color: '#666',
+                transition: 'color 0.2s',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'flex-start',
               }}
             >
-              Info {showAbout ? '▾' : '▸'}
+              <span>Info</span>
             </li>
             {showAbout && (
               <>
-                <li>
+                <li
+                  style={{
+                    fontFamily: "'Press Start 2P', monospace",
+                    fontWeight: 'normal',
+                    fontSize: '0.75rem',
+                    letterSpacing: '0.5px',
+                    textTransform: 'uppercase',
+                    color: 'black',
+                  }}
+                >
                   <Link
                     role="menuitem"
                     href="/about"
                     style={{
                       textDecoration: 'none',
                       color: 'black',
-                      fontWeight: '500',
+                      fontFamily: "'Press Start 2P', monospace",
+                      fontSize: '0.75rem',
+                      letterSpacing: '0.5px',
+                      textTransform: 'uppercase',
                       padding: '0.25rem 0.5rem',
                       display: 'inline-block',
                       transition: 'color 0.2s ease, transform 0.2s ease',
-                      fontFamily: "'Courier New', Courier, monospace"
                     }}
                     onClick={() => setIsOpen(false)}
                     onMouseEnter={e => {
-                      e.currentTarget.style.color = '#0070f3';
+                      e.currentTarget.style.color = '#2f4f4f';
                       e.currentTarget.style.transform = 'translateX(5px)';
                     }}
                     onMouseLeave={e => {
@@ -568,7 +697,16 @@ export default function BurgerMenu() {
                     About
                   </Link>
                 </li>
-                <li>
+                <li
+                  style={{
+                    fontFamily: "'Press Start 2P', monospace",
+                    fontWeight: 'normal',
+                    fontSize: '0.75rem',
+                    letterSpacing: '0.5px',
+                    textTransform: 'uppercase',
+                    color: 'black',
+                  }}
+                >
                   <a
                     role="menuitem"
                     href="https://coff.ee/obsoletetecharchive"
@@ -577,15 +715,17 @@ export default function BurgerMenu() {
                     style={{
                       textDecoration: 'none',
                       color: 'black',
-                      fontWeight: '500',
+                      fontFamily: "'Press Start 2P', monospace",
+                      fontSize: '0.75rem',
+                      letterSpacing: '0.5px',
+                      textTransform: 'uppercase',
                       padding: '0.25rem 0.5rem',
                       display: 'inline-block',
                       transition: 'color 0.2s ease, transform 0.2s ease',
-                      fontFamily: "'Courier New', Courier, monospace"
                     }}
                     onClick={() => setIsOpen(false)}
                     onMouseEnter={e => {
-                      e.currentTarget.style.color = '#0070f3';
+                      e.currentTarget.style.color = '#2f4f4f';
                       e.currentTarget.style.transform = 'translateX(5px)';
                     }}
                     onMouseLeave={e => {

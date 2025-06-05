@@ -45,7 +45,7 @@ export default function SubmitArtifact() {
 
   if (submitted) {
     return (
-      <div style={{ padding: '2rem', textAlign: 'center', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', minHeight: '80vh', backgroundColor: '#f5f5f5' }}>
+      <div style={{ padding: '2rem', textAlign: 'center', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', minHeight: '80vh', backgroundColor: '#fefdf6' }}>
         <h1>Thank You!</h1>
         <p>Your artifact has been submitted.</p>
         <button
@@ -70,7 +70,7 @@ export default function SubmitArtifact() {
   }
 
   return (
-    <div style={{ padding: '2rem', textAlign: 'center', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', minHeight: '80vh', backgroundColor: '#f5f5f5' }}>
+    <div style={{ padding: '2rem', textAlign: 'center', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', minHeight: '80vh', backgroundColor: '#fefdf6' }}>
       <h1>Submit an Artifact</h1>
       <form
         onSubmit={handleSubmit}

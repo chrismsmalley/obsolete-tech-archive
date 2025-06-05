@@ -1,12 +1,16 @@
+
 {
   "name": "obsolete-tech-archive",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://chrismsmalley.github.io/obsolete-tech-archive",
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && next export",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d out"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.49.8",

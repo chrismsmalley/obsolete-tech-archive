@@ -24,3 +24,7 @@ a {
 .logo-font {
   font-family: 'Press Start 2P', monospace;
 }
+
+.typing-text {
+  font-family: "Courier New", Courier, monospace !important;
+}

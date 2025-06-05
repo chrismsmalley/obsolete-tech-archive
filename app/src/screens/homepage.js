@@ -1,29 +1,50 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useSearchParams } from "next/navigation";
 import { techEntries } from "../data/techEntries";
 import Link from "next/link";
 import TechCard from "../components/cards/techCard";
-import { useSearchParams } from "next/navigation";
 
 export default function Homepage() {
   const entries = Array.isArray(techEntries) ? techEntries : [];
   const [currentPage, setCurrentPage] = useState(1);
+  const [selectedCategory, setSelectedCategory] = useState(null);
+  const [sort, setSort] = useState(null);
+
   const searchParams = useSearchParams();
-  const selectedCategory = searchParams.get("category");
+  useEffect(() => {
+    const category = searchParams.get("filterCategory");
+    const sortParam = searchParams.get("sort");
+    setSelectedCategory(category);
+    setSort(sortParam);
+    setCurrentPage(1);
+  }, [searchParams]);
 
   const entriesPerPage = 8;
   const filteredEntries = selectedCategory
-    ? entries.filter(
-        (entry) =>
-          entry.category?.toLowerCase() === selectedCategory.toLowerCase()
-      )
+    ? entries.filter((entry) => {
+        if (!entry.category) return false;
+        if (Array.isArray(entry.category)) {
+          return entry.category
+            .map((c) => c.toLowerCase())
+            .includes(selectedCategory.toLowerCase());
+        }
+        return entry.category.toLowerCase() === selectedCategory.toLowerCase();
+      })
     : entries;
 
-  const paginatedEntries = filteredEntries.slice(
+  let sortedEntries = [...filteredEntries];
+  if (sort === "recent") {
+    sortedEntries.sort((a, b) => new Date(b.date) - new Date(a.date));
+  } else if (sort === "alpha") {
+    sortedEntries.sort((a, b) => (a.title || "").localeCompare(b.title || ""));
+  }
+
+  const paginatedEntries = sortedEntries.slice(
     (currentPage - 1) * entriesPerPage,
     currentPage * entriesPerPage
   );
-  const totalPages = Math.ceil(filteredEntries.length / entriesPerPage);
+  const totalPages = Math.ceil(sortedEntries.length / entriesPerPage);
 
   return (
     <>
@@ -33,6 +54,15 @@ export default function Homepage() {
         to { width: 100% }
       }
 
+      @keyframes blink {
+        50% { border-color: transparent }
+      }
+
+      @keyframes blink-caret {
+        0%, 100% { border-color: transparent }
+        50% { border-color: #4a4a4a }
+      }
+
       .typing-text {
         display: inline-block;
         overflow: hidden;
@@ -40,18 +70,15 @@ export default function Homepage() {
         border-right: 0.15em solid #4a4a4a;
         animation: typing 2.5s steps(30, end), blink-caret 0.75s step-end 3;
         animation-fill-mode: forwards;
-        font-size: 8rem;
+        font-size: 6rem;
         font-weight: 700;
         color: #4a4a4a;
-      }
-
-      @keyframes blink-caret {
-        0%, 100% { border-color: transparent }
-        50% { border-color: #4a4a4a }
+        font-family: "Courier New", Courier, monospace !important;
       }
     `}</style>
     <main style={{
-      padding: "6rem 0 2rem"
+      padding: "4rem 1rem 4rem",
+      backgroundColor: "#f7f3eb",
     }}>
       {currentPage === 1 && (
       <section style={{
@@ -60,8 +87,8 @@ export default function Homepage() {
         alignItems: "center",
         justifyContent: "center",
         minHeight: "70vh",
-        marginBottom: "9rem",
-        padding: "1rem 2rem",
+        marginBottom: "12rem",
+        padding: "2rem 1rem",
         textAlign: "center"
       }}>
         <div style={{

@@ -12,7 +12,7 @@ const techEntries = [
     title: "Floppy Disk",
     slug: "floppy-disk",
     image: "/images/Floppy_disk_bg.png",
-    shortDescription: "The OG save icon. Stored a whole 1.44MB—just enough for a document and maybe a low-res JPEG if you were lucky.",
+    shortDescription: "The OG save icon. Stored a whole 1.44MB — just enough for a document and maybe a low-res JPEG if you were lucky.",
     longDescription:
       "Once the king of file transfers, the floppy disk held a mighty 1.44MB — enough for a document and maybe a pixel or two. It’s still the universal symbol for 'save,' even if most people under 20 have never used one. Blow on it before inserting, just to be safe.",
     category: "Storage"
@@ -48,7 +48,7 @@ const techEntries = [
     title: "PalmPilot",
     slug: "palmpilot",
     image: "/images/Palm-removebg.png",
-    shortDescription: "The godfather of your smartphone. A stylus, a screen, and more scheduled meetings than a Fortune 500 exec.",
+    shortDescription: "The godfather of your smartphone. A stylus, a screen, and more scheduled meetings than a Fortune 500 executive.",
     longDescription:
       "PalmPilots were personal digital assistants before the term was cool. You wrote in Graffiti (yes, a made-up alphabet), managed your contacts like a boss, and felt like you were living in the future. Until, of course, phones learned to do it all better.",
     category: "Personal Computing"
@@ -59,7 +59,7 @@ const techEntries = [
     image: "/images/zip_drive-removebg.png",
     shortDescription: "Like a floppy disk, but thick. Iomega’s big idea stored a whopping 100MB — until it clicked its way to death.",
     longDescription:
-      "The Zip Drive was supposed to save us from floppy limitations. It gave us storage in triple digits and a unique sound that struck fear into hearts when it started clicking. It burned bright, then got smoked by USB sticks and cloud storage.",
+      "The Zip Drive was supposed to save us from floppy limitations. It gave us triple-digit storage and a unique sound that struck fear into hearts when it started clicking. It burned bright, then got smoked by USB sticks and cloud storage.",
     category: "Storage"
   },
   {
@@ -77,7 +77,7 @@ const techEntries = [
     image: "/images/dial_upmodem-removebg.png",
     shortDescription: "That screechy symphony meant you were finally online. Just don’t let anyone pick up the phone.",
     longDescription:
-      "Before Wi-Fi, the dial-up modem was your noisy handshake with the internet. It was a ritual — the chirps, the whines, and the thrill of a 56kbps connection. Bonus nostalgia points if you remember yelling, “I’m online!” so no one picked up the landline.",
+      "Before Wi-Fi, the dial-up modem was your noisy handshake with the internet. It was a ritual — the chirps, the whines, and the thrill of a 56kbps connection. Bonus nostalgia points if you remember yelling, ‘I’m online!’ so no one picked up the landline.",
     category: "Communication"
   },
   {
@@ -104,7 +104,7 @@ const techEntries = [
     image: "/images/handpsring_visor-removebg-preview.png",
     shortDescription: "PalmPilot’s wild cousin — with a slot for modules no one used.",
     longDescription:
-      "Born from former Palm engineers, the Handspring Visor ran on Palm OS but tried to be more: MP3 player? Camera? Game Boy rival? Just plug in a Springboard module. It was ahead of its time, but sometimes being early means being forgotten.",
+      "Born from former Palm engineers, the Handspring Visor ran on Palm OS but aimed to be more: MP3 player? Camera? Game Boy rival? Simply plug in a Springboard module. It was ahead of its time, but sometimes being early means being forgotten.",
     category: "Personal Computing"
   },
   {
