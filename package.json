@@ -6,10 +6,9 @@
   "homepage": "https://chrismsmalley.github.io/obsolete-tech-archive",
   "scripts": {
     "dev": "next dev",
-    "build": "next build && next export",
+    "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "predeploy": "npm run build",
     "deploy": "gh-pages -d out"
   },
   "dependencies": {
