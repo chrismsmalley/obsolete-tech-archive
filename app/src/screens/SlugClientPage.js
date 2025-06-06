@@ -2,8 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
-import { techEntries } from "../../../lib/client-data/clientTechEntries";
-
+import { techEntries } from "../../data/techEntries";
 
 export default function SlugClientPage() {
   const params = useParams();
