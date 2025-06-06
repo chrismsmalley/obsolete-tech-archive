@@ -12,6 +12,9 @@ export default function SlugClientPage() {
 
   useEffect(() => {
     if (slug) {
+      console.log("Current slug:", slug);
+      console.log("Available slugs:", techEntries.map(item =>
+        item.title?.toLowerCase().replace(/\s+/g, "-").replace(/[^\w-]+/g, "")));
       const found = techEntries.find(
         (item) =>
           item.title?.toLowerCase().replace(/\s+/g, "-").replace(/[^\w-]+/g, "") === slug
@@ -21,7 +24,12 @@ export default function SlugClientPage() {
   }, [slug]);
 
   if (!entry) {
-    return <div style={{ padding: "2rem", textAlign: "center" }}>Loading...</div>;
+    return (
+      <div style={{ padding: "2rem", textAlign: "center", color: "#333" }}>
+        <h2>Not Found</h2>
+        <p>This page doesn&apos;t seem to exist. Try returning to the archive.</p>
+      </div>
+    );
   }
 
   return (
