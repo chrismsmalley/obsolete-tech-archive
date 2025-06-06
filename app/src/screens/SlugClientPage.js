@@ -8,7 +8,7 @@ export default function SlugClientPage() {
   const params = useParams();
   const slug = params?.slug;
   const [entry, setEntry] = useState(null);
-
+// test
   useEffect(() => {
     if (slug) {
       const normalizedSlug = slug.toLowerCase().replace(/\s+/g, "-").replace(/[^\w-]+/g, "");
