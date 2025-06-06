@@ -2,9 +2,17 @@
 
 import React, { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
-import { techEntries } from '../data/techEntries';
+
 
 export default function SlugClientPage() {
+  const techEntries = [
+    {
+      title: "Compact Disc",
+      description: "A shiny disc that replaced cassettes and became a standard for music and software distribution.",
+      image: "Compact_Disc_image.png",
+    },
+    // You can add more entries here as needed
+  ];
   const params = useParams();
   const slug = params?.slug;
   const [entry, setEntry] = useState(null);
@@ -39,6 +47,7 @@ export default function SlugClientPage() {
     );
   }
 
+  console.log("Resolved entry:", entry);
   return (
     <div style={{ backgroundColor: "#f7f3eb", minHeight: "100vh" }}>
       <main
