@@ -25,11 +25,23 @@ export default function Navbar() {
         display: 'flex',
         justifyContent: 'space-between',
         alignItems: 'center',
+        flexWrap: 'wrap',
+        padding: '0 8px',
       }}>
-        <Link href="/" aria-label="Go to homepage" passHref>
-          <a className="logo-font" style={{ fontSize: 'clamp(1.25rem, 5vw, 1.75rem)', textDecoration: 'none', color: 'inherit', margin: 0, lineHeight: '1' }}>
-            OT
-          </a>
+        <Link
+          href="/"
+          aria-label="Go to homepage"
+          className="logo-font"
+          style={{
+            fontSize: 'clamp(1.25rem, 6vw, 1.75rem)',
+            textDecoration: 'none',
+            color: 'inherit',
+            margin: 0,
+            lineHeight: '1',
+            padding: '4px 0',
+          }}
+        >
+          OT
         </Link>
         <BurgerMenu />
       </div>

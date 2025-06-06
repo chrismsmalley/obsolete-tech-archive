@@ -29,7 +29,7 @@ export default function Footer() {
   };
 
   return (
-    <div style={{ width: '100%', margin: 0, padding: 0 }}>
+    <div style={{ width: '100%', margin: 0, padding: 0, flexShrink: 0 }}>
       <footer className="footer" style={{ backgroundColor: '#f2f2f2', width: '100vw', margin: 0, padding: 0 }}>
         {/* Top section */}
         <div className="footer-top" style={{ display: 'flex', justifyContent: 'center', padding: '1rem 0', backgroundColor: '#f2f2f2' }}>

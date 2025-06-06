@@ -24,7 +24,6 @@ export const metadata = {
   ],
   authors: [{ name: 'Obsolete Tech Archive Team' }],
   robots: 'index, follow',
-  themeColor: '#f7f3eb',
   openGraph: {
     title: 'Obsolete Tech Archive',
     description: 'Explore a digital museum of forgotten gadgets and obsolete tech that shaped the past.',
@@ -38,25 +37,23 @@ export const metadata = {
     title: 'Obsolete Tech Archive',
     description: 'A digital museum exploring the forgotten gadgets and obsolete tech of yesteryear.',
     images: ['/images/OT image.png']
-  },
-  viewport: 'width=device-width, initial-scale=1'
+  }
 };
+
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1
+};
+
+export const themeColor = '#f7f3eb';
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={inter.className}>
-      <body
-        style={{
-          margin: 0,
-          padding: '0 1rem',
-          backgroundColor: '#f7f3eb',
-          fontSize: '16px',
-          lineHeight: '1.5',
-        }}
-      >
+      <body>
         <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
           <Navbar />
-          <main style={{ flex: 1, maxWidth: '1200px', margin: '0 auto', width: '100%' }}>{children}</main>
+          <main>{children}</main>
           <Footer />
         </div>
       </body>

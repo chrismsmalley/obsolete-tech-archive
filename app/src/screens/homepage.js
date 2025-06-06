@@ -86,31 +86,71 @@ function Homepage() {
           typing 2.5s steps(30, end),
           blink-caret 0.75s step-end 3;
         animation-fill-mode: forwards;
-        font-size: clamp(1.75rem, 4vw, 3.5rem);
+        font-size: clamp(2.25rem, 6vw, 4.25rem);
         font-weight: 700;
         color: #4a4a4a;
         font-family: "Courier New", Courier, monospace !important;
         visibility: visible !important;
         position: relative;
       }
+
+      .homepage-subtext {
+        font-size: clamp(1rem, 2.5vw, 1.5rem) !important;
+      }
+
+      .homepage-main {
+        padding: 4rem 1rem 4rem;
+        background-color: #f7f3eb;
+      }
+
+      @media (min-width: 768px) {
+        .homepage-main {
+          padding: 6rem 2rem 6rem;
+        }
+      }
+
+      .homepage-hero {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 60vh;
+        margin-bottom: 16rem;
+        padding: 2rem 1rem;
+        width: 100%;
+        box-sizing: border-box;
+        text-align: center;
+      }
+
+      @media (min-width: 768px) {
+        .homepage-hero {
+          padding: 4rem 2rem;
+        }
+      }
+
+      .techcard-container {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        align-items: stretch;
+        margin-top: 2rem;
+        width: 100%;
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      @media (min-width: 768px) {
+        .techcard-container {
+          display: grid;
+          grid-template-columns: 1fr;
+          gap: 2.5rem;
+        }
+      }
     `}</style>
-    <main style={{
-      padding: "4rem 1rem 4rem",
-      backgroundColor: "#f7f3eb",
-    }}>
+    <main className="homepage-main">
       {currentPage === 1 && (
-      <section style={{
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        justifyContent: "center",
-        minHeight: "60vh",
-        marginBottom: "6rem",
-        padding: "2rem 1rem",
-        width: "100%",
-        boxSizing: "border-box",
-        textAlign: "center"
-      }}>
+      <section className="homepage-hero">
         <div style={{
           display: "flex",
           flexDirection: "column",
@@ -122,30 +162,20 @@ function Homepage() {
             <span className="typing-text">Welcome to Obsolete Tech</span>
           </h1>
         </div>
-        <p style={{
-          fontSize: "1.1rem",
-          lineHeight: "1.6",
-          maxWidth: "900px",
-          color: "#888",
-          padding: "0 1rem"
-        }}>
+        <p
+          className="homepage-subtext"
+          style={{
+            lineHeight: "1.6",
+            maxWidth: "900px",
+            color: "#888",
+            padding: "0 1rem"
+          }}
+        >
           Unearth forgotten gadgets, doomed devices, and digital flops that once had their moment—then faded into tech obscurity.
         </p>
       </section>
       )}
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          gap: "3rem",
-          alignItems: "stretch",
-          marginTop: "2rem",
-          width: "100%",
-          maxWidth: "1200px",
-          marginLeft: "auto",
-          marginRight: "auto"
-        }}
-      >
+      <div className="techcard-container">
         {paginatedEntries.map((entry, index) => {
           const slug = (entry.title || "").toLowerCase().replace(/\s+/g, "-").replace(/[^a-z0-9-]/g, "");
           console.log("Entry title:", entry.title, "Image filename:", entry.image);
@@ -159,6 +189,7 @@ function Homepage() {
                 title={entry.title || "No title"}
                 description={entry.shortDescription ?? ""}
                 image={(entry.image || "/images/placeholder.png").replace(/^\/images\/+/, "/images/")}
+                layout="horizontal"
               />
             </Link>
           );

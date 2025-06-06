@@ -93,7 +93,7 @@ const techEntries = [
     title: "MiniDV Camcorder",
     slug: "minidv-camcorder",
     image: "/images/minidv_cam-removebg-preview.png",
-    shortDescription: "Home movies, shaky hands, and grainy glory.",
+    shortDescription: "A pocket-sized time machine. MiniDV tapes captured your birthday parties, backyard stunts, and everything in between — with glorious grain and handheld charm.",
     longDescription:
       "Before smartphones and DSLR vloggers, there was the MiniDV camcorder. Small tapes, big dreams. Whether you were filming a birthday party or your first skate trick, this device captured moments in glorious 480p. Bonus points if you labeled each tape with a Sharpie.",
     category: "Media"
@@ -111,7 +111,7 @@ const techEntries = [
     title: "Betamax",
     slug: "betamax",
     image: "/images/betamax-removebg-preview.png",
-    shortDescription: "The better format that still lost the war.",
+    shortDescription: "A technical marvel that couldn’t outmaneuver VHS. Sharper quality, loyal fans — but still the underdog in the home video showdown of the '80s.",
     longDescription:
       "Betamax was Sony’s bold foray into home video — better quality than VHS, but worse marketing. It became a textbook example of how the best tech doesn’t always win. Collectors still argue its superiority, but for most, it's a trivia answer.",
     category: "Media"
