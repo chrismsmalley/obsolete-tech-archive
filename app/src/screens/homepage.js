@@ -93,6 +93,12 @@ function Homepage() {
         visibility: visible !important;
         position: relative;
       }
+
+      @media (max-width: 600px) {
+        .typing-text {
+          font-size: 2.5rem;
+        }
+      }
     `}</style>
     <main style={{
       padding: "4rem 1rem 4rem",
@@ -107,6 +113,8 @@ function Homepage() {
         minHeight: "70vh",
         marginBottom: "12rem",
         padding: "2rem 1rem",
+        width: "100%",
+        boxSizing: "border-box",
         textAlign: "center"
       }}>
         <div style={{
@@ -116,7 +124,7 @@ function Homepage() {
           marginBottom: "2rem"
         }}>
           <img src="/images/OT image.png" alt="Site Symbol" style={{ width: "120px", height: "auto", marginBottom: "1.5rem" }} />
-          <h1 style={{ margin: 0 }}>
+          <h1 style={{ margin: 0, maxWidth: "100%", overflow: "hidden" }}>
             <span className="typing-text">Welcome to Obsolete Tech</span>
           </h1>
         </div>

@@ -27,18 +27,33 @@ export default function SlugClientPage() {
 
   return (
     <div style={{ backgroundColor: "#f7f3eb", minHeight: "100vh" }}>
-      <main style={{ padding: "2rem", maxWidth: "800px", margin: "0 auto" }}>
+      <main
+        style={{
+          padding: "2rem",
+          maxWidth: "800px",
+          margin: "0 auto",
+          width: "90vw",
+        }}
+      >
         <h1
           style={{
             fontFamily: "'VT323', 'Courier New', Courier, monospace",
-            fontSize: "3rem",
+            fontSize: "clamp(2rem, 5vw, 3rem)",
             fontWeight: "normal",
-            color: "#333"
+            color: "#333",
           }}
         >
           {entry.title}
         </h1>
-        <p style={{ fontSize: "1.3rem", color: "#555", marginBottom: "2rem" }}>{entry.description}</p>
+        <p
+          style={{
+            fontSize: "clamp(1rem, 2.5vw, 1.3rem)",
+            color: "#555",
+            marginBottom: "2rem",
+          }}
+        >
+          {entry.description}
+        </p>
         <Image
           src={`/images/${entry.image}`}
           alt={entry.title}

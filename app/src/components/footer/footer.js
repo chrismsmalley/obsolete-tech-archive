@@ -34,12 +34,12 @@ export default function Footer() {
         {/* Top section */}
         <div className="footer-top" style={{ display: 'flex', justifyContent: 'center', padding: '1rem 0', backgroundColor: '#f2f2f2' }}>
           <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '1rem', width: '100%' }}>
-            <p style={{ margin: 0, fontSize: '0.9rem', whiteSpace: 'nowrap' }}>
+            <p style={{ margin: 0, fontSize: 'clamp(0.8rem, 2.5vw, 1rem)', whiteSpace: 'nowrap' }}>
               Got a dusty gadget or forgotten flop? Submit it to the archive!
             </p>
             <form
               method="POST"
-              style={{ display: 'flex', gap: '0.5rem', alignItems: 'center' }}
+              style={{ display: 'flex', gap: '0.5rem', alignItems: 'center', flexWrap: 'wrap' }}
               onSubmit={handleSubmit}
             >
               <input
@@ -48,7 +48,15 @@ export default function Footer() {
                 name="artifact"
                 placeholder="Name your obsolete gem..."
                 required
-                style={{ padding: '0.5rem', border: '1px solid #ccc', borderRadius: '4px', minWidth: '250px' }}
+                style={{
+                  padding: '0.5rem',
+                  border: '1px solid #ccc',
+                  borderRadius: '4px',
+                  minWidth: '0',
+                  width: 'min(90vw, 300px)',
+                  maxWidth: '100%',
+                  flexGrow: 1
+                }}
               />
               <button
                 type="submit"
@@ -78,7 +86,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom section */}
-        <div className="footer-bottom" style={{ backgroundColor: '#e8e8e8', display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '1rem 2rem', fontSize: '0.875rem' }}>
+        <div className="footer-bottom" style={{ backgroundColor: '#e8e8e8', display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '1rem 2rem', fontSize: 'clamp(0.75rem, 2vw, 0.875rem)' }}>
           {/* Left: Social Icons */}
           <div className="social-icons" style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
             <a href="https://www.facebook.com/profile.php?id=61577156755851" target="_blank" rel="noopener noreferrer" className="social-icon"><FaFacebookF /></a>

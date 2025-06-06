@@ -4,6 +4,8 @@ export default function TechCard(props) {
   return (
     <div style={{
       display: 'flex',
+      flexDirection: 'row',
+      flexWrap: 'wrap',
       justifyContent: 'center',
       width: '100%',
     }}>
@@ -14,7 +16,8 @@ export default function TechCard(props) {
           transition: 'transform 0.2s ease, box-shadow 0.2s ease',
           cursor: 'pointer',
           display: 'flex',
-          height: '250px',
+          flexDirection: 'column',
+          height: 'auto',
           minHeight: '250px',
           alignItems: 'stretch',
           borderRadius: '8px',
@@ -41,7 +44,7 @@ export default function TechCard(props) {
           e.currentTarget.querySelector('img').style.transform = 'scale(1)';
         }}
         >
-          <div style={{ width: '180px', height: '180px', display: 'flex', alignItems: 'center', justifyContent: 'center', overflow: 'hidden', borderRadius: '4px', transition: 'transform 0.3s ease' }}>
+          <div style={{ width: '100%', maxWidth: '180px', height: 'auto', margin: '0 auto', display: 'flex', alignItems: 'center', justifyContent: 'center', overflow: 'hidden', borderRadius: '4px', transition: 'transform 0.3s ease' }}>
             <img
               src={props.image}
               alt={props.title}
@@ -56,7 +59,7 @@ export default function TechCard(props) {
             />
           </div>
           <div style={{ width: '1px', height: '80%', backgroundColor: '#e0e0e0' }}></div>
-          <div style={{ flex: '1', padding: '1rem', display: 'flex', flexDirection: 'column', justifyContent: 'center', maxWidth: '500px' }}>
+          <div style={{ padding: '1rem 0', width: '100%', textAlign: 'center', display: 'flex', flexDirection: 'column', justifyContent: 'center', maxWidth: '500px' }}>
             <h2 style={{ marginTop: 0, fontSize: '1.75rem', fontWeight: '600', marginBottom: '0.5rem', lineHeight: '1.2' }}>{props.title}</h2>
             <p style={{ overflow: 'hidden', textOverflow: 'ellipsis', fontSize: '1.1rem', lineHeight: '1.6', maxHeight: '4.8em', display: '-webkit-box', WebkitLineClamp: 3, WebkitBoxOrient: 'vertical' }}>{props.description}</p>
           </div>

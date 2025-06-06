@@ -12,17 +12,22 @@ export default function Navbar() {
       right: 0,
       zIndex: 1000,
       backgroundColor: '#f5f2ea',
-      padding: '10px 20px',
+      padding: '10px 16px',
       borderBottom: '1px solid #eee',
       display: 'flex',
-      justifyContent: 'space-between',
+      justifyContent: 'center',
       alignItems: 'center',
-      maxWidth: '100%',
-      overflow: 'hidden',
+      width: '100%',
     }}>
-      <div style={{ maxWidth: '1000px', margin: '0 auto', width: '100%', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+      <div style={{
+        width: '100%',
+        maxWidth: '1000px',
+        display: 'flex',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+      }}>
         <Link href="/" style={{ textDecoration: 'none', color: 'inherit' }} aria-label="Go to homepage">
-          <div className="logo-font" style={{ fontSize: '1.75rem', margin: 0 }}>
+          <div className="logo-font" style={{ fontSize: 'clamp(1.25rem, 2.5vw, 1.75rem)', margin: 0 }}>
             OT
           </div>
         </Link>
