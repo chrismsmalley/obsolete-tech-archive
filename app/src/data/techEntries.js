@@ -5,7 +5,7 @@ const techEntries = [
     image: "/images/Compact_Disc_image.png",
     shortDescription: "The shiny circle that replaced cassettes. CDs promised perfect sound forever and lived in our glove compartments and towers of jewel cases.",
     longDescription:
-      "The Compact Disc (CD) revolutionized how we consumed music in the 80s and 90s. Promising 'perfect sound forever,' CDs were the gold standard for audio quality and collectibility — until MP3s and streaming shuffled in. If you ever made a mix CD for someone, you understand its emotional power.",
+      "The Compact Disc (CD) revolutionized how we consumed music in the 80s and 90s. Promising 'perfect sound forever', CDs were the gold standard for audio quality and collectibility — until MP3s and streaming shuffled in. If you ever made a mix CD for someone, you understand its emotional power.",
     category: "Media"
   },
   {
