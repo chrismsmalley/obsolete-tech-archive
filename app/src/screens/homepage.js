@@ -86,18 +86,12 @@ function Homepage() {
           typing 2.5s steps(30, end),
           blink-caret 0.75s step-end 3;
         animation-fill-mode: forwards;
-        font-size: 6rem;
+        font-size: clamp(1.75rem, 4vw, 3.5rem);
         font-weight: 700;
         color: #4a4a4a;
         font-family: "Courier New", Courier, monospace !important;
         visibility: visible !important;
         position: relative;
-      }
-
-      @media (max-width: 600px) {
-        .typing-text {
-          font-size: 2.5rem;
-        }
       }
     `}</style>
     <main style={{
@@ -110,8 +104,8 @@ function Homepage() {
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "center",
-        minHeight: "70vh",
-        marginBottom: "12rem",
+        minHeight: "60vh",
+        marginBottom: "6rem",
         padding: "2rem 1rem",
         width: "100%",
         boxSizing: "border-box",
@@ -123,15 +117,17 @@ function Homepage() {
           alignItems: "center",
           marginBottom: "2rem"
         }}>
-          <img src="/images/OT image.png" alt="Site Symbol" style={{ width: "120px", height: "auto", marginBottom: "1.5rem" }} />
-          <h1 style={{ margin: 0, maxWidth: "100%", overflow: "hidden" }}>
+          <img src="/images/OT image.png" alt="Site Symbol" style={{ width: "90px", maxWidth: "100%", height: "auto", marginBottom: "1.5rem" }} />
+          <h1 style={{ margin: 0, maxWidth: "100%", overflow: "hidden", wordWrap: "break-word" }}>
             <span className="typing-text">Welcome to Obsolete Tech</span>
           </h1>
         </div>
         <p style={{
-          fontSize: "1.25rem",
+          fontSize: "1.1rem",
+          lineHeight: "1.6",
           maxWidth: "900px",
-          color: "#888"
+          color: "#888",
+          padding: "0 1rem"
         }}>
           Unearth forgotten gadgets, doomed devices, and digital flops that once had their moment—then faded into tech obscurity.
         </p>

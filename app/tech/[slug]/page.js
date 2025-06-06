@@ -1,9 +1,9 @@
 import React from 'react';
 import { supabase } from '../../src/lib/supabase';
 import Link from 'next/link';
-import { techEntries } from '../../src/data/techEntries';
+import { techEntries } from '@/app/src/data/techEntries';
 
-import SlugClientPage from '../../src/screens/SlugClientPage';
+import SlugClientPage from '@/app/src/screens/SlugClientPage';
 
 export default function Page() {
   return <SlugClientPage />;

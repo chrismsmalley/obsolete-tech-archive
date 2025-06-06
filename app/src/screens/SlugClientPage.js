@@ -14,8 +14,7 @@ export default function SlugClientPage() {
     if (slug) {
       const found = techEntries.find(
         (item) =>
-          item.title &&
-          item.title.toLowerCase().replace(/\s+/g, "-").replace(/[^a-z0-9-]/g, "") === slug
+          item.title?.toLowerCase().replace(/\s+/g, "-").replace(/[^\w-]+/g, "") === slug
       );
       setEntry(found);
     }
@@ -29,10 +28,11 @@ export default function SlugClientPage() {
     <div style={{ backgroundColor: "#f7f3eb", minHeight: "100vh" }}>
       <main
         style={{
-          padding: "2rem",
+          padding: "1rem 1rem 3rem",
           maxWidth: "800px",
           margin: "0 auto",
           width: "90vw",
+          boxSizing: "border-box",
         }}
       >
         <h1
@@ -54,13 +54,15 @@ export default function SlugClientPage() {
         >
           {entry.description}
         </p>
-        <Image
-          src={`/images/${entry.image}`}
-          alt={entry.title}
-          width={800}
-          height={450}
-          style={{ maxWidth: "100%", height: "auto", borderRadius: "8px" }}
-        />
+        {entry.image && (
+          <Image
+            src={`/images/${entry.image}`}
+            alt={entry.title}
+            width={800}
+            height={450}
+            style={{ maxWidth: "100%", height: "auto", borderRadius: "8px" }}
+          />
+        )}
       </main>
     </div>
   );

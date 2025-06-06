@@ -26,10 +26,10 @@ export default function Navbar() {
         justifyContent: 'space-between',
         alignItems: 'center',
       }}>
-        <Link href="/" style={{ textDecoration: 'none', color: 'inherit' }} aria-label="Go to homepage">
-          <div className="logo-font" style={{ fontSize: 'clamp(1.25rem, 2.5vw, 1.75rem)', margin: 0 }}>
+        <Link href="/" aria-label="Go to homepage" passHref>
+          <a className="logo-font" style={{ fontSize: 'clamp(1.25rem, 5vw, 1.75rem)', textDecoration: 'none', color: 'inherit', margin: 0, lineHeight: '1' }}>
             OT
-          </div>
+          </a>
         </Link>
         <BurgerMenu />
       </div>
