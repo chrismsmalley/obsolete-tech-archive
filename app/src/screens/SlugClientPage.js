@@ -12,19 +12,10 @@ export default function SlugClientPage() {
   useEffect(() => {
     if (slug) {
       const normalizedSlug = slug.toLowerCase().replace(/\s+/g, "-").replace(/[^\w-]+/g, "");
-      console.log("Current slug:", slug);
-      console.log("Normalized slug:", normalizedSlug);
-      console.log("Available slugs:", techEntries.map(item =>
-        item.title?.toLowerCase().replace(/\s+/g, "-").replace(/[^\w-]+/g, "")));
-      
       const found = techEntries.find(
         (item) =>
           item.title?.toLowerCase().replace(/\s+/g, "-").replace(/[^\w-]+/g, "") === normalizedSlug
       );
-
-      if (!found) {
-        console.warn("No matching entry found for slug:", normalizedSlug);
-      }
 
       setEntry(found);
     }
@@ -32,14 +23,13 @@ export default function SlugClientPage() {
 
   if (!entry) {
     return (
-      <div style={{ padding: "2rem", textAlign: "center", color: "#333" }}>
+      <div style={{ padding: "2rem", textAlign: "center", color: "#333", marginTop: "4rem" }}>
         <h2>Not Found</h2>
         <p>This page doesn&apos;t seem to exist. Try returning to the archive.</p>
       </div>
     );
   }
 
-  console.log("Resolved entry:", entry);
   return (
     <div style={{ backgroundColor: "#f7f3eb", minHeight: "100vh" }}>
       <main
@@ -70,12 +60,14 @@ export default function SlugClientPage() {
         >
           {entry.description}
         </p>
-        {entry.image && (
+        {entry.image ? (
           <img
             src={`/images/${entry.image}`}
             alt={entry.title}
             style={{ maxWidth: "100%", height: "auto", borderRadius: "8px" }}
           />
+        ) : (
+          <p style={{ color: "#999" }}>Image unavailable for this entry.</p>
         )}
       </main>
     </div>
