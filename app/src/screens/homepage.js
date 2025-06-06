@@ -20,6 +20,10 @@ function Homepage() {
     setCurrentPage(1);
   }, [searchParams]);
 
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, [currentPage]);
+
   const entriesPerPage = 8;
   const filteredEntries = selectedCategory
     ? entries.filter((entry) => {

@@ -21,7 +21,7 @@ export default function Navbar() {
       overflow: 'hidden',
     }}>
       <div style={{ maxWidth: '1000px', margin: '0 auto', width: '100%', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-        <Link href="/" style={{ textDecoration: 'none', color: 'inherit' }}>
+        <Link href="/" style={{ textDecoration: 'none', color: 'inherit' }} aria-label="Go to homepage">
           <div className="logo-font" style={{ fontSize: '1.75rem', margin: 0 }}>
             OT
           </div>
