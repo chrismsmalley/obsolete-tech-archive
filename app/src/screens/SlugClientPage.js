@@ -12,13 +12,21 @@ export default function SlugClientPage() {
 
   useEffect(() => {
     if (slug) {
+      const normalizedSlug = slug.toLowerCase().replace(/\s+/g, "-").replace(/[^\w-]+/g, "");
       console.log("Current slug:", slug);
+      console.log("Normalized slug:", normalizedSlug);
       console.log("Available slugs:", techEntries.map(item =>
         item.title?.toLowerCase().replace(/\s+/g, "-").replace(/[^\w-]+/g, "")));
+      
       const found = techEntries.find(
         (item) =>
-          item.title?.toLowerCase().replace(/\s+/g, "-").replace(/[^\w-]+/g, "") === slug
+          item.title?.toLowerCase().replace(/\s+/g, "-").replace(/[^\w-]+/g, "") === normalizedSlug
       );
+
+      if (!found) {
+        console.warn("No matching entry found for slug:", normalizedSlug);
+      }
+
       setEntry(found);
     }
   }, [slug]);
