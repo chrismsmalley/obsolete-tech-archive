@@ -54,3 +54,9 @@ export default function TechPage() {
     </div>
   );
 }
+export async function generateStaticParams() {
+  return techEntries.map((entry) => {
+    const slug = (entry.title || "").toLowerCase().replace(/\s+/g, "-").replace(/[^a-z0-9-]/g, "");
+    return { slug };
+  });
+}

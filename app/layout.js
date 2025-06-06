@@ -1,6 +1,13 @@
 import './globals.css';
 import Navbar from './src/components/header/navbar';
 import Footer from './src/components/footer/footer';
+import { Inter } from 'next/font/google';
+
+const inter = Inter({
+  subsets: ['latin'],
+  weight: ['400', '700'],
+  display: 'swap',
+});
 
 export const metadata = {
   title: 'Obsolete Tech Archive',
@@ -12,9 +19,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className={inter.className}>
       <head>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
         <link
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
@@ -23,7 +29,7 @@ export default function RootLayout({ children }) {
           referrerPolicy="no-referrer"
         />
       </head>
-      <body style={{ margin: 0, padding: 0, backgroundColor: '#f7f3eb', fontFamily: 'Inter, sans-serif' }}>
+      <body style={{ margin: 0, padding: 0, backgroundColor: '#f7f3eb' }}>
         <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
           <Navbar />
           <main style={{ flex: 1 }}>{children}</main>
