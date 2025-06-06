@@ -3,7 +3,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
 import { techEntries } from '../data/techEntries';
-import Image from "next/image";
 
 export default function SlugClientPage() {
   const params = useParams();
@@ -71,11 +70,9 @@ export default function SlugClientPage() {
           {entry.description}
         </p>
         {entry.image && (
-          <Image
+          <img
             src={`/images/${entry.image}`}
             alt={entry.title}
-            width={800}
-            height={450}
             style={{ maxWidth: "100%", height: "auto", borderRadius: "8px" }}
           />
         )}
