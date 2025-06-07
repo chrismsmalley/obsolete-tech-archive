@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Homepage -->
+  <url>
+    <loc>https://obsoletetecharchive.com/</loc>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Contact Page -->
+  <url>
+    <loc>https://obsoletetecharchive.com/contact</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Static entries (replace with your slugs) -->
+  <url>
+    <loc>https://obsoletetecharchive.com/tech/compact-disc</loc>
+  </url>
+  <url>
+    <loc>https://obsoletetecharchive.com/tech/floppy-disk</loc>
+  </url>
+  <url>
+    <loc>https://obsoletetecharchive.com/tech/laserdisc</loc>
+  </url>
+  <!-- Add more entries here -->
+
+</urlset>

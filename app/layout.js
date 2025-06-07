@@ -50,6 +50,11 @@ export const themeColor = '#f7f3eb';
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={inter.className}>
+      <head>
+        {/* Google AdSense Verification */}
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2068398627088024"
+     crossorigin="anonymous"></script>
+      </head>
       <body>
         <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
           <Navbar />
