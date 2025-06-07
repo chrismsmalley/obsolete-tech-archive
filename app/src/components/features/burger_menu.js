@@ -7,6 +7,7 @@ export default function BurgerMenu() {
   const [showCategories, setShowCategories] = useState(false);
   const [showExplore, setShowExplore] = useState(false);
   const [showAbout, setShowAbout] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
   const menuRef = useRef();
   const toggleRef = useRef();
 
@@ -37,6 +38,15 @@ export default function BurgerMenu() {
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
     };
+  }, []);
+
+  useEffect(() => {
+    const checkViewport = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    checkViewport();
+    window.addEventListener('resize', checkViewport);
+    return () => window.removeEventListener('resize', checkViewport);
   }, []);
 
   return (
@@ -101,7 +111,10 @@ export default function BurgerMenu() {
           style={{
             position: 'fixed',
             top: '60px',
-            right: '450px',
+            right: isMobile ? '1rem' : '450px',
+            left: isMobile ? '1rem' : 'auto',
+            width: isMobile ? 'calc(100% - 2rem)' : 'auto',
+            maxWidth: '300px',
             backgroundColor: 'white',
             borderRadius: '8px',
             border: '1px solid #ccc',
@@ -110,6 +123,7 @@ export default function BurgerMenu() {
             boxShadow: '0 10px 25px rgba(0,0,0,0.1)',
             transform: 'scale(1)',
             animation: 'fadeIn 0.3s ease-out',
+            margin: isMobile ? '0 auto' : 'initial',
           }}
         >
           <style>
