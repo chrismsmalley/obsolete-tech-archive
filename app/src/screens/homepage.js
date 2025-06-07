@@ -128,6 +128,22 @@ function Homepage() {
         }
       }
 
+      @media (max-width: 768px) {
+        .homepage-hero h1 {
+          font-size: 1.75rem;
+          line-height: 1.2;
+          text-align: center;
+          word-break: break-word;
+        }
+        .typing-text {
+          white-space: normal;
+          border-right: none;
+          animation: none;
+          font-size: 2rem;
+          text-align: center;
+        }
+      }
+
       .techcard-container {
         display: flex;
         flex-direction: column;

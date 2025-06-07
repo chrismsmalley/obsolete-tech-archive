@@ -86,23 +86,25 @@ export default function Footer() {
         </div>
 
         {/* Bottom section */}
-        <div className="footer-bottom" style={{ backgroundColor: '#e8e8e8', display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '1rem 2rem', fontSize: 'clamp(0.75rem, 2vw, 0.875rem)' }}>
-          {/* Left: Social Icons */}
-          <div className="social-icons" style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
-            <a href="https://www.facebook.com/profile.php?id=61577156755851" target="_blank" rel="noopener noreferrer" className="social-icon"><FaFacebookF /></a>
-            <a href="https://x.com/ObsoleteTechArc" target="_blank" rel="noopener noreferrer" className="social-icon"><FaXTwitter /></a>
-            <a href="https://www.instagram.com/obsoletetecharchive/" target="_blank" rel="noopener noreferrer" className="social-icon"><FaInstagram /></a>
-          </div>
+        <div className="footer-bottom" style={{ backgroundColor: '#e8e8e8', display: 'flex', flexDirection: 'column', gap: '1rem', alignItems: 'center', justifyContent: 'center', padding: '1rem 2rem', fontSize: 'clamp(0.75rem, 2vw, 0.875rem)' }}>
+          <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', width: '100%', maxWidth: '1200px' }}>
+            {/* Left: Social Icons */}
+            <div className="social-icons" style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+              <a href="https://www.facebook.com/profile.php?id=61577156755851" target="_blank" rel="noopener noreferrer" className="social-icon"><FaFacebookF /></a>
+              <a href="https://x.com/ObsoleteTechArc" target="_blank" rel="noopener noreferrer" className="social-icon"><FaXTwitter /></a>
+              <a href="https://www.instagram.com/obsoletetecharchive/" target="_blank" rel="noopener noreferrer" className="social-icon"><FaInstagram /></a>
+            </div>
 
-          {/* Center: Links */}
-          <div style={{ display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
-            <a href="/privacy_policy" className="footer-link">Privacy Policy</a>
-            <span>|</span>
-            <Link href="/contact" className="footer-link">Contact</Link>
-          </div>
+            {/* Center: Links */}
+            <div style={{ display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
+              <a href="/privacy_policy" className="footer-link">Privacy Policy</a>
+              <span>|</span>
+              <Link href="/contact" className="footer-link">Contact</Link>
+            </div>
 
-          {/* Right: Copyright */}
-          <span className="footer-copy">&copy; Obsolete Tech. All rights reserved.</span>
+            {/* Right: Copyright */}
+            <span className="footer-copy">&copy; Obsolete Tech. All rights reserved.</span>
+          </div>
         </div>
       </footer>
     </div>

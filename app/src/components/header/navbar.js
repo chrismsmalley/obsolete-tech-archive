@@ -27,6 +27,7 @@ export default function Navbar() {
         alignItems: 'center',
         flexWrap: 'wrap',
         padding: '0 8px',
+        position: 'relative',
       }}>
         <Link
           href="/"
@@ -43,7 +44,15 @@ export default function Navbar() {
         >
           OT
         </Link>
-        <BurgerMenu />
+        <div style={{
+          position: 'absolute',
+          right: 0,
+          top: '50%',
+          transform: 'translateY(-50%)',
+          paddingRight: '8px'
+        }}>
+          <BurgerMenu />
+        </div>
       </div>
     </header>
   );
