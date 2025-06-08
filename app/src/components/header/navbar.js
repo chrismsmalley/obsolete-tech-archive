@@ -46,9 +46,9 @@ export default function Navbar() {
         </Link>
         <div style={{
           position: 'absolute',
-          right: '8px',
+          right: '16px',
           top: '50%',
-          transform: 'translateY(-50%)'
+          transform: 'translateY(-50%)',
         }}>
           <BurgerMenu />
         </div>

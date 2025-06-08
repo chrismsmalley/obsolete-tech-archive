@@ -33,13 +33,32 @@ export default function Footer() {
       <footer className="footer" style={{ backgroundColor: '#f2f2f2', width: '100vw', margin: 0, padding: 0 }}>
         {/* Top section */}
         <div className="footer-top" style={{ display: 'flex', justifyContent: 'center', padding: '1rem 0', backgroundColor: '#f2f2f2' }}>
-          <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '1rem', width: '100%' }}>
-            <p style={{ margin: 0, fontSize: 'clamp(0.8rem, 2.5vw, 1rem)', whiteSpace: 'nowrap' }}>
+          <div style={{
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
+            alignItems: 'center',
+            gap: '0.5rem',
+            width: '100%'
+          }}>
+            <p style={{
+              margin: 0,
+              fontSize: 'clamp(0.8rem, 2.5vw, 1rem)',
+              textAlign: 'center',
+              padding: '0 1rem'
+            }}>
               Got a dusty gadget or forgotten flop? Submit it to the archive!
             </p>
             <form
               method="POST"
-              style={{ display: 'flex', gap: '0.5rem', alignItems: 'center', flexWrap: 'wrap' }}
+              style={{
+                display: 'flex',
+                gap: '0.5rem',
+                alignItems: 'center',
+                flexWrap: 'wrap',
+                justifyContent: 'center',
+                width: '100%'
+              }}
               onSubmit={handleSubmit}
             >
               <input

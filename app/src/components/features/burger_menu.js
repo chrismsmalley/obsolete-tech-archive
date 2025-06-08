@@ -111,8 +111,8 @@ export default function BurgerMenu() {
           style={{
             position: 'fixed',
             top: '60px',
-            right: isMobile ? '1rem' : '450px',
-            left: isMobile ? '1rem' : 'auto',
+            left: isMobile ? '50%' : 'auto',
+            transform: isMobile ? 'translateX(-50%)' : 'none',
             width: isMobile ? 'calc(100% - 2rem)' : 'auto',
             maxWidth: '300px',
             backgroundColor: 'white',
@@ -121,9 +121,7 @@ export default function BurgerMenu() {
             padding: '1rem',
             zIndex: 10000,
             boxShadow: '0 10px 25px rgba(0,0,0,0.1)',
-            transform: 'scale(1)',
             animation: 'fadeIn 0.3s ease-out',
-            margin: isMobile ? '0 auto' : 'initial',
           }}
         >
           <style>
