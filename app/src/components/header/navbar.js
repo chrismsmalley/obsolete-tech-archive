@@ -44,12 +44,7 @@ export default function Navbar() {
         >
           OT
         </Link>
-        <div style={{
-          position: 'absolute',
-          right: '16px',
-          top: '50%',
-          transform: 'translateY(-50%)',
-        }}>
+        <div className="burger-wrapper">
           <BurgerMenu />
         </div>
       </div>

@@ -55,7 +55,7 @@ export default function Footer() {
                 display: 'flex',
                 gap: '0.5rem',
                 alignItems: 'center',
-                flexWrap: 'wrap',
+                flexWrap: typeof window !== 'undefined' && window.innerWidth < 768 ? 'wrap' : 'nowrap',
                 justifyContent: 'center',
                 width: '100%'
               }}
@@ -72,7 +72,7 @@ export default function Footer() {
                   border: '1px solid #ccc',
                   borderRadius: '4px',
                   minWidth: '0',
-                  width: 'min(90vw, 300px)',
+                  width: typeof window !== 'undefined' && window.innerWidth < 768 ? 'min(90vw, 300px)' : '300px',
                   maxWidth: '100%',
                   flexGrow: 1
                 }}
@@ -80,7 +80,7 @@ export default function Footer() {
               <button
                 type="submit"
                 style={{
-                  padding: '0.5rem 1rem',
+                  padding: typeof window !== 'undefined' && window.innerWidth < 768 ? '0.5rem 1rem' : '0.5rem 0.75rem',
                   border: 'none',
                   borderRadius: '4px',
                   backgroundColor: '#333',

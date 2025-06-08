@@ -28,3 +28,9 @@ a {
 .typing-text {
   font-family: "Courier New", Courier, monospace !important;
 }
+
+@media (max-width: 768px) {
+  .burger-wrapper {
+    margin-right: 1rem; /* Adjust this value to move the burger menu slightly left on mobile */
+  }
+}
