@@ -71,10 +71,11 @@ export default function Footer() {
                   padding: '0.5rem',
                   border: '1px solid #ccc',
                   borderRadius: '4px',
-                  minWidth: '0',
-                  width: typeof window !== 'undefined' && window.innerWidth < 768 ? 'min(90vw, 300px)' : '300px',
-                  maxWidth: '100%',
-                  flexGrow: 1
+                  width: 'auto',
+                  minWidth: '140px',
+                  maxWidth: '90vw',
+                  flexShrink: 1,
+                  flexGrow: 0,
                 }}
               />
               <button
