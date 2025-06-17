@@ -37,7 +37,7 @@ export default function NewsletterPage() {
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
-      <main style={{ flexGrow: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', padding: '2rem 1rem', backgroundColor: '#fefdf6' }}>
+      <main style={{ flexGrow: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', padding: '2rem 1rem', backgroundColor: '#f7f3eb' }}>
         <h1 style={{ fontSize: '2rem', marginBottom: '1rem' }}>Subscribe to Our Newsletter</h1>
         <p style={{ marginBottom: '1.5rem' }}>
           Stay up to date with the latest entries from the Obsolete Tech Archive. Sign up for occasional updates, features, and more.
@@ -86,9 +86,8 @@ export default function NewsletterPage() {
         padding: '1rem',
         fontSize: '0.9rem',
         color: '#888',
-        backgroundColor: '#fefdf6'
+        backgroundColor: '#f7f3eb'
       }}>
-        &copy; {new Date().getFullYear()} Obsolete Tech Archive
       </footer>
     </div>
   );

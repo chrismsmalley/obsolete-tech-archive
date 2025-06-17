@@ -45,7 +45,7 @@ export default function SubmitArtifact() {
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
-      <main style={{ flexGrow: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', padding: '2rem 1rem', backgroundColor: '#fefdf6' }}>
+      <main style={{ flexGrow: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', padding: '2rem 1rem', backgroundColor: '#f7f3eb' }}>
         {submitted ? (
           <div style={{ padding: '2rem', textAlign: 'center', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', minHeight: '80vh' }}>
             <h1>Thank You!</h1>
@@ -152,7 +152,7 @@ export default function SubmitArtifact() {
         padding: '1rem',
         fontSize: '0.9rem',
         color: '#888',
-        backgroundColor: '#fefdf6'
+        backgroundColor: '#f7f3eb'
       }}>
       </footer>
     </div>

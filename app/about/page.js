@@ -15,7 +15,7 @@ export default function AboutPage() {
         justifyContent: 'center',
         alignItems: 'center',
         padding: '2rem 1rem',
-        backgroundColor: '#fefdf6',
+        backgroundColor: '#f7f3eb',
         fontFamily: 'sans-serif'
       }}>
         <div style={{ maxWidth: '800px', textAlign: 'center' }}>
@@ -35,7 +35,8 @@ export default function AboutPage() {
         textAlign: 'center',
         padding: '1rem',
         fontSize: '0.9rem',
-        color: '#888'
+        color: '#888',
+        backgroundColor: '#f7f3eb'
       }}>
       </footer>
     </div>
