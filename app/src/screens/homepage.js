@@ -187,7 +187,7 @@ function Homepage() {
             padding: "0 1rem"
           }}
         >
-          Unearth forgotten gadgets, doomed devices, and digital flops that once had their moment—then faded into tech obscurity.
+          Obsolete Tech Archive is a digital museum dedicated to preserving the quirky, forgotten, and fascinating gadgets that once captured our imaginations. From short-lived handhelds to early gaming consoles, outdated media formats, and strange tech experiments, we showcase the innovation, ambition, and sometimes misfires of technology&apos;s past. Each artifact tells a story — of what was, what could have been, and how technology continuously evolves. Whether you&apos;re a nostalgic collector or a curious explorer, Obsolete Tech Archive offers a growing collection of devices that defined, and then quietly exited, the tech stage.
         </p>
       </section>
       )}
