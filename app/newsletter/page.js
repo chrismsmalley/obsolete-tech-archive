@@ -36,48 +36,60 @@ export default function NewsletterPage() {
   };
 
   return (
-    <div style={{ padding: '2rem', maxWidth: '600px', margin: '0 auto', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', minHeight: '80vh', textAlign: 'center' }}>
-      <h1 style={{ fontSize: '2rem', marginBottom: '1rem' }}>Subscribe to Our Newsletter</h1>
-      <p style={{ marginBottom: '1.5rem' }}>
-        Stay up to date with the latest entries from the Obsolete Tech Archive. Sign up for occasional updates, features, and more.
-      </p>
-      {submitted ? (
-        <p style={{ color: 'green' }}>Thanks! You&apos;ve been subscribed.</p>
-      ) : (
-        <form onSubmit={handleSubmit}>
-          <input
-            type="email"
-            name="email"
-            placeholder="Enter your email"
-            required
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            style={{
-              padding: '0.5rem',
-              width: '100%',
-              maxWidth: '400px',
-              marginBottom: '1rem',
-              border: '1px solid #ccc',
-              borderRadius: '4px'
-            }}
-          />
-          <br />
-          <button
-            type="submit"
-            style={{
-              padding: '0.5rem 1rem',
-              backgroundColor: '#000',
-              color: '#fff',
-              border: 'none',
-              borderRadius: '4px',
-              cursor: 'pointer'
-            }}
-          >
-            Subscribe
-          </button>
-        </form>
-      )}
-      {error && <p style={{ color: 'red' }}>{error}</p>}
+    <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+      <main style={{ flexGrow: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', padding: '2rem', backgroundColor: '#fefdf6' }}>
+        <h1 style={{ fontSize: '2rem', marginBottom: '1rem' }}>Subscribe to Our Newsletter</h1>
+        <p style={{ marginBottom: '1.5rem' }}>
+          Stay up to date with the latest entries from the Obsolete Tech Archive. Sign up for occasional updates, features, and more.
+        </p>
+        {submitted ? (
+          <p style={{ color: 'green' }}>Thanks! You&apos;ve been subscribed.</p>
+        ) : (
+          <form onSubmit={handleSubmit} style={{ textAlign: 'center' }}>
+            <input
+              type="email"
+              name="email"
+              placeholder="Enter your email"
+              required
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              style={{
+                padding: '0.5rem',
+                width: '100%',
+                maxWidth: '400px',
+                marginBottom: '1rem',
+                border: '1px solid #ccc',
+                borderRadius: '4px',
+                fontFamily: 'inherit'
+              }}
+            />
+            <br />
+            <button
+              type="submit"
+              style={{
+                padding: '0.5rem 1rem',
+                backgroundColor: '#000',
+                color: '#fff',
+                border: 'none',
+                borderRadius: '4px',
+                cursor: 'pointer'
+              }}
+            >
+              Subscribe
+            </button>
+          </form>
+        )}
+        {error && <p style={{ color: 'red' }}>{error}</p>}
+      </main>
+      <footer style={{
+        textAlign: 'center',
+        padding: '1rem',
+        fontSize: '0.9rem',
+        color: '#888',
+        backgroundColor: '#fefdf6'
+      }}>
+        &copy; {new Date().getFullYear()} Obsolete Tech Archive
+      </footer>
     </div>
   );
 }
