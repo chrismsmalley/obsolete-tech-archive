@@ -124,7 +124,7 @@ export default function Footer() {
               </div>
 
               {/* Right: Copyright */}
-              <span className="footer-copy" style={{ textAlign: 'center', display: 'block' }}>&copy; Obsolete Tech. All rights reserved.</span>
+              <span className="footer-copy" style={{ textAlign: 'center', display: 'block' }}>&copy;{new Date().getFullYear()} Obsolete Tech Archive. All rights reserved.</span>
             </div>
           </div>
         </div>
