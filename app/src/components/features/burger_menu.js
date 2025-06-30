@@ -798,6 +798,117 @@ export default function BurgerMenu() {
                     color: 'black',
                   }}
                 >
+                  <Link
+                    role="menuitem"
+                    href="/privacy_policy"
+                    style={{
+                      textDecoration: 'none',
+                      color: 'black',
+                      fontFamily: '"Courier New", Courier, monospace',
+                      fontSize: '0.9rem',
+                      letterSpacing: '0.5px',
+                      textTransform: 'uppercase',
+                      padding: '0.25rem 0.5rem',
+                      display: 'inline-block',
+                      transition: 'color 0.2s ease, transform 0.2s ease',
+                    }}
+                    onClick={() => setIsOpen(false)}
+                    onMouseEnter={e => {
+                      e.currentTarget.style.color = '#2f4f4f';
+                      e.currentTarget.style.transform = 'translateX(5px)';
+                    }}
+                    onMouseLeave={e => {
+                      e.currentTarget.style.color = 'black';
+                      e.currentTarget.style.transform = 'translateX(0)';
+                    }}
+                  >
+                    Privacy Policy
+                  </Link>
+                </li>
+                <li
+                  style={{
+                    fontFamily: '"Courier New", Courier, monospace',
+                    fontWeight: 'normal',
+                    fontSize: '0.9rem',
+                    letterSpacing: '0.5px',
+                    textTransform: 'uppercase',
+                    color: 'black',
+                  }}
+                >
+                  <Link
+                    role="menuitem"
+                    href="/contact"
+                    style={{
+                      textDecoration: 'none',
+                      color: 'black',
+                      fontFamily: '"Courier New", Courier, monospace',
+                      fontSize: '0.9rem',
+                      letterSpacing: '0.5px',
+                      textTransform: 'uppercase',
+                      padding: '0.25rem 0.5rem',
+                      display: 'inline-block',
+                      transition: 'color 0.2s ease, transform 0.2s ease',
+                    }}
+                    onClick={() => setIsOpen(false)}
+                    onMouseEnter={e => {
+                      e.currentTarget.style.color = '#2f4f4f';
+                      e.currentTarget.style.transform = 'translateX(5px)';
+                    }}
+                    onMouseLeave={e => {
+                      e.currentTarget.style.color = 'black';
+                      e.currentTarget.style.transform = 'translateX(0)';
+                    }}
+                  >
+                    Contact
+                  </Link>
+                </li>
+                <li
+                  style={{
+                    fontFamily: '"Courier New", Courier, monospace',
+                    fontWeight: 'normal',
+                    fontSize: '0.9rem',
+                    letterSpacing: '0.5px',
+                    textTransform: 'uppercase',
+                    color: 'black',
+                  }}
+                >
+                                    <Link
+                    role="menuitem"
+                    href="/cookie"
+                    style={{
+                      textDecoration: 'none',
+                      color: 'black',
+                      fontFamily: '"Courier New", Courier, monospace',
+                      fontSize: '0.9rem',
+                      letterSpacing: '0.5px',
+                      textTransform: 'uppercase',
+                      padding: '0.25rem 0.5rem',
+                      display: 'inline-block',
+                      transition: 'color 0.2s ease, transform 0.2s ease',
+                    }}
+                    onClick={() => setIsOpen(false)}
+                    onMouseEnter={e => {
+                      e.currentTarget.style.color = '#2f4f4f';
+                      e.currentTarget.style.transform = 'translateX(5px)';
+                    }}
+                    onMouseLeave={e => {
+                      e.currentTarget.style.color = 'black';
+                      e.currentTarget.style.transform = 'translateX(0)';
+                    }}
+                  >
+                    Cookie Policy
+                  </Link>
+                </li>
+                <li
+                  style={{
+                    fontFamily: '"Courier New", Courier, monospace',
+                    fontWeight: 'normal',
+                    fontSize: '0.9rem',
+                    letterSpacing: '0.5px',
+                    textTransform: 'uppercase',
+                    color: 'black',
+                  }}
+                >
                   <a
                     role="menuitem"
                     href="https://coff.ee/obsoletetecharchive"

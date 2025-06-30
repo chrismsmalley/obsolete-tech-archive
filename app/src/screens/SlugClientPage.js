@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import Link from "next/link";
 import { techEntries } from "@/app/src/data/techEntries";
 
 export default function SlugClientPage({ slug }) {
@@ -21,6 +22,24 @@ export default function SlugClientPage({ slug }) {
             padding: "2rem",
           }}
         >
+          <Link
+            href="/"
+            style={{
+              display: 'inline-block',
+              marginBottom: '1rem',
+              backgroundColor: 'transparent',
+              color: '#888',
+              border: 'none',
+              fontSize: '0.9rem',
+              fontWeight: 500,
+              letterSpacing: '0.05rem',
+              textTransform: 'uppercase',
+              cursor: 'pointer',
+              textDecoration: 'none',
+            }}
+          >
+            ← Back
+          </Link>
           <h1 style={{ fontSize: "2rem", marginBottom: "1.5rem", fontWeight: "600", borderBottom: "1px solid #e0e0e0", paddingBottom: "0.5rem" }}>
             {tech.title}
           </h1>

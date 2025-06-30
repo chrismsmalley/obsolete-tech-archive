@@ -16,7 +16,16 @@ export default function PrivacyPolicy() {
 
       <h2>Cookies? Only the Edible Kind</h2>
       <p>
-        Our website might use cookies, but not the warm, gooey kind your grandma makes. These are boring digital ones, used to help the site function and maybe tell us how many people still remember MiniDiscs.
+        Our website might use cookies—not the warm, gooey kind your grandma makes, but the digital ones that help the site run properly and tell us how many people still remember MiniDiscs.
+      </p>
+      <p>
+        Third-party services (like Google) may also use cookies, web beacons, or similar technologies to serve ads and collect analytics on our site. These help us understand visitor behavior and serve relevant content.
+      </p>
+      <p>
+        By using this site, you agree to the use of these cookies. You can learn more about how Google uses data when you visit our site here:{" "}
+        <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener noreferrer">
+          https://policies.google.com/technologies/partner-sites
+        </a>.
       </p>
 
       <h2>Sharing Your Info</h2>
