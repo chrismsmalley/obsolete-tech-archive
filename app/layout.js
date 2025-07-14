@@ -52,9 +52,21 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={inter.className}>
       <head>
-        {/* Google AdSense Verification */}
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2068398627088024"
-     crossorigin="anonymous"></script>
+        {/* Ezoic Header Scripts */}
+        {/* eslint-disable-next-line @next/next/no-sync-scripts */}
+        <script src="https://cmp.gatekeeperconsent.com/min.js" data-cfasync="false"></script>
+        {/* eslint-disable-next-line @next/next/no-sync-scripts */}
+        <script src="https://the.gatekeeperconsent.com/cmp.min.js" data-cfasync="false"></script>
+        <script async src="//www.ezojs.com/ezoic/sa.min.js"></script>
+        <script
+          defer
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.ezstandalone = window.ezstandalone || {};
+              ezstandalone.cmd = ezstandalone.cmd || [];
+            `,
+          }}
+        />
       </head>
       <body>
         <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
