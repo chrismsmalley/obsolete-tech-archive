@@ -74,6 +74,19 @@ export default function RootLayout({ children }) {
           <main>{children}</main>
           <Footer />
           <CookieBanner />
+          {/* Ezoic - bottom_of_page - bottom_of_page */}
+          <div id="ezoic-pub-ad-placeholder-103"></div>
+          {/* End Ezoic - bottom_of_page - bottom_of_page */}
+          <script
+            defer
+            dangerouslySetInnerHTML={{
+              __html: `
+                ezstandalone.cmd.push(function () {
+                  ezstandalone.showAds(103);
+                });
+              `,
+            }}
+          />
         </div>
       </body>
     </html>

@@ -196,18 +196,36 @@ function Homepage() {
           const slug = (entry.title || "").toLowerCase().replace(/\s+/g, "-").replace(/[^a-z0-9-]/g, "");
           console.log("Entry title:", entry.title, "Image filename:", entry.image);
           return (
-            <Link
-              key={index}
-              href={`/tech/${slug}`}
-              style={{ textDecoration: "none", color: "inherit", width: "100%" }}
-            >
-              <TechCard
-                title={entry.title || "No title"}
-                description={entry.shortDescription ?? ""}
-                image={(entry.image || "/images/placeholder.png").replace(/^\/images\/+/, "/images/")}
-                layout="horizontal"
-              />
-            </Link>
+            <React.Fragment key={index}>
+              <Link
+                href={`/tech/${slug}`}
+                style={{ textDecoration: "none", color: "inherit", width: "100%" }}
+              >
+                <TechCard
+                  title={entry.title || "No title"}
+                  description={entry.shortDescription ?? ""}
+                  image={(entry.image || "/images/placeholder.png").replace(/^\/images\/+/, "/images/")}
+                  layout="horizontal"
+                />
+              </Link>
+              {index === 0 && (
+                <>
+                  {/* Ezoic - under_first_paragraph - under_first_paragraph */}
+                  <div id="ezoic-pub-ad-placeholder-109" style={{ width: "100%" }}></div>
+                  {/* End Ezoic - under_first_paragraph - under_first_paragraph */}
+                  <script
+                    defer
+                    dangerouslySetInnerHTML={{
+                      __html: `
+                        ezstandalone.cmd.push(function () {
+                          ezstandalone.showAds(109);
+                        });
+                      `,
+                    }}
+                  />
+                </>
+              )}
+            </React.Fragment>
           );
         })}
       </div>
