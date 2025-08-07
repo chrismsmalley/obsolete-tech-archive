@@ -259,7 +259,7 @@ const techEntries = [
 {
   title: "TV Guide Channel",
   slug: "tv-guide-channel",
-  image: "/images/tv_guide_channel.png",
+  image: "images/placeholder_coming_soon.png",
   shortDescription: "You waited 10 minutes just to find out what was on at 8pm.",
   longDescription:
     "The TV Guide Channel was slow, unskippable, and strangely mesmerizing. You’d turn it on to check what's playing... and end up watching it scroll for 15 minutes.\n\nPart cable info, part background noise, it was a relic of pre-DVR patience. By the time you saw your show listed, it had already started. And yes, the ads on the top half were always weird.",
@@ -268,7 +268,7 @@ const techEntries = [
 {
   title: "FireWire",
   slug: "firewire",
-  image: "/images/firewire.png",
+  image: "images/placeholder_coming_soon.png",
   shortDescription: "Apple’s fast little port that almost made it.",
   longDescription:
     "FireWire was supposed to be the future of fast data transfer. It zipped video from camcorders and audio from interfaces with speed USB couldn’t touch — at least at first.\n\nApple loved it. Video editors loved it. But USB 2.0 got cheaper and more widespread, and FireWire faded into niche use. A cool port with a cooler name that just couldn’t win the popularity contest.",
@@ -277,7 +277,7 @@ const techEntries = [
 {
   title: "TiVo",
   slug: "tivo",
-  image: "/images/tivo.png",
+  image: "images/placeholder_coming_soon.png",
   shortDescription: "The DVR that taught us how to pause live TV — and skip commercials like rebels.",
   longDescription:
     "TiVo felt like magic. You’d pause live TV to grab a snack, rewind to catch that joke again, or fast-forward through ads like some kind of remote-wielding wizard.\n\nLaunched in 1999, TiVo was the original digital video recorder (DVR) that made watching TV feel like time travel. It let you binge before bingeing was a thing and became a verb in the process. Eventually, cable companies copied the idea, and streaming buried it. But for a while, TiVo was peak couch power.",
@@ -286,7 +286,7 @@ const techEntries = [
 {
   title: "MySpace",
   slug: "myspace",
-  image: "/images/myspace.png",
+  image: "images/placeholder_coming_soon.png",
   shortDescription: "The original social network — complete with glitter, chaos, and your Top 8.",
   longDescription:
     "MySpace was where HTML met hormones. You’d spend hours tweaking your profile song, ranking your friends, and throwing virtual glitter all over your page.\n\nLaunched in 2003, MySpace gave everyone a crash course in personal branding and passive-aggressive friend management. Tom was everyone’s first friend — and honestly, the most loyal. It was messy, loud, and kind of perfect before Facebook showed up with its clean lines and real names.",
@@ -295,7 +295,7 @@ const techEntries = [
 {
   title: "iPod Classic",
   slug: "ipod-classic",
-  image: "/images/ipod_classic.png",
+  image: "images/placeholder_coming_soon.png",
   shortDescription: "1,000 songs in your pocket — and a scroll wheel that felt *just right*.",
   longDescription:
     "The iPod Classic was the digital mixtape king. That satisfying click wheel, the grayscale screen, and the ability to carry your entire music library in your jeans — it changed everything.\n\nReleased in 2001, the iPod wasn’t the first MP3 player, but it was the one that got it right. It turned Apple into a lifestyle and gave us those iconic silhouette ads. Eventually, it was replaced by phones, but nothing ever scrolled quite like it.",
@@ -304,7 +304,7 @@ const techEntries = [
 {
   title: "Google Glass",
   slug: "google-glass",
-  image: "/images/google_glass.png",
+  image: "images/placeholder_coming_soon.png",
   shortDescription: "The future was on your face. Unfortunately, so were the looks you got.",
   longDescription:
     "Google Glass was part gadget, part social experiment. You wore it on your face, took photos with a wink, and learned very quickly that not everyone loved being around a cyborg.\n\nReleased in 2013 as an early AR headset, Glass had promise — notifications, directions, camera — but also privacy concerns and a sky-high price tag. It didn’t go mainstream, but it walked so future wearables could learn how *not* to make people uncomfortable.",
@@ -313,7 +313,7 @@ const techEntries = [
 {
   title: "Ask Jeeves",
   slug: "ask-jeeves",
-  image: "/images/ask_jeeves.png",
+  image: "images/placeholder_coming_soon.png",
   shortDescription: "Before Google, we asked a butler. He tried his best.",
   longDescription:
     "Ask Jeeves was your polite internet butler. You typed out full questions like, 'What’s the weather like in Paris?' and he’d fetch answers with a digital bow.\n\nLaunched in 1996, it stood out in the early search engine crowd by encouraging natural language. But as algorithms improved, Jeeves got out-Googled and eventually disappeared from the homepage — probably to enjoy early retirement in a virtual mansion.",
@@ -322,7 +322,7 @@ const techEntries = [
 {
   title: "VHS Rewinder",
   slug: "vhs-rewinder",
-  image: "/images/vhs_rewinder.png",
+  image: "images/placeholder_coming_soon.png",
   shortDescription: "Because rewinding in the VCR was just too slow. Be kind, rewind — fast.",
   longDescription:
     "Before Netflix, there was Blockbuster. And before returning your tape, you had to rewind it — or risk the wrath of late fees and passive-aggressive stickers.\n\nEnter the VHS rewinder: a separate little machine that did one job and did it fast. Some looked like racecars. Some made weird noises. All of them saved your VCR’s motor from an early death. A truly niche appliance with a very specific kind of glory.",
@@ -331,7 +331,7 @@ const techEntries = [
 {
   title: "Windows XP",
   slug: "windows-xp",
-  image: "/images/windows_xp.png",
+  image: "images/placeholder_coming_soon.png",
   shortDescription: "The rolling green hills. The startup chime. The last time Windows felt cozy.",
   longDescription:
     "Windows XP was like your favorite hoodie — comfy, reliable, and somehow still running on that one computer in the basement.\n\nLaunched in 2001, it combined usability with the kind of visual flair that made people feel like computers weren’t just for work anymore. It stuck around for over a decade, resisting upgrades like a stubborn grandparent. And let’s be honest — that startup sound still lives rent-free in your brain.",
@@ -340,7 +340,7 @@ const techEntries = [
 {
   title: "MapQuest Printouts",
   slug: "mapquest-printouts",
-  image: "/images/mapquest.png",
+  image: "images/placeholder_coming_soon.png",
   shortDescription: "Turn left in 0.3 miles… if you can read your crumpled paper in time.",
   longDescription:
     "Before GPS talked to you, you talked to your passenger — usually while holding a printout from MapQuest, squinting at 10-point font.\n\nLaunched in 1996, MapQuest was the OG online navigation tool. You’d plan a route, print the turn-by-turns, and hope your ink didn’t run out. A wrong turn meant guessing, backtracking, and maybe stopping to ask for directions (gasp). RIP, glovebox printers.",
@@ -349,7 +349,7 @@ const techEntries = [
 {
   title: "Nintendo Power Glove",
   slug: "nintendo-power-glove",
-  image: "/images/power_glove.png",
+  image: "images/placeholder_coming_soon.png",
   shortDescription: "It looked cooler than it worked — and that was enough.",
   longDescription:
     "The Power Glove was 80s tech optimism in wearable form. You wore it, waved it, and hoped Mario would listen. He usually didn’t.\n\nReleased in 1989, it promised motion control gaming long before the Wii. It was clunky, awkward, and barely functional — but it looked so rad doing it. Immortalized in *The Wizard*, it remains a glorious example of style over substance.",
@@ -358,7 +358,7 @@ const techEntries = [
 {
   title: "CD Wallet",
   slug: "cd-wallet",
-  image: "/images/cd_wallet.png",
+  image: "images/placeholder_coming_soon.png",
   shortDescription: "A binder full of bangers — and at least one scratched copy of Linkin Park.",
   longDescription:
     "The CD wallet was your mobile music library, your personality, and a backseat heat trap for plastic discs. Flipping through it on a road trip? Peak 2000s energy.\n\nAvailable in every size from ‘fits in your backpack’ to ‘basically luggage,’ it held burned mix CDs, that one weird trance album, and a few you definitely didn’t buy legally. It jingled. It zipped. It was the original Spotify playlist, but louder.",
@@ -367,7 +367,7 @@ const techEntries = [
 {
   title: "Bluetooth Earpiece",
   slug: "bluetooth-earpiece",
-  image: "/images/bluetooth_earpiece.png",
+  image: "images/placeholder_coming_soon.png",
   shortDescription: "Business in your ear, party on the other line.",
   longDescription:
     "The Bluetooth earpiece was the ultimate hands-free flex. If you walked around talking to the air in 2006, odds are you were closing a deal — or pretending to.\n\nWorn mostly by sales reps, early adopters, and your one uncle who really leaned into tech trends, these little head-huggers freed up your hands and made you feel important. Siri may live in our phones now, but these paved the way for talking to our tech.",
@@ -376,7 +376,7 @@ const techEntries = [
 {
   title: "Punch Cards",
   slug: "punch-cards",
-  image: "/images/punch_cards.png",
+  image: "images/placeholder_coming_soon.png",
   shortDescription: "Before keyboards, you programmed with holes. Very, very slowly.",
   longDescription:
     "Punch cards were the OG programming method — stacks of cardboard with carefully placed holes that told the computer what to do. One typo? Start over.\n\nThey date back to the 1800s but became computing staples through the 60s and 70s. Used in early IBM machines, punch cards were fragile, confusing, and deeply satisfying to stack. They're basically ancient floppy disks, but less convenient.",
@@ -385,7 +385,7 @@ const techEntries = [
 {
   title: "RealPlayer",
   slug: "realplayer",
-  image: "/images/realplayer.png",
+  image: "images/placeholder_coming_soon.png",
   shortDescription: "The video player that buffered like its life depended on it.",
   longDescription:
     "RealPlayer was one of the first ways to stream media online — and one of the first reasons you learned what 'buffering' meant.\n\nReleased in 1995, it let you play video and audio in proprietary formats. It also installed toolbars you didn’t want and played video in a window the size of a postage stamp. But hey — it worked (sometimes), and that made it revolutionary.",
@@ -394,7 +394,7 @@ const techEntries = [
 {
   title: "Physical Media Rentals",
   slug: "physical-media-rentals",
-  image: "/images/media_rentals.png",
+  image: "images/placeholder_coming_soon.png",
   shortDescription: "Friday night wasn’t complete without a trip to the video store.",
   longDescription:
     "Blockbuster. Hollywood Video. Family-owned joints with carpets that smelled like popcorn and ambition. Physical media rentals were a whole vibe.\n\nYou’d wander the aisles, judge covers, fight for the last copy of *The Matrix*, and maybe grab a Butterfinger at checkout. The late fees were real. The memories? Even more so.",
@@ -403,7 +403,7 @@ const techEntries = [
 {
   title: "The Under Construction GIF",
   slug: "under-construction-gif",
-  image: "/images/under_construction.png",
+  image: "images/placeholder_coming_soon.png",
   shortDescription: "If your webpage didn’t have this, was it even a webpage?",
   longDescription:
     "Ah yes, the blinking jackhammer guy. A staple of Geocities, Angelfire, and every page that dreamed of being something… someday.\n\nThe ‘Under Construction’ GIF was the neon sticky note of the early web. No updates? No problem. Toss in a GIF and let the world know greatness was coming. Eventually.",
@@ -412,7 +412,7 @@ const techEntries = [
 {
   title: "Trackball Mouse",
   slug: "trackball-mouse",
-  image: "/images/trackball_mouse.png",
+  image: "images/placeholder_coming_soon.png",
   shortDescription: "Spin the ball, steer your destiny. Or at least your cursor.",
   longDescription:
     "The trackball mouse was part controller, part conversation piece. Instead of dragging a mouse, you spun the ball like a tiny arcade game.\n\nPopular with graphic designers and office rebels, it offered precision — and occasional wrist confusion. It still has fans today, but most folks moved on to scroll wheels and touchpads. RIP, thumb calluses.",
@@ -421,7 +421,7 @@ const techEntries = [
 {
   title: "Internet Explorer 6",
   slug: "internet-explorer-6",
-  image: "/images/ie6.png",
+  image: "images/placeholder_coming_soon.png",
   shortDescription: "The browser you loved to hate — but only because you had to use it.",
   longDescription:
     "IE6 was the browser that came with your PC, whether you wanted it or not. It was slow, insecure, and incompatible with half the web — but it was *there*.\n\nReleased in 2001, IE6 stuck around for way too long thanks to corporate IT inertia and lack of competition. It gave developers nightmares and security teams headaches. If you ever had to write a CSS hack just for IE6, you deserve a medal.",
@@ -430,7 +430,7 @@ const techEntries = [
 {
   title: "Digital Picture Frame",
   slug: "digital-picture-frame",
-  image: "/images/digital_frame.png",
+  image: "images/placeholder_coming_soon.png",
   shortDescription: "Because grandma needed a slideshow… but techier.",
   longDescription:
     "Digital picture frames were supposed to modernize your mantle. Load in a memory card, and boom — a never-ending slideshow of slightly oversharpened photos.\n\nThey felt futuristic in the 2000s but often had clunky interfaces and screens that washed out in sunlight. Still, they were a staple gift for birthdays, holidays, and grandparents with too many grandkids to frame.",
@@ -439,7 +439,7 @@ const techEntries = [
 {
   title: "MiniDisc",
   slug: "minidisc",
-  image: "/images/minidisc.png",
+  image: "images/placeholder_coming_soon.png",
   shortDescription: "The forgotten middle child between CDs and MP3s.",
   longDescription:
     "MiniDiscs were compact, rewritable, and durable — a perfect bridge between analog and digital music. But somehow, they just never caught on.\n\nReleased by Sony in 1992, MiniDiscs had all the makings of a hit. But with CDs dominating and MP3s on the rise, it got lost in the shuffle. Audiophiles still praise it, but the rest of us barely knew it existed.",
@@ -448,7 +448,7 @@ const techEntries = [
 {
   title: "Flash Website Intros",
   slug: "flash-intros",
-  image: "/images/flash_intro.png",
+  image: "images/placeholder_coming_soon.png",
   shortDescription: "Skip Intro? Please. This was the *main event* in 2003.",
   longDescription:
     "Flash intros were the overdramatic red carpet of early websites. Animated logos, swooshing text, epic soundtracks — and a loading bar that took forever.\n\nThey were flashy (literally), unnecessary, and extremely cool at the time. But they died with the fall of Flash, taking autoplay audio and unnecessary wait times with them. A beautiful, bloated chapter in web history.",
