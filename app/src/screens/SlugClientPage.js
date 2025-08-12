@@ -23,7 +23,15 @@ export default function SlugClientPage({ slug }) {
           }}
         >
           <button
-            onClick={() => window.history.back()}
+            onClick={() => {
+              const savedPage = sessionStorage.getItem("currentPage");
+              const savedScroll = sessionStorage.getItem("scrollY");
+              if (savedPage) {
+                window.location.href = `/?page=${savedPage}#scroll-${savedScroll}`;
+              } else {
+                window.history.back();
+              }
+            }}
             style={{
               display: 'inline-block',
               marginBottom: '1rem',
