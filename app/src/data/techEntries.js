@@ -259,7 +259,7 @@ const techEntries = [
 {
   title: "TV Guide Channel",
   slug: "tv-guide-channel",
-  image: "/images/vivo-removebg-preview.png",
+  image: "/images/tv guide channel.jpeg",
   shortDescription: "You waited 10 minutes just to find out what was on at 8pm.",
   longDescription:
     "The TV Guide Channel was slow, unskippable, and strangely mesmerizing. You’d turn it on to check what's playing... and end up watching it scroll for 15 minutes.\n\nPart cable info, part background noise, it was a relic of pre-DVR patience. By the time you saw your show listed, it had already started. And yes, the ads on the top half were always weird.",
@@ -277,7 +277,7 @@ const techEntries = [
 {
   title: "TiVo",
   slug: "tivo",
-  image: "/images/vivo.png",
+  image: "/images/vivo-removebg-preview.png",
   shortDescription: "The DVR that taught us how to pause live TV — and skip commercials like rebels.",
   longDescription:
     "TiVo felt like magic. You’d pause live TV to grab a snack, rewind to catch that joke again, or fast-forward through ads like some kind of remote-wielding wizard.\n\nLaunched in 1999, TiVo was the original digital video recorder (DVR) that made watching TV feel like time travel. It let you binge before bingeing was a thing and became a verb in the process. Eventually, cable companies copied the idea, and streaming buried it. But for a while, TiVo was peak couch power.",

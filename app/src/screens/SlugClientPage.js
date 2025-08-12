@@ -22,8 +22,8 @@ export default function SlugClientPage({ slug }) {
             padding: "2rem",
           }}
         >
-          <Link
-            href="/"
+          <button
+            onClick={() => window.history.back()}
             style={{
               display: 'inline-block',
               marginBottom: '1rem',
@@ -39,7 +39,7 @@ export default function SlugClientPage({ slug }) {
             }}
           >
             ← Back
-          </Link>
+          </button>
           <h1 style={{ fontSize: "2rem", marginBottom: "1.5rem", fontWeight: "600", borderBottom: "1px solid #e0e0e0", paddingBottom: "0.5rem" }}>
             {tech.title}
           </h1>
