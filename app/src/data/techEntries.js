@@ -259,7 +259,7 @@ const techEntries = [
 {
   title: "TV Guide Channel",
   slug: "tv-guide-channel",
-  image: "/images/tv guide channel.png",
+  image: "/images/vivo-removebg-preview.png",
   shortDescription: "You waited 10 minutes just to find out what was on at 8pm.",
   longDescription:
     "The TV Guide Channel was slow, unskippable, and strangely mesmerizing. You’d turn it on to check what's playing... and end up watching it scroll for 15 minutes.\n\nPart cable info, part background noise, it was a relic of pre-DVR patience. By the time you saw your show listed, it had already started. And yes, the ads on the top half were always weird.",
@@ -286,7 +286,7 @@ const techEntries = [
 {
   title: "MySpace",
   slug: "myspace",
-  image: "/images/myspace.png",
+  image: "/images/myspace.jpeg",
   shortDescription: "The original social network — complete with glitter, chaos, and your Top 8.",
   longDescription:
     "MySpace was where HTML met hormones. You’d spend hours tweaking your profile song, ranking your friends, and throwing virtual glitter all over your page.\n\nLaunched in 2003, MySpace gave everyone a crash course in personal branding and passive-aggressive friend management. Tom was everyone’s first friend — and honestly, the most loyal. It was messy, loud, and kind of perfect before Facebook showed up with its clean lines and real names.",
@@ -331,7 +331,7 @@ const techEntries = [
 {
   title: "Windows XP",
   slug: "windows-xp",
-  image: "/images/windows xp.png",
+  image: "/images/windows xp.jpeg",
   shortDescription: "The rolling green hills. The startup chime. The last time Windows felt cozy.",
   longDescription:
     "Windows XP was like your favorite hoodie — comfy, reliable, and somehow still running on that one computer in the basement.\n\nLaunched in 2001, it combined usability with the kind of visual flair that made people feel like computers weren’t just for work anymore. It stuck around for over a decade, resisting upgrades like a stubborn grandparent. And let’s be honest — that startup sound still lives rent-free in your brain.",
@@ -349,7 +349,7 @@ const techEntries = [
 {
   title: "Nintendo Power Glove",
   slug: "nintendo-power-glove",
-  image: "/images/power_glove-removebg.png",
+  image: "/images/power_glove-removebg-preview.png",
   shortDescription: "It looked cooler than it worked — and that was enough.",
   longDescription:
     "The Power Glove was 80s tech optimism in wearable form. You wore it, waved it, and hoped Mario would listen. He usually didn’t.\n\nReleased in 1989, it promised motion control gaming long before the Wii. It was clunky, awkward, and barely functional — but it looked so rad doing it. Immortalized in *The Wizard*, it remains a glorious example of style over substance.",
@@ -358,7 +358,7 @@ const techEntries = [
 {
   title: "CD Wallet",
   slug: "cd-wallet",
-  image: "/images/cd_wallet-removebg.png",
+  image: "/images/cd_wallet-removebg-preview.png",
   shortDescription: "A binder full of bangers — and at least one scratched copy of Linkin Park.",
   longDescription:
     "The CD wallet was your mobile music library, your personality, and a backseat heat trap for plastic discs. Flipping through it on a road trip? Peak 2000s energy.\n\nAvailable in every size from ‘fits in your backpack’ to ‘basically luggage,’ it held burned mix CDs, that one weird trance album, and a few you definitely didn’t buy legally. It jingled. It zipped. It was the original Spotify playlist, but louder.",
@@ -394,7 +394,7 @@ const techEntries = [
 {
   title: "Physical Media Rentals",
   slug: "physical-media-rentals",
-  image: "images/vhs rental store.png",
+  image: "images/vhs rental store.jpg",
   shortDescription: "Friday night wasn’t complete without a trip to the video store.",
   longDescription:
     "Blockbuster. Hollywood Video. Family-owned joints with carpets that smelled like popcorn and ambition. Physical media rentals were a whole vibe.\n\nYou’d wander the aisles, judge covers, fight for the last copy of *The Matrix*, and maybe grab a Butterfinger at checkout. The late fees were real. The memories? Even more so.",
@@ -403,7 +403,7 @@ const techEntries = [
 {
   title: "The Under Construction GIF",
   slug: "under-construction-gif",
-  image: "images/placeholder_coming_soon.png",
+  image: "/images/under_costruction-removebg-preview.png",
   shortDescription: "If your webpage didn’t have this, was it even a webpage?",
   longDescription:
     "Ah yes, the blinking jackhammer guy. A staple of Geocities, Angelfire, and every page that dreamed of being something… someday.\n\nThe ‘Under Construction’ GIF was the neon sticky note of the early web. No updates? No problem. Toss in a GIF and let the world know greatness was coming. Eventually.",
@@ -412,7 +412,7 @@ const techEntries = [
 {
   title: "Trackball Mouse",
   slug: "trackball-mouse",
-  image: "/images/trackball_-removebg.png",
+  image: "/images/trackball_-removebg-preview.png",
   shortDescription: "Spin the ball, steer your destiny. Or at least your cursor.",
   longDescription:
     "The trackball mouse was part controller, part conversation piece. Instead of dragging a mouse, you spun the ball like a tiny arcade game.\n\nPopular with graphic designers and office rebels, it offered precision — and occasional wrist confusion. It still has fans today, but most folks moved on to scroll wheels and touchpads. RIP, thumb calluses.",
@@ -448,7 +448,7 @@ const techEntries = [
 {
   title: "Flash Website Intros",
   slug: "flash-intros",
-  image: "images/placeholder_coming_soon.png",
+  image: "/images/flash_website_intros.png",
   shortDescription: "Skip Intro? Please. This was the *main event* in 2003.",
   longDescription:
     "Flash intros were the overdramatic red carpet of early websites. Animated logos, swooshing text, epic soundtracks — and a loading bar that took forever.\n\nThey were flashy (literally), unnecessary, and extremely cool at the time. But they died with the fall of Flash, taking autoplay audio and unnecessary wait times with them. A beautiful, bloated chapter in web history.",
