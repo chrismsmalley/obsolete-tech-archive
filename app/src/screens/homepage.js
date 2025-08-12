@@ -163,6 +163,44 @@ function Homepage() {
           gap: 2.5rem;
         }
       }
+
+      /* Pagination link styles */
+      .pager-link {
+        background: transparent;
+        border: none;
+        color: #888;
+        font-size: 0.9rem;
+        font-weight: 500;
+        letter-spacing: 0.05rem;
+        text-transform: uppercase;
+        cursor: pointer;
+        padding: 0;
+        text-decoration: none;
+        transition: color 0.15s ease, text-decoration-color 0.15s ease;
+      }
+
+      .pager-link:hover,
+      .pager-link:focus-visible {
+        color: #4a4a4a;
+        text-decoration: underline;
+        text-decoration-thickness: 2px;
+        text-underline-offset: 3px;
+        outline: none;
+      }
+
+      .pager-link[aria-current="page"],
+      .pager-link--active {
+        color: #4a4a4a;
+        font-weight: 700;
+        cursor: default;
+        pointer-events: none;
+        text-decoration: none;
+      }
+
+      .pager-link:focus-visible {
+        outline: 2px solid #4a4a4a;
+        outline-offset: 2px;
+      }
     `}</style>
     <main className="homepage-main">
       {currentPage === 1 && (
@@ -234,7 +272,8 @@ function Homepage() {
         style={{
           marginTop: "2rem",
           display: "flex",
-          justifyContent: currentPage > 1 ? "space-between" : "flex-end",
+          alignItems: "center",
+          justifyContent: currentPage > 1 && currentPage < totalPages ? "space-between" : "center",
           gap: "1rem",
           width: "100%",
           maxWidth: "1200px",
@@ -246,34 +285,38 @@ function Homepage() {
         {currentPage > 1 && (
           <button
             onClick={() => setCurrentPage(p => Math.max(p - 1, 1))}
-            style={{
-              backgroundColor: "transparent",
-              color: "#888",
-              border: "none",
-              fontSize: "0.9rem",
-              fontWeight: "500",
-              letterSpacing: "0.05rem",
-              textTransform: "uppercase",
-              cursor: "pointer",
-            }}
+            className="pager-link"
           >
             ← Previous
           </button>
         )}
+
+        <div
+          role="navigation"
+          aria-label="Pagination"
+          style={{ display: "flex", gap: "0.5rem", justifyContent: "center", flexWrap: "wrap", flex: 1 }}
+        >
+          {[...Array(totalPages)].map((_, i) => {
+            const page = i + 1;
+            const isActive = page === currentPage;
+            return (
+              <button
+                key={page}
+                onClick={() => setCurrentPage(page)}
+                aria-current={isActive ? "page" : undefined}
+                disabled={isActive}
+                className={`pager-link${isActive ? " pager-link--active" : ""}`}
+              >
+                {page}
+              </button>
+            );
+          })}
+        </div>
+
         {currentPage < totalPages && (
           <button
             onClick={() => setCurrentPage(p => Math.min(p + 1, totalPages))}
-            style={{
-              backgroundColor: "transparent",
-              color: "#888",
-              border: "none",
-              fontSize: "0.9rem",
-              fontWeight: "500",
-              letterSpacing: "0.05rem",
-              textTransform: "uppercase",
-              cursor: "pointer",
-              marginLeft: currentPage > 1 ? undefined : "auto"
-            }}
+            className="pager-link"
           >
             Next →
           </button>
