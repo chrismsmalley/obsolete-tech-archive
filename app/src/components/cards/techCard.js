@@ -28,7 +28,7 @@ export default function TechCard(props) {
           display: 'flex',
           flexDirection: isMobile ? 'column' : 'row',
           backgroundColor: 'transparent',
-          alignItems: 'center',
+          alignItems: isMobile ? 'center' : 'stretch',
           marginBottom: '2rem',
           width: '100%',
           maxWidth: '1000px',
@@ -38,6 +38,9 @@ export default function TechCard(props) {
           padding: '1rem',
           boxSizing: 'border-box',
           boxShadow: '0 4px 12px rgba(0, 0, 0, 0.12)',
+          height: isMobile ? '260px' : '280px',
+          overflow: 'hidden',
+          transition: 'transform 0.2s ease, box-shadow 0.2s ease',
         }}
         onMouseEnter={e => {
           e.currentTarget.style.transform = 'translateY(-4px)';
@@ -53,12 +56,12 @@ export default function TechCard(props) {
           <div style={{
             flex: '0 0 auto',
             width: isMobile ? '80%' : '250px',
-            height: isMobile ? 'auto' : '250px',
+            height: '100%',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
           }}>
-            <div style={{ width: '180px', height: '180px', display: 'flex', alignItems: 'center', justifyContent: 'center', overflow: 'hidden', borderRadius: '4px', transition: 'transform 0.3s ease' }}>
+            <div style={{ width: isMobile ? '160px' : '180px', height: isMobile ? '160px' : '180px', display: 'flex', alignItems: 'center', justifyContent: 'center', overflow: 'hidden', borderRadius: '4px', transition: 'transform 0.3s ease' }}>
               <img
                 src={props.image}
                 alt={props.title}
@@ -87,9 +90,9 @@ export default function TechCard(props) {
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'center',
-            maxWidth: '500px'
+            maxWidth: '500px',
           }}>
-            <h2 style={{ marginTop: 0, fontSize: '1.75rem', fontWeight: '600', marginBottom: '0.5rem', lineHeight: '1.2' }}>{props.title}</h2>
+            <h2 style={{ marginTop: 0, fontSize: '1.75rem', fontWeight: '600', marginBottom: '0.5rem', lineHeight: '1.2', display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>{props.title}</h2>
             <p style={{ overflow: 'hidden', textOverflow: 'ellipsis', fontSize: '1.1rem', lineHeight: '1.6', maxHeight: '4.8em', display: '-webkit-box', WebkitLineClamp: 3, WebkitBoxOrient: 'vertical' }}>{props.description}</p>
           </div>
         </div>
