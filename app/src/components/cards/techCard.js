@@ -41,6 +41,7 @@ export default function TechCard(props) {
           height: isMobile ? '260px' : '280px',
           overflow: 'hidden',
           transition: 'transform 0.2s ease, box-shadow 0.2s ease',
+          borderRadius: '10px',
         }}
         onMouseEnter={e => {
           e.currentTarget.style.transform = 'translateY(-4px)';
@@ -54,14 +55,27 @@ export default function TechCard(props) {
         }}
         >
           <div style={{
-            flex: '0 0 auto',
-            width: isMobile ? '80%' : '250px',
-            height: '100%',
+            flex: isMobile ? '0 0 auto' : '0 0 52%',
+            width: isMobile ? '100%' : '52%',
+            maxWidth: isMobile ? '100%' : '52%',
+            height: isMobile ? '200px' : '100%',
+            // backgroundColor removed for image container
+            borderRadius: isMobile ? '8px' : '8px 0 0 8px',
+            borderRight: isMobile ? 'none' : '1px solid #e6e6e6',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
+            overflow: 'hidden'
           }}>
-            <div style={{ width: isMobile ? '160px' : '180px', height: isMobile ? '160px' : '180px', display: 'flex', alignItems: 'center', justifyContent: 'center', overflow: 'hidden', borderRadius: '4px', transition: 'transform 0.3s ease' }}>
+            <div style={{
+              width: '100%',
+              height: '100%',
+              padding: isMobile ? '8px' : '12px',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              overflow: 'hidden'
+            }}>
               <img
                 src={props.image}
                 alt={props.title}
@@ -70,27 +84,29 @@ export default function TechCard(props) {
                   height: '100%',
                   objectFit: 'contain',
                   backgroundColor: 'transparent',
-                  borderRadius: '4px',
                   transition: 'transform 0.3s ease'
                 }}
               />
             </div>
           </div>
           <div style={{
-            width: isMobile ? '100%' : '2px',
-            height: isMobile ? '2px' : '80%',
-            backgroundColor: '#b0b0b0',
-            margin: isMobile ? '1rem 0' : '0 1.5rem',
-            flexShrink: 0
+            width: '100%',
+            height: '2px',
+            backgroundColor: '#e6e6e6',
+            margin: '1rem 0',
+            flexShrink: 0,
+            display: isMobile ? 'block' : 'none'
           }}></div>
           <div style={{
             flex: '1',
             width: '100%',
-            padding: '1rem',
+            padding: '1.25rem',
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'center',
-            maxWidth: '500px',
+            maxWidth: 'none',
+            backgroundColor: '#ffffff',
+            borderRadius: isMobile ? '8px' : '0 8px 8px 0'
           }}>
             <h2 style={{ marginTop: 0, fontSize: '1.75rem', fontWeight: '600', marginBottom: '0.5rem', lineHeight: '1.2', display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>{props.title}</h2>
             <p style={{ overflow: 'hidden', textOverflow: 'ellipsis', fontSize: '1.1rem', lineHeight: '1.6', maxHeight: '4.8em', display: '-webkit-box', WebkitLineClamp: 3, WebkitBoxOrient: 'vertical' }}>{props.description}</p>

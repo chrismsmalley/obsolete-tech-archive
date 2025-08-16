@@ -100,7 +100,7 @@ function Homepage() {
 
       .homepage-main {
         padding: 4rem 1rem 4rem;
-        background-color: #f7f3eb;
+        background-color: #FAFAFA;
       }
 
       @media (min-width: 768px) {
@@ -211,7 +211,16 @@ function Homepage() {
           alignItems: "center",
           marginBottom: "2rem"
         }}>
-          <img src="/images/OT image.png" alt="Site Symbol" style={{ width: "90px", maxWidth: "100%", height: "auto", marginBottom: "1.5rem" }} />
+          <div
+            style={{
+              backgroundColor: "#f5f5f5",
+              padding: "10px",
+              borderRadius: "8px",
+              display: "inline-block"
+            }}
+          >
+            <img src="/images/ot_logo-removebg-preview.png" alt="Site Symbol" style={{ width: "90px", maxWidth: "100%", height: "auto", marginBottom: "1.5rem" }} />
+          </div>
           <h1 style={{ margin: 0, maxWidth: "100%", overflow: "hidden", wordWrap: "break-word" }}>
             <span className="typing-text">Welcome to Obsolete Tech</span>
           </h1>

@@ -11,7 +11,7 @@ export default function Navbar() {
       left: 0,
       right: 0,
       zIndex: 1000,
-      backgroundColor: '#f5f2ea',
+      backgroundColor: '#f8f8f8',
       padding: '10px 16px',
       borderBottom: '1px solid #eee',
       display: 'flex',

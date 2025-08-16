@@ -2,7 +2,7 @@ const techEntries = [
   {
   title: "Compact Disc",
   slug: "compact-disc",
-  image: "/images/Compact_Disc_image.png",
+  image: "/images/cd_painting.png",
   shortDescription: "The shiny circle that ruled the 90s. Perfect sound forever — until you scratched it just a little.",
   longDescription:
     "The Compact Disc (CD) brought digital dazzle to music lovers in the 80s and 90s. It promised “perfect sound forever” — and we believed it, until that one skip ruined your favorite track. If you ever made a mix CD for someone, you knew what love (and frustration) felt like.\n\nCDs hit shelves in 1982 thanks to Philips and Sony, and quickly became the top dog for music storage, knocking out cassettes and vinyl with their crisp digital quality. But once MP3s and streaming rolled in, the towers of jewel cases started collecting dust. Still, for collectors and audiophiles, CDs never really left the stage."
