@@ -11,15 +11,17 @@ export default function SlugClientPage({ slug }) {
   }
 
   return (
-    <div style={{ display: "flex", flexDirection: "column", minHeight: "88vh" }}>
-      <main style={{ flex: 1, display: "flex", justifyContent: "center", padding: "2rem", marginTop: "2rem" }}>
+    <div style={{ display: "flex", flexDirection: "column", minHeight: "88vh", backgroundColor: "#FAFAFA" }}>
+      <main style={{ flex: 1, display: "flex", justifyContent: "center", padding: "2rem", marginTop: "2rem", backgroundColor: "#FAFAFA", boxSizing: "border-box" }}>
         <div
           style={{
             maxWidth: "800px",
             width: "100%",
             borderRadius: "8px",
-            boxShadow: "0 4px 12px rgba(0, 0, 0, 0.1)",
+            boxShadow: "0 6px 18px rgba(0, 0, 0, 0.08)",
             padding: "2rem",
+            backgroundColor: "#ffffff",
+            border: "1px solid #eeeeee",
           }}
         >
           <button
@@ -32,19 +34,7 @@ export default function SlugClientPage({ slug }) {
                 window.history.back();
               }
             }}
-            style={{
-              display: 'inline-block',
-              marginBottom: '1rem',
-              backgroundColor: 'transparent',
-              color: '#888',
-              border: 'none',
-              fontSize: '0.9rem',
-              fontWeight: 500,
-              letterSpacing: '0.05rem',
-              textTransform: 'uppercase',
-              cursor: 'pointer',
-              textDecoration: 'none',
-            }}
+            className="pager-link"
           >
             ← Back
           </button>
@@ -66,6 +56,39 @@ export default function SlugClientPage({ slug }) {
           <p style={{ lineHeight: "1.6", fontSize: "1.1rem", color: "#333" }}>
             {tech.longDescription}
           </p>
+          <style jsx>{`
+            .pager-link {
+              background: transparent;
+              border: none;
+              color: #888;
+              font-size: 0.9rem;
+              font-weight: 500;
+              letter-spacing: 0.05rem;
+              text-transform: uppercase;
+              cursor: pointer;
+              padding: 0;
+              text-decoration: none;
+              transition: color 0.15s ease, text-decoration-color 0.15s ease;
+            }
+            .pager-link:hover,
+            .pager-link:focus-visible {
+              color: #4a4a4a;
+              text-decoration: underline;
+              text-decoration-thickness: 2px;
+              text-underline-offset: 3px;
+              outline: none;
+            }
+            .pager-link:focus-visible {
+              outline: 2px solid #4a4a4a;
+              outline-offset: 2px;
+            }
+            h1 {
+              color: #222;
+            }
+            p {
+              color: #333;
+            }
+          `}</style>
         </div>
       </main>
     </div>
