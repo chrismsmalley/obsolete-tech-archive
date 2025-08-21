@@ -11,6 +11,27 @@ function Homepage() {
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [sort, setSort] = useState(null);
 
+  const [showBanner, setShowBanner] = useState(true);
+
+  useEffect(() => {
+    // Persist dismissal across visits
+    try {
+      const dismissed = typeof window !== "undefined" && window.localStorage.getItem("ota_home_banner_dismissed") === "1";
+      if (dismissed) setShowBanner(false);
+    } catch (e) {
+      // ignore storage errors
+    }
+  }, []);
+
+  const dismissBanner = () => {
+    setShowBanner(false);
+    try {
+      window.localStorage.setItem("ota_home_banner_dismissed", "1");
+    } catch (e) {
+      // ignore storage errors
+    }
+  };
+
   const searchParams = useSearchParams();
   useEffect(() => {
     const category = searchParams.get("filterCategory");
@@ -201,8 +222,60 @@ function Homepage() {
         outline: 2px solid #4a4a4a;
         outline-offset: 2px;
       }
+
+      /* Temporary homepage banner */
+      .temp-banner {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.75rem;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 0.75rem 1rem;
+        background: #FFF3B0; /* warm retro yellow */
+        border: 1px solid #E6D27A;
+        color: #4a4a4a;
+        font-size: clamp(0.9rem, 2.2vw, 1rem);
+        text-align: center;
+      }
+      .temp-banner__text {
+        margin: 0;
+      }
+      .temp-banner__close {
+        margin-left: 0.5rem;
+        background: transparent;
+        border: none;
+        font-weight: 700;
+        cursor: pointer;
+        line-height: 1;
+        padding: 0.25rem 0.5rem;
+        color: #4a4a4a;
+      }
+      .temp-banner__close:focus-visible {
+        outline: 2px solid #4a4a4a;
+        outline-offset: 2px;
+      }
     `}</style>
     <main className="homepage-main">
+      {showBanner && (
+        <div className="temp-banner" role="status" aria-live="polite">
+          <p className="temp-banner__text">
+            💾 Pardon the dial‑up vibes — this page is a bit of a hot mess. We’re tuning it up to make it cleaner and better soon.
+          </p>
+          <button
+            type="button"
+            className="temp-banner__close"
+            aria-label="Dismiss message"
+            onClick={dismissBanner}
+            title="Dismiss"
+          >
+            ×
+          </button>
+        </div>
+      )}
       {currentPage === 1 && (
       <section className="homepage-hero">
         <div style={{
