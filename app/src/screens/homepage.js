@@ -11,26 +11,26 @@ function Homepage() {
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [sort, setSort] = useState(null);
 
-  const [showBanner, setShowBanner] = useState(true);
+  // const [showBanner, setShowBanner] = useState(true);
 
-  useEffect(() => {
-    // Persist dismissal across visits
-    try {
-      const dismissed = typeof window !== "undefined" && window.localStorage.getItem("ota_home_banner_dismissed") === "1";
-      if (dismissed) setShowBanner(false);
-    } catch (e) {
-      // ignore storage errors
-    }
-  }, []);
+  // useEffect(() => {
+  //   // Persist dismissal across visits
+  //   try {
+  //     const dismissed = typeof window !== "undefined" && window.localStorage.getItem("ota_home_banner_dismissed") === "1";
+  //     if (dismissed) setShowBanner(false);
+  //   } catch (e) {
+  //     // ignore storage errors
+  //   }
+  // }, []);
 
-  const dismissBanner = () => {
-    setShowBanner(false);
-    try {
-      window.localStorage.setItem("ota_home_banner_dismissed", "1");
-    } catch (e) {
-      // ignore storage errors
-    }
-  };
+  // const dismissBanner = () => {
+  //   setShowBanner(false);
+  //   try {
+  //     window.localStorage.setItem("ota_home_banner_dismissed", "1");
+  //   } catch (e) {
+  //     // ignore storage errors
+  //   }
+  // };
 
   const searchParams = useSearchParams();
   useEffect(() => {
@@ -260,7 +260,7 @@ function Homepage() {
       }
     `}</style>
     <main className="homepage-main">
-      {showBanner && (
+      {/* {showBanner && (
         <div className="temp-banner" role="status" aria-live="polite">
           <p className="temp-banner__text">
             💾 Pardon the dial‑up vibes — this page is a bit of a hot mess. We’re tuning it up to make it cleaner and better soon.
@@ -275,7 +275,7 @@ function Homepage() {
             ×
           </button>
         </div>
-      )}
+      )} */}
       {currentPage === 1 && (
       <section className="homepage-hero">
         <div style={{
