@@ -38,7 +38,7 @@ export default function TechCard(props) {
           padding: '1rem',
           boxSizing: 'border-box',
           boxShadow: '0 4px 12px rgba(0, 0, 0, 0.12)',
-          height: isMobile ? '260px' : '280px',
+          height: isMobile ? '300px' : '280px',
           overflow: 'hidden',
           transition: 'transform 0.2s ease, box-shadow 0.2s ease',
           borderRadius: '10px',
@@ -58,7 +58,7 @@ export default function TechCard(props) {
             flex: isMobile ? '0 0 auto' : '0 0 52%',
             width: isMobile ? '100%' : '52%',
             maxWidth: isMobile ? '100%' : '52%',
-            height: isMobile ? '200px' : '100%',
+            height: isMobile ? '160px' : '100%',
             // backgroundColor removed for image container
             borderRadius: isMobile ? '8px' : '8px 0 0 8px',
             borderRight: isMobile ? 'none' : '1px solid #e6e6e6',
@@ -109,7 +109,17 @@ export default function TechCard(props) {
             borderRadius: isMobile ? '8px' : '0 8px 8px 0'
           }}>
             <h2 style={{ marginTop: 0, fontSize: '1.75rem', fontWeight: '600', marginBottom: '0.5rem', lineHeight: '1.2', display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>{props.title}</h2>
-            <p style={{ overflow: 'hidden', textOverflow: 'ellipsis', fontSize: '1.1rem', lineHeight: '1.6', maxHeight: '4.8em', display: '-webkit-box', WebkitLineClamp: 3, WebkitBoxOrient: 'vertical' }}>{props.description}</p>
+            <p style={{
+              overflow: 'hidden',
+              textOverflow: 'ellipsis',
+              fontSize: isMobile ? '0.95rem' : '1.05rem',
+              lineHeight: 1.5,
+              display: '-webkit-box',
+              WebkitLineClamp: isMobile ? 3 : 2,
+              WebkitBoxOrient: 'vertical'
+            }}>
+              {props.description}
+            </p>
           </div>
         </div>
       </div>

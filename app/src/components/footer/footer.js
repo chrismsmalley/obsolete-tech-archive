@@ -65,7 +65,7 @@ export default function Footer() {
                 ref={inputRef}
                 type="text"
                 name="artifact"
-                placeholder="Name your obsolete gem..."
+                placeholder="Have an obsolete gem?"
                 required
                 style={{
                   padding: '0.5rem',
