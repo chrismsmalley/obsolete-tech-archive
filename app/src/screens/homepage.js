@@ -6,7 +6,39 @@ import Link from "next/link";
 import TechCard from "../components/cards/techCard";
 
 function Homepage() {
-  const entries = Array.isArray(techEntries) ? techEntries : [];
+  // DB-powered list (fetched from /api/tech); falls back to local techEntries if API not ready
+  const [entries, setEntries] = useState([]);
+
+  useEffect(() => {
+    let cancelled = false;
+    async function load() {
+      try {
+        const res = await fetch('/api/tech', { cache: 'no-store' });
+        if (!res.ok) throw new Error('API unavailable');
+        const data = await res.json();
+        if (cancelled) return;
+        // map DB rows to the props your cards expect
+        const mapped = (data || []).map((x) => ({
+          title: x.name,
+          slug: x.slug,
+          image: x.image_url,
+          shortDescription: x.short_description,
+          longDescription: x.long_description,
+          category: x.category,
+          date: x.year_released ? `${x.year_released}-01-01` : undefined,
+        }));
+        setEntries(mapped);
+      } catch (e) {
+        const local = Array.isArray(techEntries) ? techEntries : [];
+        setEntries(local);
+        if (process && process.env && process.env.NODE_ENV !== 'production') {
+          console.info('[Homepage] Using local techEntries fallback:', e?.message || e);
+        }
+      }
+    }
+    load();
+    return () => { cancelled = true; };
+  }, []);
   const [currentPage, setCurrentPage] = useState(1);
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [sort, setSort] = useState(null);
@@ -328,23 +360,6 @@ function Homepage() {
                   layout="horizontal"
                 />
               </Link>
-              {index === 0 && (
-                <>
-                  {/* Ezoic - under_first_paragraph - under_first_paragraph */}
-                  <div id="ezoic-pub-ad-placeholder-109" style={{ width: "100%" }}></div>
-                  {/* End Ezoic - under_first_paragraph - under_first_paragraph */}
-                  <script
-                    defer
-                    dangerouslySetInnerHTML={{
-                      __html: `
-                        ezstandalone.cmd.push(function () {
-                          ezstandalone.showAds(109);
-                        });
-                      `,
-                    }}
-                  />
-                </>
-              )}
             </React.Fragment>
           );
         })}
