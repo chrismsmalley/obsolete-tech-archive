@@ -457,7 +457,7 @@ const techEntries = [
   {
     title: "Zune",
     slug: "zune",
-    image: "/images/zune-removebg-preview.png",
+    image: "/images/Zune-removebg-preview.png",
     shortDescription: "Microsoft’s cool MP3 player that arrived to the party right as the DJ went home.",
     longDescription:
       "Zune actually slapped — clean UI, great sound, even wireless sharing (that no one used). But going toe‑to‑toe with the iPod is like arm‑wrestling a bulldozer.\n\nLaunched in 2006, Zune tried playlists, social features, and bold colors. Fans loved it; the market shrugged. Today it’s a cult classic and a reminder that good products still need a lucky timeline.",
@@ -502,7 +502,7 @@ const techEntries = [
   {
     title: "Windows Phone",
     slug: "windows-phone",
-    image: "/images/windows_phone-removebg-preview.png",
+    image: "/images/Windows_phone-removebg-preview.png",
     shortDescription: "Tiles so clean you could eat off them. Apps so few you might have to.",
     longDescription:
       "Metro UI was gorgeous — bold colors, live tiles, typography for days. The hardware? Solid. The camera? Often best‑in‑class.\n\nBut without developer love, an ecosystem starves. Between 2010–2017, Windows Phone fought hard and bowed out gracefully. Design students still use its screenshots in portfolios.",
