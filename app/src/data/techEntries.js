@@ -453,7 +453,178 @@ const techEntries = [
   longDescription:
     "Flash intros were the overdramatic red carpet of early websites. Animated logos, swooshing text, epic soundtracks — and a loading bar that took forever.\n\nThey were flashy (literally), unnecessary, and extremely cool at the time. But they died with the fall of Flash, taking autoplay audio and unnecessary wait times with them. A beautiful, bloated chapter in web history.",
   category: "Web Culture"
-}
+},
+  {
+    title: "Zune",
+    slug: "zune",
+    image: "/images/zune-removebg-preview.png",
+    shortDescription: "Microsoft’s cool MP3 player that arrived to the party right as the DJ went home.",
+    longDescription:
+      "Zune actually slapped — clean UI, great sound, even wireless sharing (that no one used). But going toe‑to‑toe with the iPod is like arm‑wrestling a bulldozer.\n\nLaunched in 2006, Zune tried playlists, social features, and bold colors. Fans loved it; the market shrugged. Today it’s a cult classic and a reminder that good products still need a lucky timeline.",
+    category: "Media"
+  },
+  {
+    title: "Netscape Navigator",
+    slug: "netscape-navigator",
+    image: "/images/netscape.jpeg",
+    shortDescription: "The browser that taught the web how to web — before IE ‘borrowed’ its lunch.",
+    longDescription:
+      "If you clicked around the early internet, you probably did it in Netscape. Animated GIFs! Under construction signs! Right‑click, view source!\n\nReleased in 1994, it dominated until Microsoft bundled Internet Explorer with Windows. Netscape faded, but its codebase lived on as Mozilla and Firefox. Legends never really 404.",
+    category: "Web Culture"
+  },
+  {
+    title: "HD DVD",
+    slug: "hd-dvd",
+    image: "/images/hd_dvd-removebg-preview.png",
+    shortDescription: "Blu‑ray’s worthy rival that brought a laser to a format knife fight — and still lost.",
+    longDescription:
+      "Toshiba’s HD DVD looked sharp, loaded fast, and even had early interactive features. But studio deals swung blue, and retail shelves followed.\n\nFrom 2006 to 2008 it was the high‑def home video duel of the decade. Then one day, *poof* — discounted players and a lot of shiny coasters.",
+    category: "Media"
+  },
+  {
+    title: "Google Reader",
+    slug: "google-reader",
+    image: "/images/Google_Reader_logo.png",
+    shortDescription: "The quiet superstar of the open web — until it got sunsetted at peak productivity.",
+    longDescription:
+      "Reader was how nerds kept up with the entire internet without doomscrolling. Subscribe to feeds, skim headlines, share with friends — bliss.\n\nLaunched in 2005 and killed in 2013, it left a hole that newsletters and Twitter never quite filled. Long live RSS.",
+    category: "Web Culture"
+  },
+  {
+    title: "Pebble Smartwatch",
+    slug: "pebble-smartwatch",
+    image: "/images/pebble-removebg-preview.png",
+    shortDescription: "Week‑long battery, pixel‑perfect vibes, and a Kickstarter that broke the internet.",
+    longDescription:
+      "Pebble made smartwatches fun *and* useful: notifications, fitness, custom faces — with e‑paper battery life that laughed at chargers.\n\nBorn in 2012 from a record‑breaking Kickstarter, it was beloved by devs and minimalists. Bought, sunsetted, but never forgotten — Rebble lives on.",
+    category: "Wearables"
+  },
+  {
+    title: "Windows Phone",
+    slug: "windows-phone",
+    image: "/images/windows_phone-removebg-preview.png",
+    shortDescription: "Tiles so clean you could eat off them. Apps so few you might have to.",
+    longDescription:
+      "Metro UI was gorgeous — bold colors, live tiles, typography for days. The hardware? Solid. The camera? Often best‑in‑class.\n\nBut without developer love, an ecosystem starves. Between 2010–2017, Windows Phone fought hard and bowed out gracefully. Design students still use its screenshots in portfolios.",
+    category: "Mobile"
+  },
+  {
+    title: "Vine",
+    slug: "vine",
+    image: "/images/vine-removebg-preview.png",
+    shortDescription: "Six seconds of pure chaos that launched a thousand memes (and careers).",
+    longDescription:
+      "Vine distilled comedy into micro‑bursts: perfect loops, weird timing, and quotable audio. ‘Road work ahead?’ ‘I sure hope it does.’\n\nAcquired by Twitter, it peaked fast and vanished in 2016 — but its DNA lives in TikTok, Reels, and your brain’s meme folder.",
+    category: "Web Culture"
+  },
+  {
+    title: "LimeWire",
+    slug: "limewire",
+    image: "/images/limewire-removebg-preview.png",
+    shortDescription: "Where you got that one song… and probably three viruses named after it.",
+    longDescription:
+      "Peer‑to‑peer file sharing at its most chaotic. You’d search for a track, download five fakes, and hope the sixth wasn’t a trojan.\n\nFrom the early 2000s until legal hammers fell, LimeWire was digital piracy’s messy middle child — and a rite of passage for many.",
+    category: "Web Culture"
+  },
+  {
+    title: "Yahoo Messenger",
+    slug: "yahoo-messenger",
+    image: "/images/yahoo_messenger-removebg-preview.png",
+    shortDescription: "BRB, away message set to mysterious lyrics and something about pizza.",
+    longDescription:
+      "Yahoo Messenger was the purple portal to late‑night chats, status games, and that one friend who *always* buzzed you.\n\nLaunched in 1998, it rode the wave of early IM culture with emoticons, webcams, and chat rooms galore. It faded as phones took over, but for a while, your buddy list was the internet.",
+    category: "Communication"
+  },
+  {
+    title: "ICQ",
+    slug: "icq",
+    image: "/images/icq-removebg-preview.png",
+    shortDescription: "Uh‑oh! The OG instant messenger with a sound you can still hear in your soul.",
+    longDescription:
+      "ICQ was instant messaging before instant messaging was cool. You had a UIN number, a weird flower icon, and the ‘uh‑oh’ that announced every new message.\n\nBorn in 1996, it pioneered features we take for granted today: file transfers, histories, statuses. It never fully vanished — but its golden age is pure 90s internet.",
+    category: "Communication"
+  },
+  {
+    title: "AltaVista",
+    slug: "altavista",
+    image: "/images/Altavista_logo-removebg-preview.png",
+    shortDescription: "Once upon a time, this *was* how you found things online.",
+    longDescription:
+      "AltaVista felt like hacking the universe: type words, get webpages — fast. It was the default in computer labs and libraries before Google ate everyone’s lunch.\n\nLaunched in 1995, it introduced powerful search and translation. But branding flips and portal bloat slowed it down. By 2013, the lights went out for good.",
+    category: "Web Culture"
+  },
+  {
+    title: "Friendster",
+    slug: "friendster",
+    image: "/images/Friendster-removebg-preview.png",
+    shortDescription: "Pre‑Facebook social networking where everyone was ‘single’ and photobooth pics reigned.",
+    longDescription:
+      "Friendster was the proto‑social network: profiles, testimonials, drama. It taught us how online popularity worked — and how sites crumble when scale hits.\n\nLaunched in 2002, it exploded, then buckled under growth and competition. It later pivoted to gaming, but by then the party had moved.",
+    category: "Web Culture"
+  },
+  {
+    title: "Nokia N‑Gage",
+    slug: "nokia-n-gage",
+    image: "/images/Nokia-N-Gage-removebg-preview.png",
+    shortDescription: "Part phone, part game console, all taco. Side‑talking legend.",
+    longDescription:
+      "The N‑Gage tried to merge Game Boy fun with Nokia durability. You got swappable game cards, Bluetooth multiplayer — and jokes about holding a taco to your head.\n\nReleased in 2003, it was ambitious but awkward. Gamers wanted buttons; callers wanted comfort. It’s a meme now, but a lovable one.",
+    category: "Mobile"
+  },
+  {
+    title: "Palm Pre",
+    slug: "palm-pre",
+    image: "/images/Palm_Pre-removebg-preview.png",
+    shortDescription: "Swipe cards, wireless charging, and webOS magic — a gem that arrived too soon.",
+    longDescription:
+      "The Palm Pre introduced card‑based multitasking and inductive charging before it was cool. webOS was slick, thoughtful, and way ahead of its time.\n\nLaunched in 2009, it couldn’t out‑market iPhone and Android. But designers still borrow its ideas. Pour one out for Synergy.",
+    category: "Mobile"
+  },
+  {
+    title: "Google Wave",
+    slug: "google-wave",
+    image: "/images/google_wave-removebg-preview.png",
+    shortDescription: "Email, chat, docs — all at once! Also, confusion — all at once.",
+    longDescription:
+      "Google Wave tried to reinvent online collaboration with live‑updating threads you could edit mid‑conversation. Powerful, wild, and… hard to explain to your team.\n\nLaunched in 2009 and sunset in 2010, it left behind ideas that reappeared in modern tools. Visionary, but a tough UX sell.",
+    category: "Web Culture"
+  },
+  {
+    title: "Windows Media Center",
+    slug: "windows-media-center",
+    image: "/images/Windows_Media_Center-removebg-preview.png",
+    shortDescription: "Big‑screen DVR vibes for your PC — green glow included.",
+    longDescription:
+      "Media Center turned Windows into a living‑room DVR: TV tuners, EPGs, recordings, the whole couch potato stack.\n\nBundled with certain Windows editions from 2002 onward, it peaked in the HTPC era before streaming and smart TVs made it feel extra. Still missed by home theater nerds.",
+    category: "Media"
+  },
+  {
+    title: "SmartMedia Card",
+    slug: "smartmedia-card",
+    image: "/images/SmartMedia_Card_-removebg-preview.png",
+    shortDescription: "Paper‑thin camera storage with a talent for getting lost in your bag.",
+    longDescription:
+      "SmartMedia was an ultra‑thin flash card used in early digital cameras. Lightweight, fragile, and ready to corrupt at the worst time.\n\nPopular around the late 90s/early 2000s, it eventually lost to SD cards, which were smaller, sturdier, and less dramatic.",
+    category: "Storage"
+  },
+  {
+    title: "Windows Movie Maker",
+    slug: "windows-movie-maker",
+    image: "/images/Windows_Movie_Maker_logo-removebg-preview.png",
+    shortDescription: "Where every school project got star wipes and Arial Black titles.",
+    longDescription:
+      "Movie Maker made editing feel possible: trim, drag, add a corny transition, export, win the class. It was basic — and perfect for its moment.\n\nBundled with Windows in the 2000s, it turned a generation into amateur editors before phones took over the job.",
+    category: "Media"
+  },
+  {
+    title: "Adobe Flash Player",
+    slug: "adobe-flash-player",
+    image: "/images/Adobe_Flash_Player.png",
+    shortDescription: "The plugin that powered half the web — and crashed the other half.",
+    longDescription:
+      "Flash gave us games, cartoons, and weird interactive websites with loading bars that lied. It also gave us pop‑ups, battery drain, and security holes.\n\nFrom the late 90s to the 2010s, Flash ruled rich media. Then HTML5 arrived, mobile said ‘nope,’ and the plugin rode into the sunset in 2020.",
+    category: "Web Culture"
+  }
 ];
 
 export { techEntries };
