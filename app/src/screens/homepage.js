@@ -10,7 +10,7 @@ function Homepage() {
   const entries = Array.isArray(techEntries) ? techEntries : [];
   const [currentPage, setCurrentPage] = useState(1);
   const [selectedCategory, setSelectedCategory] = useState(null);
-  const [sort, setSort] = useState(null);
+  const [sort, setSort] = useState("recent");
 
   // const [showBanner, setShowBanner] = useState(true);
 
@@ -315,7 +315,6 @@ function Homepage() {
       <div className="techcard-container">
         {paginatedEntries.map((entry, index) => {
           const slug = (entry.title || "").toLowerCase().replace(/\s+/g, "-").replace(/[^a-z0-9-]/g, "");
-          console.log("Entry title:", entry.title, "Image filename:", entry.image);
           return (
             <React.Fragment key={index}>
               <Link
@@ -329,7 +328,7 @@ function Homepage() {
                   layout="horizontal"
                 />
               </Link>
-              {index === 0 && (
+              {index === 0 && process.env.NODE_ENV === "production" && (
                 <div style={{ width: "100%", marginTop: "0.5rem" }}>
                   <AdSlot slot="XXXXXXXXXX" format="auto" />
                 </div>
@@ -339,9 +338,11 @@ function Homepage() {
         })}
       </div>
 
-      <div style={{ width: "100%", maxWidth: "1200px", margin: "2rem auto 0", padding: "0 0.5rem" }}>
-        <AdSlot slot="YYYYYYYYYY" format="auto" />
-      </div>
+      {process.env.NODE_ENV === "production" && (
+        <div style={{ width: "100%", maxWidth: "1200px", margin: "2rem auto 0", padding: "0 0.5rem" }}>
+          <AdSlot slot="YYYYYYYYYY" format="auto" />
+        </div>
+      )}
 
       <div
         style={{
