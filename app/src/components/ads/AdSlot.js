@@ -8,7 +8,7 @@ import { useEffect, useRef } from "react";
  * Usage: <AdsSlot slot="YOUR_SLOT_ID" format="auto" />
  * Note: This file mirrors AdSlot.js to avoid import typos.
  */
-export default function AdsSlot({
+export default function AdSlot({
   slot = "",
   layout = "",
   format = "auto",
