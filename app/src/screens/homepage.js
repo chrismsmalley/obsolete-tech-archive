@@ -4,6 +4,7 @@ import { useSearchParams } from "next/navigation";
 import { techEntries } from "../data/techEntries";
 import Link from "next/link";
 import TechCard from "../components/cards/techCard";
+import AdSlot from "../components/ads/AdSlot";
 
 function Homepage() {
   const entries = Array.isArray(techEntries) ? techEntries : [];
@@ -329,25 +330,17 @@ function Homepage() {
                 />
               </Link>
               {index === 0 && (
-                <>
-                  {/* Ezoic - under_first_paragraph - under_first_paragraph */}
-                  <div id="ezoic-pub-ad-placeholder-109" style={{ width: "100%" }}></div>
-                  {/* End Ezoic - under_first_paragraph - under_first_paragraph */}
-                  <script
-                    defer
-                    dangerouslySetInnerHTML={{
-                      __html: `
-                        ezstandalone.cmd.push(function () {
-                          ezstandalone.showAds(109);
-                        });
-                      `,
-                    }}
-                  />
-                </>
+                <div style={{ width: "100%", marginTop: "0.5rem" }}>
+                  <AdSlot slot="XXXXXXXXXX" format="auto" />
+                </div>
               )}
             </React.Fragment>
           );
         })}
+      </div>
+
+      <div style={{ width: "100%", maxWidth: "1200px", margin: "2rem auto 0", padding: "0 0.5rem" }}>
+        <AdSlot slot="YYYYYYYYYY" format="auto" />
       </div>
 
       <div
