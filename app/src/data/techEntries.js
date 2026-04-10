@@ -142,7 +142,7 @@ const techEntries = [
 {
   title: "T-Mobile Sidekick",
   slug: "t-mobile-sidekick",
-  image: "images/sidekick-removebg-preview.png",
+  image: "/images/sidekick-removebg-preview.png",
   shortDescription: "The flip-screen messaging machine that made you feel like a hacker in a teen drama.",
   longDescription:
     "Before iPhones ruled the world, the Sidekick was the ultimate flex. That snap-open screen? Iconic. AIM, texting, and browsing all in one — this was mobile magic for the MySpace generation.\n\nLaunched by T-Mobile in the early 2000s, the Sidekick (aka Danger Hiptop) was beloved for its unique swivel screen and full keyboard. It made texting effortless and changed how teens and celebs messaged on the go. It eventually got left behind by app-hungry smartphones, but it walked so the rest could run.",
@@ -151,7 +151,7 @@ const techEntries = [
 {
   title: "AIM (AOL Instant Messenger)",
   slug: "aim",
-  image: "images/aim-removebg-preview.png",
+  image: "/images/aim-removebg-preview.png",
   shortDescription: "You weren’t online — you were *Away*. The original source of cryptic away messages and buddy list drama.",
   longDescription:
     "AIM was the soundtrack of the early internet. You signed on to that door creak, arranged your crushes by status, and carefully crafted away messages like digital poetry.\n\nLaunched by AOL in 1997, AIM let you chat, flirt, and ghost long before social media made it cool. It shut down in 2017, but its spirit lives on in every DM and '...is typing' bubble.",
@@ -160,7 +160,7 @@ const techEntries = [
 {
   title: "Windows 95 Startup Disk",
   slug: "windows-95-startup-disk",
-  image: "images/windows_95-removebg-preview.png",
+  image: "/images/windows_95-removebg-preview.png",
   shortDescription: "The floppy that saved your PC (or didn’t). Insert and pray.",
   longDescription:
     "Before boot menus and recovery partitions, there was the Windows 95 startup disk. One floppy to rule them all — unless it was corrupted, then you were toast.\n\nUsed to troubleshoot and boot stubborn PCs, this humble disk was your best friend and worst enemy in the 90s. It asked tough questions like, 'Do you want to load CD-ROM support?' and made you feel like a hacker for saying yes.",
@@ -169,7 +169,7 @@ const techEntries = [
 {
   title: "Sega Dreamcast",
   slug: "sega-dreamcast",
-  image: "images/dreamcast-removebg-preview.png",
+  image: "/images/dreamcast-removebg-preview.png",
   shortDescription: "The console that was too cool, too early. Internet gaming before anyone else thought it was a good idea.",
   longDescription:
     "Dreamcast was Sega’s bold, beautiful last stand. It had VMUs, online play, and games that made you whisper 'whoa' — but it arrived just a little too early.\n\nReleased in 1999, Dreamcast was ahead of its time with features like a built-in modem, visual memory unit, and a killer launch lineup. Despite its innovations, it got buried by the PS2 hype train. Still, it’s a cult favorite and a love letter to what gaming *could’ve been*.",
@@ -178,7 +178,7 @@ const techEntries = [
 {
   title: "8-Track Tape",
   slug: "8-track-tape",
-  image: "images/8_track-removebg-preview.png",
+  image: "/images/8_track-removebg-preview.png",
   shortDescription: "Clunky, chunky, and guaranteed to switch tracks mid-chorus.",
   longDescription:
     "8-Tracks were the soundtrack of shag-carpeted cars and living rooms. The size of a brick and just as subtle, they played music in loops — whether you wanted them to or not.\n\nPopular from the mid-60s through the late 70s, 8-Tracks offered portable music for the first time. You could pop one into your car stereo and cruise — just don’t get mad when it changes songs mid-solo. Cassette tapes eventually took over, but 8-Tracks paved the way.",
@@ -187,7 +187,7 @@ const techEntries = [
 {
   title: "Clippy",
   slug: "clippy",
-  image: "images/clippy-removebg-preview.png",
+  image: "/images/clippy-removebg-preview.png",
   shortDescription: "The overly helpful paperclip who just wanted to be loved — and closed.",
   longDescription:
     "Clippy (real name: Clippit) popped up uninvited in Microsoft Office to offer help — usually when you didn’t need it. 'It looks like you're writing a letter...' became both meme and menace.\n\nIntroduced in Office 97, Clippy was supposed to make digital documents easier. Instead, it became the face of annoying assistants everywhere. Retired in the early 2000s, Clippy now lives on in internet legend and ironic merch.",
@@ -205,7 +205,7 @@ const techEntries = [
 {
   title: "Calculator Watch",
   slug: "calculator-watch",
-  image: "images/cal_watch-removebg-preview.png",
+  image: "/images/cal_watch-removebg-preview.png",
   shortDescription: "For the kid who was ready for math *anytime*. Bonus points if it had a tiny stylus.",
   longDescription:
     "The calculator watch was part gadget, part status symbol for nerds and geniuses alike. Tiny buttons, endless beeps, and serious brainiac vibes.\n\nPopularized in the 80s and 90s by Casio, these watches combined timekeeping with 8-digit math — and looked surprisingly cool doing it. Smartphones stole their thunder, but calculator watches still pop up for retro flair.",
@@ -214,7 +214,7 @@ const techEntries = [
 {
   title: "Geocities",
   slug: "geocities",
-  image: "images/geocities-removebg-preview.png",
+  image: "/images/geocities-removebg-preview.png",
   shortDescription: "Your first homepage. Blinking text, MIDI music, and way too many GIFs.",
   longDescription:
     "Geocities gave the masses a place to build *whatever* they wanted — and it showed. Neon backgrounds, guestbooks, visitor counters, and unlicensed fan pages ruled the early web.\n\nLaunched in 1994 and bought by Yahoo in 1999, Geocities was a DIY internet village. It was shut down in 2009, but parts live on in archives, forever preserving the chaos and creativity of the early web.",
@@ -232,7 +232,7 @@ const techEntries = [
 {
   title: "Cassette Tape",
   slug: "cassette-tape",
-  image: "images/cassette_tape-removebg-preview.png",
+  image: "/images/cassette_tape-removebg-preview.png",
   shortDescription: "Rewind with a pencil. Mixtape magic and hiss included.",
   longDescription:
     "Cassette tapes let you make mixtapes for your crush, your car, or your Walkman — sometimes all three. They clicked, hissed, and occasionally got eaten by the player, but we loved them anyway.\n\nLaunched in the 1960s by Philips, the cassette revolutionized personal audio. By the 80s, they were everywhere — until CDs and digital music came calling. But nostalgia runs deep, and cassettes have been making a slow, squeaky comeback.",
@@ -241,7 +241,7 @@ const techEntries = [
 {
   title: "Netbook",
   slug: "netbook",
-  image: "images/netbook-removebg-preview.png",
+  image: "/images/netbook-removebg-preview.png",
   shortDescription: "Tiny laptop, big dreams. Just don’t open too many tabs.",
   longDescription:
     "Netbooks were like laptops that hit puberty early — small, awkward, and full of potential. They were cheap, portable, and perfect for light browsing and word docs.\n\nPopular in the late 2000s, netbooks made mobile computing affordable, but were often underpowered and cramped. Once tablets and ultrabooks hit the scene, the netbook quietly shuffled offstage. We salute its effort.",
@@ -250,7 +250,7 @@ const techEntries = [
 {
   title: "BlackBerry",
   slug: "blackberry",
-  image: "images/blackberry-removebg-preview.png",
+  image: "/images/blackberry-removebg-preview.png",
   shortDescription: "The business phone with a keyboard so good, people mourned it.",
   longDescription:
     "Before the iPhone, there was the BlackBerry — email in your pocket, tactile keys under your thumbs, and a blinking red light that meant *you were important*.\n\nBlackBerry phones were the go-to for execs, government workers, and anyone addicted to email. Their peak was the 2000s, but they couldn’t keep up with the touchscreen revolution. Still, no virtual keyboard ever quite matched that click.",
@@ -268,7 +268,7 @@ const techEntries = [
 {
   title: "FireWire",
   slug: "firewire",
-  image: "images/firewire-removebg-preview.png",
+  image: "/images/firewire-removebg-preview.png",
   shortDescription: "Apple’s fast little port that almost made it.",
   longDescription:
     "FireWire was supposed to be the future of fast data transfer. It zipped video from camcorders and audio from interfaces with speed USB couldn’t touch — at least at first.\n\nApple loved it. Video editors loved it. But USB 2.0 got cheaper and more widespread, and FireWire faded into niche use. A cool port with a cooler name that just couldn’t win the popularity contest.",
@@ -322,7 +322,7 @@ const techEntries = [
 {
   title: "VHS Rewinder",
   slug: "vhs-rewinder",
-  image: "images/VHS_tape_rewinder-removebg-preview.png",
+  image: "/images/VHS_tape_rewinder-removebg-preview.png",
   shortDescription: "Because rewinding in the VCR was just too slow. Be kind, rewind — fast.",
   longDescription:
     "Before Netflix, there was Blockbuster. And before returning your tape, you had to rewind it — or risk the wrath of late fees and passive-aggressive stickers.\n\nEnter the VHS rewinder: a separate little machine that did one job and did it fast. Some looked like racecars. Some made weird noises. All of them saved your VCR’s motor from an early death. A truly niche appliance with a very specific kind of glory.",
@@ -394,7 +394,7 @@ const techEntries = [
 {
   title: "Physical Media Rentals",
   slug: "physical-media-rentals",
-  image: "images/vhs rental store.jpg",
+  image: "/images/vhs rental store.jpg",
   shortDescription: "Friday night wasn’t complete without a trip to the video store.",
   longDescription:
     "Blockbuster. Hollywood Video. Family-owned joints with carpets that smelled like popcorn and ambition. Physical media rentals were a whole vibe.\n\nYou’d wander the aisles, judge covers, fight for the last copy of *The Matrix*, and maybe grab a Butterfinger at checkout. The late fees were real. The memories? Even more so.",
@@ -439,7 +439,7 @@ const techEntries = [
 {
   title: "MiniDisc",
   slug: "minidisc",
-  image: "images/minidisc-removebg-preview.png",
+  image: "/images/minidisc-removebg-preview.png",
   shortDescription: "The forgotten middle child between CDs and MP3s.",
   longDescription:
     "MiniDiscs were compact, rewritable, and durable — a perfect bridge between analog and digital music. But somehow, they just never caught on.\n\nReleased by Sony in 1992, MiniDiscs had all the makings of a hit. But with CDs dominating and MP3s on the rise, it got lost in the shuffle. Audiophiles still praise it, but the rest of us barely knew it existed.",
@@ -610,7 +610,7 @@ const techEntries = [
   {
     title: "Windows Movie Maker",
     slug: "windows-movie-maker",
-    image: "/images/Windows_Movie_Maker_logo-removebg-preview.png",
+    image: "/images/Windows_Live_Movie_Maker_logo-removebg-preview.png",
     shortDescription: "Where every school project got star wipes and Arial Black titles.",
     longDescription:
       "Movie Maker made editing feel possible: trim, drag, add a corny transition, export, win the class. It was basic — and perfect for its moment.\n\nBundled with Windows in the 2000s, it turned a generation into amateur editors before phones took over the job.",

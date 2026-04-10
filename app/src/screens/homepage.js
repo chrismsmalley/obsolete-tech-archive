@@ -4,7 +4,6 @@ import { useSearchParams } from "next/navigation";
 import { techEntries } from "../data/techEntries";
 import Link from "next/link";
 import TechCard from "../components/cards/techCard";
-import AdSlot from "../components/ads/AdSlot";
 
 function Homepage() {
   const entries = Array.isArray(techEntries) ? techEntries : [];
@@ -101,28 +100,45 @@ function Homepage() {
 
       .typing-text {
         display: inline-block;
+        width: 0;
+        max-width: 100%;
         overflow: hidden;
         white-space: nowrap;
-        border-right: 0.15em solid #4a4a4a;
+        border-right: 0.12em solid #4a4a4a;
         animation:
-          typing 2.5s steps(30, end),
-          blink-caret 0.75s step-end 3;
-        animation-fill-mode: forwards;
-        font-size: clamp(2.25rem, 6vw, 4.25rem);
+          typing 2.4s steps(24, end) forwards,
+          blink-caret 0.75s step-end 4;
+        font-size: clamp(2rem, 5vw, 3.75rem);
         font-weight: 700;
         color: #4a4a4a;
         font-family: "Courier New", Courier, monospace !important;
         visibility: visible !important;
         position: relative;
+        line-height: 1.08;
+        vertical-align: bottom;
+      }
+
+      @supports (width: 1ch) {
+        .typing-text {
+          animation:
+            typing-width 2.4s steps(24, end) forwards,
+            blink-caret 0.75s step-end 4;
+        }
+      }
+
+      @keyframes typing-width {
+        from { width: 0 }
+        to { width: 24ch }
       }
 
       .homepage-subtext {
         font-size: clamp(1rem, 2.5vw, 1.5rem) !important;
+        color: var(--ota-muted);
       }
 
       .homepage-main {
         padding: 4rem 1rem 4rem;
-        background-color: #FAFAFA;
+        background-color: transparent;
       }
 
       @media (min-width: 768px) {
@@ -137,11 +153,65 @@ function Homepage() {
         align-items: center;
         justify-content: center;
         min-height: 60vh;
-        margin-bottom: 16rem;
+        margin-bottom: 12rem;
         padding: 2rem 1rem;
         width: 100%;
         box-sizing: border-box;
         text-align: center;
+      }
+
+      .homepage-hero-panel {
+        width: min(980px, 100%);
+        padding: clamp(1.5rem, 3vw, 2.5rem);
+        border: 1px solid var(--ota-line);
+        border-radius: 28px;
+        background:
+          linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(250, 252, 255, 0.9));
+        box-shadow: var(--ota-shadow);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .homepage-hero-panel::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:
+          radial-gradient(circle at top right, rgba(47, 93, 98, 0.12), transparent 30%),
+          radial-gradient(circle at bottom left, rgba(197, 111, 82, 0.08), transparent 26%),
+          linear-gradient(transparent, rgba(255, 255, 255, 0.22));
+        pointer-events: none;
+      }
+
+      .homepage-hero-panel::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: linear-gradient(90deg, var(--ota-accent), rgba(197, 111, 82, 0.8));
+      }
+
+      .homepage-kicker {
+        margin: 0 0 1rem;
+        font-size: 0.72rem;
+        letter-spacing: 0.24em;
+        text-transform: uppercase;
+        color: var(--ota-accent);
+        font-weight: 700;
+      }
+
+      .homepage-intro {
+        position: relative;
+        z-index: 1;
+      }
+
+      .homepage-rule {
+        width: min(180px, 40%);
+        height: 1px;
+        margin: 1.75rem auto 0;
+        background: linear-gradient(90deg, transparent, rgba(47, 93, 98, 0.45), transparent);
       }
 
       @media (min-width: 768px) {
@@ -158,11 +228,20 @@ function Homepage() {
           word-break: break-word;
         }
         .typing-text {
+          width: auto;
+          max-width: 100%;
+          overflow: visible;
           white-space: normal;
           border-right: none;
           animation: none;
           font-size: 2rem;
           text-align: center;
+        }
+        .homepage-hero {
+          margin-bottom: 7rem;
+        }
+        .homepage-hero-panel {
+          border-radius: 22px;
         }
       }
 
@@ -190,20 +269,22 @@ function Homepage() {
       .pager-link {
         background: transparent;
         border: none;
-        color: #888;
+        color: var(--ota-muted);
         font-size: 0.9rem;
         font-weight: 500;
         letter-spacing: 0.05rem;
         text-transform: uppercase;
         cursor: pointer;
-        padding: 0;
+        padding: 0.35rem 0.5rem;
+        border-radius: 999px;
         text-decoration: none;
-        transition: color 0.15s ease, text-decoration-color 0.15s ease;
+        transition: color 0.15s ease, text-decoration-color 0.15s ease, background-color 0.15s ease;
       }
 
       .pager-link:hover,
       .pager-link:focus-visible {
-        color: #4a4a4a;
+        color: var(--ota-accent);
+        background: var(--ota-accent-soft);
         text-decoration: underline;
         text-decoration-thickness: 2px;
         text-underline-offset: 3px;
@@ -212,15 +293,16 @@ function Homepage() {
 
       .pager-link[aria-current="page"],
       .pager-link--active {
-        color: #4a4a4a;
+        color: var(--ota-accent);
         font-weight: 700;
         cursor: default;
         pointer-events: none;
         text-decoration: none;
+        background: rgba(47, 93, 98, 0.08);
       }
 
       .pager-link:focus-visible {
-        outline: 2px solid #4a4a4a;
+        outline: 2px solid var(--ota-accent);
         outline-offset: 2px;
       }
 
@@ -279,37 +361,45 @@ function Homepage() {
       )} */}
       {currentPage === 1 && (
       <section className="homepage-hero">
-        <div style={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          marginBottom: "2rem"
-        }}>
-          <div
-            style={{
-              backgroundColor: "#f5f5f5",
-              padding: "10px",
-              borderRadius: "8px",
-              display: "inline-block"
-            }}
-          >
-            <img src="/images/ot_logo-removebg-preview.png" alt="Site Symbol" style={{ width: "90px", maxWidth: "100%", height: "auto", marginBottom: "1.5rem" }} />
+        <div className="homepage-hero-panel">
+          <div className="homepage-intro">
+            <p className="homepage-kicker">Curated Archive of Retired Tech</p>
+            <div style={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              marginBottom: "2rem"
+            }}>
+              <div
+                style={{
+                  backgroundColor: "rgba(255, 255, 255, 0.9)",
+                  padding: "10px 12px",
+                  borderRadius: "14px",
+                  display: "inline-block",
+                  border: "1px solid var(--ota-line)",
+                  boxShadow: "0 10px 24px rgba(31, 43, 54, 0.08)"
+                }}
+              >
+                <img src="/images/ot_logo-removebg-preview.png" alt="Site Symbol" style={{ width: "90px", maxWidth: "100%", height: "auto", marginBottom: "1.5rem" }} />
+              </div>
+              <h1 style={{ margin: "1.25rem 0 0", maxWidth: "100%", overflow: "visible", wordWrap: "break-word" }}>
+                <span className="typing-text">Welcome to Obsolete Tech</span>
+              </h1>
+            </div>
+            <p
+              className="homepage-subtext"
+              style={{
+                lineHeight: "1.7",
+                maxWidth: "900px",
+                padding: "0 1rem",
+                margin: "0 auto"
+              }}
+            >
+              Obsolete Tech Archive is a digital museum dedicated to preserving the quirky, forgotten, and fascinating gadgets that once captured our imaginations. From short-lived handhelds to early gaming consoles, outdated media formats, and strange tech experiments, we showcase the innovation, ambition, and sometimes misfires of technology&apos;s past. Each artifact tells a story of what was, what could have been, and how technology continuously evolves. Whether you&apos;re a nostalgic collector or a curious explorer, Obsolete Tech Archive offers a growing collection of devices that defined, and then quietly exited, the tech stage.
+            </p>
+            <div className="homepage-rule" />
           </div>
-          <h1 style={{ margin: 0, maxWidth: "100%", overflow: "hidden", wordWrap: "break-word" }}>
-            <span className="typing-text">Welcome to Obsolete Tech</span>
-          </h1>
         </div>
-        <p
-          className="homepage-subtext"
-          style={{
-            lineHeight: "1.6",
-            maxWidth: "900px",
-            color: "#888",
-            padding: "0 1rem"
-          }}
-        >
-          Obsolete Tech Archive is a digital museum dedicated to preserving the quirky, forgotten, and fascinating gadgets that once captured our imaginations. From short-lived handhelds to early gaming consoles, outdated media formats, and strange tech experiments, we showcase the innovation, ambition, and sometimes misfires of technology&apos;s past. Each artifact tells a story — of what was, what could have been, and how technology continuously evolves. Whether you&apos;re a nostalgic collector or a curious explorer, Obsolete Tech Archive offers a growing collection of devices that defined, and then quietly exited, the tech stage.
-        </p>
       </section>
       )}
       <div className="techcard-container">
@@ -324,25 +414,15 @@ function Homepage() {
                 <TechCard
                   title={entry.title || "No title"}
                   description={entry.shortDescription ?? ""}
+                  category={Array.isArray(entry.category) ? entry.category[0] : entry.category}
                   image={(entry.image || "/images/placeholder.png").replace(/^\/images\/+/, "/images/")}
                   layout="horizontal"
                 />
               </Link>
-              {index === 0 && process.env.NODE_ENV === "production" && (
-                <div style={{ width: "100%", marginTop: "0.5rem" }}>
-                  <AdSlot slot="XXXXXXXXXX" format="auto" />
-                </div>
-              )}
             </React.Fragment>
           );
         })}
       </div>
-
-      {process.env.NODE_ENV === "production" && (
-        <div style={{ width: "100%", maxWidth: "1200px", margin: "2rem auto 0", padding: "0 0.5rem" }}>
-          <AdSlot slot="YYYYYYYYYY" format="auto" />
-        </div>
-      )}
 
       <div
         style={{

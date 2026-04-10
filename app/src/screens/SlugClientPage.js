@@ -1,9 +1,10 @@
 "use client";
 import React from "react";
-import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { techEntries } from "@/app/src/data/techEntries";
 
 export default function SlugClientPage({ slug }) {
+  const router = useRouter();
   const tech = techEntries.find((entry) => entry.slug === slug);
 
   if (!tech) {
@@ -26,12 +27,10 @@ export default function SlugClientPage({ slug }) {
         >
           <button
             onClick={() => {
-              const savedPage = sessionStorage.getItem("currentPage");
-              const savedScroll = sessionStorage.getItem("scrollY");
-              if (savedPage) {
-                window.location.href = `/?page=${savedPage}#scroll-${savedScroll}`;
+              if (window.history.length > 1) {
+                router.back();
               } else {
-                window.history.back();
+                router.push("/");
               }
             }}
             className="pager-link"

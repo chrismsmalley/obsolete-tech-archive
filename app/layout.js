@@ -52,33 +52,12 @@ export const themeColor = '#f7f3eb';
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={inter.className}>
-      <head>
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2068398627088024"
-             crossOrigin="anonymous"></script>
-        <meta name="google-adsense-account" content="ca-pub-2068398627088024" />
-      </head>
       <body>
         <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
           <Navbar />
           <main>{children}</main>
           <Footer />
           <CookieBanner />
-          {/* Ezoic bottom-of-page — TEMPORARILY DISABLED */}
-          {false && (
-            <>
-              <div id="ezoic-pub-ad-placeholder-103"></div>
-              <script
-                defer
-                dangerouslySetInnerHTML={{
-                  __html: `
-                    ezstandalone.cmd.push(function () {
-                      ezstandalone.showAds(103);
-                    });
-                  `,
-                }}
-              />
-            </>
-          )}
         </div>
       </body>
     </html>

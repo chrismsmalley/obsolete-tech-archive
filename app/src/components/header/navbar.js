@@ -1,7 +1,14 @@
 'use client';
 import React from 'react';
 import Link from 'next/link';
+import { Press_Start_2P } from 'next/font/google';
 import BurgerMenu from '../features/burger_menu';
+
+const pressStart = Press_Start_2P({
+  subsets: ['latin'],
+  weight: '400',
+  display: 'swap',
+});
 
 export default function Navbar() {
   return (
@@ -11,9 +18,12 @@ export default function Navbar() {
       left: 0,
       right: 0,
       zIndex: 1000,
-      backgroundColor: '#f8f8f8',
+      backgroundColor: 'rgba(255, 255, 255, 0.86)',
+      backdropFilter: 'blur(14px)',
+      WebkitBackdropFilter: 'blur(14px)',
       padding: '10px 16px',
-      borderBottom: '1px solid #eee',
+      borderBottom: '1px solid rgba(44, 103, 112, 0.12)',
+      boxShadow: '0 8px 24px rgba(31, 43, 54, 0.05)',
       display: 'flex',
       justifyContent: 'center',
       alignItems: 'center',
@@ -32,7 +42,7 @@ export default function Navbar() {
         <Link
           href="/"
           aria-label="Go to homepage"
-          className="logo-font"
+          className={pressStart.className}
           style={{
             fontSize: 'clamp(1.25rem, 6vw, 1.75rem)',
             textDecoration: 'none',
