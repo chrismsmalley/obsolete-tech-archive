@@ -10,6 +10,7 @@ function Homepage() {
   const [currentPage, setCurrentPage] = useState(1);
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [sort, setSort] = useState("recent");
+  const [isHydrated, setIsHydrated] = useState(false);
 
   // const [showBanner, setShowBanner] = useState(true);
 
@@ -40,6 +41,10 @@ function Homepage() {
     setSort(sortParam);
     setCurrentPage(1);
   }, [searchParams]);
+
+  useEffect(() => {
+    setIsHydrated(true);
+  }, []);
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -257,6 +262,10 @@ function Homepage() {
         margin-right: auto;
       }
 
+      .techcard-container--hidden {
+        visibility: hidden;
+      }
+
       @media (min-width: 768px) {
         .techcard-container {
           display: grid;
@@ -402,8 +411,8 @@ function Homepage() {
         </div>
       </section>
       )}
-      <div className="techcard-container">
-        {paginatedEntries.map((entry, index) => {
+      <div className={`techcard-container${isHydrated ? "" : " techcard-container--hidden"}`}>
+        {isHydrated && paginatedEntries.map((entry, index) => {
           const slug = (entry.title || "").toLowerCase().replace(/\s+/g, "-").replace(/[^a-z0-9-]/g, "");
           return (
             <React.Fragment key={index}>

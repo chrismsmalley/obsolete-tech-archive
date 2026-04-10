@@ -39,6 +39,15 @@ export default function TechCard(props) {
                   src={props.image}
                   alt={props.title}
                   className="tech-card__image"
+                  width="1200"
+                  height="900"
+                  style={{
+                    display: 'block',
+                    width: '100%',
+                    maxWidth: '100%',
+                    height: '100%',
+                    objectFit: 'contain',
+                  }}
                 />
               </div>
             </div>
@@ -203,7 +212,9 @@ export default function TechCard(props) {
           .tech-card {
             flex-direction: column;
             gap: 1rem;
-            height: 300px;
+            height: auto;
+            min-height: 300px;
+            overflow: visible;
           }
 
           .tech-card__media {
@@ -239,8 +250,11 @@ export default function TechCard(props) {
           }
 
           .tech-card__content {
+            flex: 0 0 auto;
             width: 100%;
+            height: auto;
             border-radius: 8px;
+            justify-content: flex-start;
           }
 
           .tech-card__meta {
@@ -254,6 +268,7 @@ export default function TechCard(props) {
           .tech-card__description {
             font-size: 0.95rem;
             -webkit-line-clamp: 3;
+            overflow: visible;
           }
         }
       `}</style>
