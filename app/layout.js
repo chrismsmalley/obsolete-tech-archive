@@ -2,13 +2,6 @@ import './globals.css';
 import Navbar from './src/components/header/navbar';
 import Footer from './src/components/footer/footer';
 import CookieBanner from './src/components/banner/CookieBanner';
-import { Inter } from 'next/font/google';
-
-const inter = Inter({
-  subsets: ['latin'],
-  weight: ['400', '700'],
-  display: 'swap',
-});
 
 export const metadata = {
   title: 'Obsolete Tech Archive',
@@ -51,7 +44,7 @@ export const themeColor = '#f7f3eb';
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={inter.className}>
+    <html lang="en">
       <body>
         <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
           <Navbar />

@@ -452,7 +452,7 @@ export default function SubmitArtifact() {
           )}
 
           <p className="footer-note">
-            Every great archive starts with somebody saying, "Wait, does anyone else remember this thing?"
+            Every great archive starts with somebody saying, &quot;Wait, does anyone else remember this thing?&quot;
           </p>
         </div>
       </main>

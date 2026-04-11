@@ -1,14 +1,7 @@
 'use client';
 import React from 'react';
 import Link from 'next/link';
-import { Press_Start_2P } from 'next/font/google';
 import BurgerMenu from '../features/burger_menu';
-
-const pressStart = Press_Start_2P({
-  subsets: ['latin'],
-  weight: '400',
-  display: 'swap',
-});
 
 export default function Navbar() {
   return (
@@ -42,7 +35,7 @@ export default function Navbar() {
         <Link
           href="/"
           aria-label="Go to homepage"
-          className={pressStart.className}
+          className="logo-font"
           style={{
             fontSize: 'clamp(1.25rem, 6vw, 1.75rem)',
             textDecoration: 'none',

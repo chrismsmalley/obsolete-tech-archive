@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React from 'react';
 
 export default function TechCard(props) {
@@ -35,12 +36,13 @@ export default function TechCard(props) {
           >
             <div className="tech-card__media">
               <div className="tech-card__media-inner">
-                <img
+                <Image
                   src={props.image}
                   alt={props.title}
                   className="tech-card__image"
-                  width="1200"
-                  height="900"
+                  width={1200}
+                  height={900}
+                  sizes="(max-width: 767px) 100vw, 52vw"
                   style={{
                     display: 'block',
                     width: '100%',

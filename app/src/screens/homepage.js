@@ -1,5 +1,6 @@
 "use client";
 import React, { useState, useEffect, Suspense } from "react";
+import Image from "next/image";
 import { useSearchParams } from "next/navigation";
 import { techEntries } from "../data/techEntries";
 import Link from "next/link";
@@ -389,7 +390,14 @@ function Homepage() {
                   boxShadow: "0 10px 24px rgba(31, 43, 54, 0.08)"
                 }}
               >
-                <img src="/images/ot_logo-removebg-preview.png" alt="Site Symbol" style={{ width: "90px", maxWidth: "100%", height: "auto", marginBottom: "1.5rem" }} />
+                <Image
+                  src="/images/ot_logo-removebg-preview.png"
+                  alt="Obsolete Tech Archive logo"
+                  width={90}
+                  height={90}
+                  priority
+                  style={{ width: "90px", maxWidth: "100%", height: "auto", marginBottom: "1.5rem" }}
+                />
               </div>
               <h1 style={{ margin: "1.25rem 0 0", maxWidth: "100%", overflow: "visible", wordWrap: "break-word" }}>
                 <span className="typing-text">Welcome to Obsolete Tech</span>
