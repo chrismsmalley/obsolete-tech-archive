@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
  :root {
   --ota-bg: #ffffff;
   --ota-bg-warm: #f5f8fb;
@@ -72,7 +74,15 @@ a {
 }
 
 .logo-font {
-  font-family: ui-monospace, 'SFMono-Regular', Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+  font-family: 'Press Start 2P', ui-monospace, 'SFMono-Regular', Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+}
+
+.logo-mark {
+  display: inline-block;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transform: translateY(-1px);
 }
 
 .typing-text {

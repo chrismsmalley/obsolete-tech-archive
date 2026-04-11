@@ -37,7 +37,7 @@ export default function Navbar() {
           aria-label="Go to homepage"
           className="logo-font"
           style={{
-            fontSize: 'clamp(1.25rem, 6vw, 1.75rem)',
+            fontSize: 'clamp(1.2rem, 5vw, 1.55rem)',
             textDecoration: 'none',
             color: 'inherit',
             margin: 0,
@@ -45,7 +45,7 @@ export default function Navbar() {
             padding: '4px 0',
           }}
         >
-          OT
+          <span className="logo-mark" aria-hidden="true">OT</span>
         </Link>
         <div className="burger-wrapper">
           <BurgerMenu />

@@ -43,8 +43,7 @@ export default function SlugClientPage({ slug }) {
                 src={tech.image}
                 alt={tech.title}
                 className="artifact-image"
-                width={1200}
-                height={900}
+                fill
                 sizes="(max-width: 900px) 100vw, 420px"
               />
             </div>
@@ -199,16 +198,15 @@ export default function SlugClientPage({ slug }) {
               padding: 1.35rem;
               border-radius: 24px;
               border: 1px solid rgba(47, 93, 98, 0.1);
+              overflow: hidden;
               background:
                 radial-gradient(circle at center, rgba(255, 255, 255, 0.94), rgba(255, 255, 255, 0.25) 58%, transparent 78%),
                 linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(243, 248, 252, 0.9));
             }
             .artifact-image {
-              width: 100%;
-              max-width: 420px;
-              height: auto;
-              display: block;
               object-fit: contain;
+              object-position: center;
+              padding: 1.35rem;
               filter: drop-shadow(0 14px 22px rgba(31, 43, 54, 0.14));
             }
             .artifact-section {

@@ -21,18 +21,6 @@ export default function TechCard(props) {
         }}>
           <div
             className="tech-card"
-            onMouseEnter={e => {
-              e.currentTarget.style.transform = 'translateY(-4px)';
-              e.currentTarget.style.boxShadow = '0 18px 34px rgba(31, 43, 54, 0.12)';
-              e.currentTarget.style.borderColor = 'rgba(47, 93, 98, 0.26)';
-              e.currentTarget.querySelector('.tech-card__image').style.transform = 'scale(1.06)';
-            }}
-            onMouseLeave={e => {
-              e.currentTarget.style.transform = 'translateY(0)';
-              e.currentTarget.style.boxShadow = 'var(--ota-shadow)';
-              e.currentTarget.style.borderColor = 'var(--ota-line)';
-              e.currentTarget.querySelector('.tech-card__image').style.transform = 'scale(1)';
-            }}
           >
             <div className="tech-card__media">
               <div className="tech-card__media-inner">
@@ -85,6 +73,13 @@ export default function TechCard(props) {
           transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
         }
 
+        .tech-card:hover,
+        .tech-card:focus-within {
+          transform: translateY(-4px);
+          box-shadow: 0 18px 34px rgba(31, 43, 54, 0.12);
+          border-color: rgba(47, 93, 98, 0.26);
+        }
+
         .tech-card__media {
           flex: 0 0 52%;
           width: 52%;
@@ -98,10 +93,9 @@ export default function TechCard(props) {
           justify-content: center;
           overflow: hidden;
           background:
-            radial-gradient(circle at 50% 52%, rgba(255, 255, 255, 0.98), rgba(255, 255, 255, 0.45) 28%, transparent 52%),
-            radial-gradient(circle at 25% 20%, rgba(44, 103, 112, 0.11), transparent 24%),
-            radial-gradient(circle at 78% 78%, rgba(197, 111, 82, 0.08), transparent 20%),
-            linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(243, 248, 252, 0.92));
+            radial-gradient(circle at 18% 16%, rgba(44, 103, 112, 0.07), transparent 22%),
+            radial-gradient(circle at 82% 78%, rgba(197, 111, 82, 0.06), transparent 18%),
+            linear-gradient(180deg, rgba(252, 253, 254, 0.98), rgba(244, 248, 251, 0.94));
         }
 
         .tech-card__media-inner {
@@ -114,17 +108,6 @@ export default function TechCard(props) {
           justify-content: center;
           overflow: hidden;
           position: relative;
-        }
-
-        .tech-card__media-inner::before {
-          content: "";
-          position: absolute;
-          inset: 12% 14%;
-          border-radius: 24px;
-          background:
-            radial-gradient(circle at center, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.2) 58%, transparent 75%);
-          opacity: 0.9;
-          pointer-events: none;
         }
 
         .tech-card__media-inner::after {
@@ -145,6 +128,11 @@ export default function TechCard(props) {
           background-color: transparent;
           filter: drop-shadow(0 14px 22px rgba(31, 43, 54, 0.14));
           transition: transform 0.3s ease, filter 0.3s ease;
+        }
+
+        .tech-card:hover .tech-card__image,
+        .tech-card:focus-within .tech-card__image {
+          transform: scale(1.04);
         }
 
         .tech-card__divider {
@@ -230,11 +218,6 @@ export default function TechCard(props) {
 
           .tech-card__media-inner {
             padding: 8px;
-          }
-
-          .tech-card__media-inner::before {
-            inset: 10% 10%;
-            border-radius: 20px;
           }
 
           .tech-card__media-inner::after {
