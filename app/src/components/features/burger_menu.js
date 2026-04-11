@@ -86,7 +86,7 @@ export default function BurgerMenu() {
             position: 'absolute',
             width: '100%',
             height: '4px',
-            backgroundColor: 'grey',
+            backgroundColor: 'var(--ota-accent)',
             borderRadius: '2px',
             opacity: isOpen ? 0 : 1,
             transition: 'opacity 0.3s ease-in-out',
