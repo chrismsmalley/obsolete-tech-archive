@@ -243,9 +243,9 @@ const techEntries = [
   title: "Dial-up Modem",
   slug: "dial-up-modem",
   image: "/images/dial_upmodem-removebg.png",
-  shortDescription: "The screech of the internet being born. Took minutes to connect — and dropped the moment someone picked up the phone.",
+  shortDescription: "The internet’s original theme song: robot screeching, static, and the sound of your patience dying. Disconnects guaranteed if your mom needed the phone.",
   longDescription:
-    "Dial-up was a symphony of shrieks and hope. Every online journey started with a handshake of static and ended with “Mom, hang up the phone!”\n\nDominant in the 90s, these modems used phone lines to connect you at a blazing 56kbps — fast enough for email, slow enough for everything else. They walked so broadband could run."
+    "Dial-up was the ultimate test of willpower and family diplomacy. You’d click ‘Connect,’ hear a noise that sounded like R2-D2 in pain, and pray nobody picked up the phone. At 56kbps, you could download a song in just 30 minutes—if the cosmos aligned.\n\nIt was the gateway to chat rooms, pixelated GIFs, and the wild west of the early web. Sure, it was slow, but it made every meme feel like a hard-won trophy. Dial-up walked so WiFi could run (and so you could finally use the phone and internet at the same time)."
   ,
   yearIntroduced: 1980,
   peakEra: "1990s to early 2000s",
@@ -273,9 +273,9 @@ const techEntries = [
   title: "Dot Matrix Printer",
   slug: "dot-matrix-printer",
   image: "/images/dot_matrix_printer-removebg-preview.png",
-  shortDescription: "A screeching dinosaur of the office world. Reliable, loud, and still somehow not extinct.",
+  shortDescription: "The office dinosaur that screamed every page into existence. If you didn’t hear it, was anything actually printed?",
   longDescription:
-    "Dot matrix printers weren’t elegant, but they got the job done. From endless reports to banner-sized birthday signs, these clunky machines screamed productivity.\n\nWith their pin-based printing and feed-hole paper, they were the workhorses of the 80s and 90s. Loud, slow, and still alive in some back offices. Respect."
+    "Dot matrix printers: for when you wanted your documents to sound like a tiny jackhammer and look like they were printed during a mild earthquake. These beasts chewed through endless paper, made banners longer than your homework excuses, and doubled as the world’s worst white noise machine.\n\nThey’re still alive in back offices and government buildings, probably out of spite. If you ever tore off a perforated strip, you know true satisfaction."
   ,
   yearIntroduced: 1970,
   peakEra: "1980s to 1990s",
@@ -303,9 +303,9 @@ const techEntries = [
   title: "MiniDV Camcorder",
   slug: "minidv-camcorder",
   image: "/images/minidv_cam-removebg-preview.png",
-  shortDescription: "Your grainy gateway to stardom. If it fits in your palm and records in 480p, it’s MiniDV magic.",
+  shortDescription: "The camcorder that made everyone a Spielberg—if Spielberg filmed in potato quality and lost half the tapes.",
   longDescription:
-    "Before phones filmed everything, the MiniDV camcorder captured our skate tricks, school plays, and cringey teen monologues — one tape at a time.\n\nIntroduced in 1995, it offered digital video in a tiny cassette format. MiniDV was king until memory cards dethroned it. But for a brief moment, everyone was a filmmaker."
+    "MiniDV camcorders: the reason your childhood is immortalized in glorious, grainy 480p. You filmed skate fails, school plays, and your cousin’s weird magic tricks, all on tapes that loved to vanish right before you needed them.\n\nIt was the golden age of ‘almost’ professional filmmaking. Sure, the footage was fuzzy, but so are the memories."
   ,
   yearIntroduced: 1995,
   peakEra: "Late 1990s to mid-2000s",
@@ -333,9 +333,9 @@ const techEntries = [
   title: "Handspring Visor",
   slug: "handspring-visor",
   image: "/images/handpsring_visor-removebg-preview.png",
-  shortDescription: "PalmPilot’s weirder sibling — complete with add-ons you never used but definitely bragged about.",
+  shortDescription: "PalmPilot’s wild child. Came with more add-ons than a Happy Meal and just as much confusion.",
   longDescription:
-    "The Handspring Visor wanted to do it all. Add a camera? MP3 player? GPS? Just plug in a Springboard module and pretend it worked flawlessly.\n\nReleased in 1999, it was a more playful, expandable take on Palm OS devices. Too quirky to last, but way too fun to forget."
+    "The Handspring Visor was the Swiss Army knife of PDAs—if half the tools were missing and the rest were sold separately. Want a camera? GPS? Flamethrower? (Okay, not really.) Just plug in a Springboard module and hope for the best.\n\nIt was the gadget for people who wanted to show off, tinker, and lose tiny accessories in couch cushions. Too weird to live, too fun to forget."
   ,
   yearIntroduced: 1999,
   peakEra: "1999 to early 2000s",
@@ -363,9 +363,9 @@ const techEntries = [
   title: "Betamax",
   slug: "betamax",
   image: "/images/betamax-removebg-preview.png",
-  shortDescription: "The underdog in the great VHS war. Better quality, worse luck.",
+  shortDescription: "The Rocky Balboa of video tapes: better quality, but still got KO’d by VHS in the first round.",
   longDescription:
-    "Betamax was technically superior — sharper picture, less grain, cooler name. But VHS had better marketing and longer recording time. And so, history was written by the winners.\n\nIntroduced by Sony in 1975, Betamax lost the format war but earned cult status. It’s the Rocky of home video: didn’t win, but still got a standing ovation."
+    "Betamax: the tape that flexed its muscles, showed off its picture, and still got dunked on by VHS. It was the underdog with a cooler name, sharper image, and the worst luck in tech history.\n\nIf you owned a Betamax, you were either a video snob or someone who lost a bet. It’s the ultimate ‘almost made it’ story—like bringing a lightsaber to a pillow fight and still losing."
   ,
   yearIntroduced: 1975,
   peakEra: "Late 1970s to 1980s",
@@ -393,9 +393,9 @@ const techEntries = [
   title: "Game Boy Printer",
   slug: "game-boy-printer",
   image: "/images/Game_Boy_Printer-removebg-preview.png",
-  shortDescription: "Pixelated selfies on sticky paper — if your AA batteries didn’t give up halfway through.",
+  shortDescription: "Print your face in 8-bit glory! If the batteries lasted, you got a sticker. If not, you got character-building disappointment.",
   longDescription:
-    "The Game Boy Printer turned your grainy camera snaps into tiny thermal masterpieces. It was slow, silly, and perfect.\n\nReleased in 1998 alongside the Game Boy Camera, it let kids print grayscale pixel portraits, memes, and high scores before selfies were even a thing. The paper faded fast, but the memories stuck."
+    "The Game Boy Printer: for when you wanted to turn your pixelated mug into a tiny, sticky masterpiece. It ran on AA batteries, printed at the speed of a snail, and made every selfie look like a ransom note.\n\nThe paper faded, but the bragging rights lasted forever. It was the original ‘print and flex’ for kids who thought Instagram was a Polaroid."
   ,
   yearIntroduced: 1998,
   peakEra: "Late 1990s to early 2000s",
@@ -423,9 +423,9 @@ const techEntries = [
   title: "T-Mobile Sidekick",
   slug: "t-mobile-sidekick",
   image: "/images/sidekick-removebg-preview.png",
-  shortDescription: "The flip-screen messaging machine that made you feel like a hacker in a teen drama.",
+  shortDescription: "The phone that made you feel like a secret agent—if secret agents mostly gossiped on AIM and flipped their screens for dramatic effect.",
   longDescription:
-    "Before iPhones ruled the world, the Sidekick was the ultimate flex. That snap-open screen? Iconic. AIM, texting, and browsing all in one — this was mobile magic for the MySpace generation.\n\nLaunched by T-Mobile in the early 2000s, the Sidekick (aka Danger Hiptop) was beloved for its unique swivel screen and full keyboard. It made texting effortless and changed how teens and celebs messaged on the go. It eventually got left behind by app-hungry smartphones, but it walked so the rest could run.",
+    "The T-Mobile Sidekick: part phone, part fidget toy, all drama. That snap-open screen was pure theater, and the keyboard was built for maximum gossip velocity.\n\nIt was the ultimate flex for MySpace royalty and anyone who wanted to text like a hacker in a Disney Channel movie. The Sidekick didn’t just walk so smartphones could run—it swiveled, snapped, and spilled all the tea first."
   yearIntroduced: 2002,
   peakEra: "Early to late 2000s",
   replacedBy: "iPhone and Android smartphones",
@@ -452,9 +452,9 @@ const techEntries = [
   title: "AIM (AOL Instant Messenger)",
   slug: "aim",
   image: "/images/aim-removebg-preview.png",
-  shortDescription: "You weren’t online — you were *Away*. The original source of cryptic away messages and buddy list drama.",
+  shortDescription: "The OG drama machine. If you didn’t have a cryptic away message, did you even exist?",
   longDescription:
-    "AIM was the soundtrack of the early internet. You signed on to that door creak, arranged your crushes by status, and carefully crafted away messages like digital poetry.\n\nLaunched by AOL in 1997, AIM let you chat, flirt, and ghost long before social media made it cool. It shut down in 2017, but its spirit lives on in every DM and '...is typing' bubble.",
+    "AIM: where friendships were made, hearts were broken, and away messages were the original subtweets. You’d log in, hear that door creak, and instantly know who was online, who was ignoring you, and who was about to drop a lyric bomb.\n\nIt was the birthplace of internet slang, buddy list politics, and the art of pretending you were busy. RIP, AIM—you were the digital cafeteria table we all needed."
   yearIntroduced: 1997,
   peakEra: "Late 1990s to mid-2000s",
   replacedBy: "Social messaging apps and mobile chat",
@@ -481,9 +481,9 @@ const techEntries = [
   title: "Windows 95 Startup Disk",
   slug: "windows-95-startup-disk",
   image: "/images/windows_95-removebg-preview.png",
-  shortDescription: "The floppy that saved your PC (or didn’t). Insert and pray.",
+  shortDescription: "Insert disk, cross fingers, and prepare to duel your PC’s mood swings. The original IT panic button.",
   longDescription:
-    "Before boot menus and recovery partitions, there was the Windows 95 startup disk. One floppy to rule them all — unless it was corrupted, then you were toast.\n\nUsed to troubleshoot and boot stubborn PCs, this humble disk was your best friend and worst enemy in the 90s. It asked tough questions like, 'Do you want to load CD-ROM support?' and made you feel like a hacker for saying yes.",
+    "The Windows 95 startup disk: one floppy, infinite anxiety. You’d pop it in, pray it wasn’t corrupted, and answer cryptic questions like you were defusing a bomb.\n\nIt was the difference between glory and despair, and the reason every 90s kid learned to fear the phrase ‘Non-system disk or disk error.’"
   yearIntroduced: 1995,
   peakEra: "Mid-1990s to early 2000s",
   replacedBy: "Recovery partitions, USB installers, and built-in repair tools",
@@ -510,9 +510,9 @@ const techEntries = [
   title: "Sega Dreamcast",
   slug: "sega-dreamcast",
   image: "/images/dreamcast-removebg-preview.png",
-  shortDescription: "The console that was too cool, too early. Internet gaming before anyone else thought it was a good idea.",
+  shortDescription: "The console that showed up to the party in a flying car, but everyone else was still on rollerblades. Too cool, too soon.",
   longDescription:
-    "Dreamcast was Sega’s bold, beautiful last stand. It had VMUs, online play, and games that made you whisper 'whoa' — but it arrived just a little too early.\n\nReleased in 1999, Dreamcast was ahead of its time with features like a built-in modem, visual memory unit, and a killer launch lineup. Despite its innovations, it got buried by the PS2 hype train. Still, it’s a cult favorite and a love letter to what gaming *could’ve been*.",
+    "Dreamcast was Sega’s last wild child—online play, weird memory cards with screens, and games that made you say ‘whoa’ even if your friends didn’t get it. It was the console for people who wanted to flex on the future, not just play Sonic.\n\nIt got steamrolled by the PS2 hype train, but Dreamcast fans still treat it like the secret menu at a legendary diner. Pour one out for the console that was too awesome for its own good.",
   yearIntroduced: 1998,
   peakEra: "1999 to 2001",
   replacedBy: "PlayStation 2, Xbox, and GameCube era consoles",
@@ -539,9 +539,9 @@ const techEntries = [
   title: "8-Track Tape",
   slug: "8-track-tape",
   image: "/images/8_track-removebg-preview.png",
-  shortDescription: "Clunky, chunky, and guaranteed to switch tracks mid-chorus.",
+  shortDescription: "The music brick that changed songs whenever it felt like it. Road trip roulette, baby!",
   longDescription:
-    "8-Tracks were the soundtrack of shag-carpeted cars and living rooms. The size of a brick and just as subtle, they played music in loops — whether you wanted them to or not.\n\nPopular from the mid-60s through the late 70s, 8-Tracks offered portable music for the first time. You could pop one into your car stereo and cruise — just don’t get mad when it changes songs mid-solo. Cassette tapes eventually took over, but 8-Tracks paved the way.",
+    "8-Tracks: the chunky, clunky mixtape for your shag-carpeted ride. You’d pop one in, crank the volume, and pray it didn’t switch tracks mid-guitar solo.\n\nThey were the original ‘shuffle’ button—except you had zero control. Cassette tapes took over, but 8-Tracks made sure your music was always an adventure.",
   yearIntroduced: 1965,
   peakEra: "Late 1960s to late 1970s",
   replacedBy: "Cassette tapes",
@@ -568,9 +568,9 @@ const techEntries = [
   title: "Clippy",
   slug: "clippy",
   image: "/images/clippy-removebg-preview.png",
-  shortDescription: "The overly helpful paperclip who just wanted to be loved — and closed.",
+  shortDescription: "The paperclip therapist you never asked for. Popped up, judged your grammar, and haunted your dreams.",
   longDescription:
-    "Clippy (real name: Clippit) popped up uninvited in Microsoft Office to offer help — usually when you didn’t need it. 'It looks like you're writing a letter...' became both meme and menace.\n\nIntroduced in Office 97, Clippy was supposed to make digital documents easier. Instead, it became the face of annoying assistants everywhere. Retired in the early 2000s, Clippy now lives on in internet legend and ironic merch.",
+    "Clippy: the animated paperclip who crashed your Word doc like an over-caffeinated life coach. ‘It looks like you’re writing a letter…’ Yeah, Clippy, and now I’m writing a restraining order.\n\nSupposed to help, but mostly just made you question your life choices. Now Clippy lives on as a meme, a sticker, and the reason you trust no digital assistant ever again.",
   yearIntroduced: 1997,
   peakEra: "Late 1990s to early 2000s",
   replacedBy: "Less intrusive help systems and modern AI assistants",
@@ -597,9 +597,9 @@ const techEntries = [
   title: "Rotary Phone",
   slug: "rotary-phone",
   image: "/images/rotary_phone-removebg-preview.png",
-  shortDescription: "Dialing took effort. And if you messed up the last number? Start over.",
+  shortDescription: "Dialing was cardio. Mess up the last number? Enjoy your rage spiral and start again.",
   longDescription:
-    "Rotary phones weren’t just tools — they were patience trainers. Each spin of the dial was a commitment, especially if your friend’s number had too many 9s.\n\nCommon from the 1920s through the 1980s, rotary phones were a fixture in homes before buttons took over. No screens, no texting, just pure analog satisfaction and the occasional finger cramp.",
+    "Rotary phones: the original test of patience and finger strength. Every call was a workout, especially if your friend’s number had too many 9s.\n\nNo screens, no texting, just pure analog drama and the occasional finger cramp. If you survived dialing, you earned that conversation.",
   yearIntroduced: 1891,
   peakEra: "1920s to 1980s",
   replacedBy: "Push-button landline phones",
@@ -626,9 +626,9 @@ const techEntries = [
   title: "Calculator Watch",
   slug: "calculator-watch",
   image: "/images/cal_watch-removebg-preview.png",
-  shortDescription: "For the kid who was ready for math *anytime*. Bonus points if it had a tiny stylus.",
+  shortDescription: "The wrist bling for mathletes and future hackers. Bonus points if you could actually press the buttons.",
   longDescription:
-    "The calculator watch was part gadget, part status symbol for nerds and geniuses alike. Tiny buttons, endless beeps, and serious brainiac vibes.\n\nPopularized in the 80s and 90s by Casio, these watches combined timekeeping with 8-digit math — and looked surprisingly cool doing it. Smartphones stole their thunder, but calculator watches still pop up for retro flair.",
+    "Calculator watches: for the kid who wanted to flex on math class and tell time at the same time. Tiny buttons, endless beeps, and the ultimate nerd street cred.\n\nIf you could actually use the calculator without a stylus or a magnifying glass, you were basically a wizard. Still cooler than any smartwatch.",
   yearIntroduced: 1980,
   peakEra: "1980s to 1990s",
   replacedBy: "Smartphones and multifunction smartwatches",
@@ -655,9 +655,9 @@ const techEntries = [
   title: "Geocities",
   slug: "geocities",
   image: "/images/geocities-removebg-preview.png",
-  shortDescription: "Your first homepage. Blinking text, MIDI music, and way too many GIFs.",
+  shortDescription: "The internet’s original glitter bomb. If your page didn’t have a guestbook and a seizure warning, did you even Geocities?",
   longDescription:
-    "Geocities gave the masses a place to build *whatever* they wanted — and it showed. Neon backgrounds, guestbooks, visitor counters, and unlicensed fan pages ruled the early web.\n\nLaunched in 1994 and bought by Yahoo in 1999, Geocities was a DIY internet village. It was shut down in 2009, but parts live on in archives, forever preserving the chaos and creativity of the early web.",
+    "Geocities: where every page was a party, every background was neon, and every visitor counter was a badge of honor. You could build anything—especially if ‘anything’ meant unreadable fonts and auto-playing MIDI.\n\nIt was the wild west of web design, and we loved every blinking, scrolling, GIF-infested minute of it.",
   yearIntroduced: 1994,
   peakEra: "Mid-1990s to early 2000s",
   replacedBy: "Blogs, social media, and modern site builders",
@@ -684,9 +684,9 @@ const techEntries = [
   title: "Slide Projector",
   slug: "slide-projector",
   image: "/images/slide_projector-removebg-preview.png",
-  shortDescription: "Click, whirr, *next slide*. Family vacations never looked so dusty.",
+  shortDescription: "The original ‘Netflix and yawn.’ Click, whirr, and hope nobody falls asleep before your vacation slides are done.",
   longDescription:
-    "Before PowerPoint and HDMI, there was the slide projector — a box of light, noise, and nostalgia. You loaded your slides, dimmed the lights, and subjected guests to a slow scroll through your summer road trip.\n\nUsed widely from the 50s through the 80s, slide projectors were a classroom staple and living room centerpiece. Today, they mostly live in attics — or ironically on Instagram.",
+    "Slide projectors: the reason family gatherings turned into hostage situations. You’d dim the lights, fire up the clicky box, and force everyone to relive your summer road trip—one dusty slide at a time.\n\nIt was PowerPoint for people who liked drama, dust, and the sound of a fan struggling for its life.",
   yearIntroduced: 1930,
   peakEra: "1950s to 1980s",
   replacedBy: "Digital projectors and presentation software",
@@ -713,9 +713,9 @@ const techEntries = [
   title: "Cassette Tape",
   slug: "cassette-tape",
   image: "/images/cassette_tape-removebg-preview.png",
-  shortDescription: "Rewind with a pencil. Mixtape magic and hiss included.",
+  shortDescription: "Mixtape magic, pencil rewinds, and the sound of true love (and static).",
   longDescription:
-    "Cassette tapes let you make mixtapes for your crush, your car, or your Walkman — sometimes all three. They clicked, hissed, and occasionally got eaten by the player, but we loved them anyway.\n\nLaunched in the 1960s by Philips, the cassette revolutionized personal audio. By the 80s, they were everywhere — until CDs and digital music came calling. But nostalgia runs deep, and cassettes have been making a slow, squeaky comeback.",
+    "Cassette tapes: the reason you know how to fix things with a pencil. You’d make a mixtape for your crush, your car, or your Walkman—sometimes all three.\n\nThey hissed, clicked, and occasionally got eaten alive by the player, but that was just part of the romance. If you never made a tape, did you even have feelings?",
   yearIntroduced: 1963,
   peakEra: "1970s to 1990s",
   replacedBy: "Compact discs and digital music",
@@ -742,9 +742,9 @@ const techEntries = [
   title: "Netbook",
   slug: "netbook",
   image: "/images/netbook-removebg-preview.png",
-  shortDescription: "Tiny laptop, big dreams. Just don’t open too many tabs.",
+  shortDescription: "The laptop that tried its best. Small, scrappy, and allergic to multitasking.",
   longDescription:
-    "Netbooks were like laptops that hit puberty early — small, awkward, and full of potential. They were cheap, portable, and perfect for light browsing and word docs.\n\nPopular in the late 2000s, netbooks made mobile computing affordable, but were often underpowered and cramped. Once tablets and ultrabooks hit the scene, the netbook quietly shuffled offstage. We salute its effort.",
+    "Netbooks: the tiny laptops with big dreams and even bigger limitations. Great for typing, browsing, and pretending you were a digital nomad—until you opened three tabs and watched it beg for mercy.\n\nThey were the underdogs of mobile computing, and we love an underdog, even if they crash sometimes.",
   yearIntroduced: 2007,
   peakEra: "2008 to 2011",
   replacedBy: "Tablets, ultrabooks, and more capable laptops",
@@ -771,9 +771,9 @@ const techEntries = [
   title: "BlackBerry",
   slug: "blackberry",
   image: "/images/blackberry-removebg-preview.png",
-  shortDescription: "The business phone with a keyboard so good, people mourned it.",
+  shortDescription: "The phone that made you feel like a CEO, even if you were just texting your mom. That keyboard? Legendary.",
   longDescription:
-    "Before the iPhone, there was the BlackBerry — email in your pocket, tactile keys under your thumbs, and a blinking red light that meant *you were important*.\n\nBlackBerry phones were the go-to for execs, government workers, and anyone addicted to email. Their peak was the 2000s, but they couldn’t keep up with the touchscreen revolution. Still, no virtual keyboard ever quite matched that click.",
+    "BlackBerry: the phone that turned everyone into a power user (or at least made you look busy). That keyboard was so good, people still dream about it.\n\nIt was the original ‘I’m important’ device—until touchscreens took over and the blinking red light became a ghost of productivity past."
   yearIntroduced: 1999,
   peakEra: "2000s to early 2010s",
   replacedBy: "iPhone and Android smartphones",
@@ -1206,9 +1206,9 @@ const techEntries = [
   title: "RealPlayer",
   slug: "realplayer",
   image: "/images/real player.png",
-  shortDescription: "The video player that buffered like its life depended on it.",
+  shortDescription: "The video player that made ‘buffering’ a lifestyle. Installed toolbars you didn’t even know you didn’t want.",
   longDescription:
-    "RealPlayer was one of the first ways to stream media online — and one of the first reasons you learned what 'buffering' meant.\n\nReleased in 1995, it let you play video and audio in proprietary formats. It also installed toolbars you didn’t want and played video in a window the size of a postage stamp. But hey — it worked (sometimes), and that made it revolutionary.",
+    "RealPlayer: the OG streaming app that turned every video into a suspense thriller—would it play, or would you stare at a spinning circle forever? It came with bonus toolbars, pop-ups, and a window so tiny you needed a microscope.\n\nIt was revolutionary, infuriating, and the reason you learned to say ‘buffering’ with feeling."
   yearIntroduced: 1995,
   peakEra: "Late 1990s to early 2000s",
   replacedBy: "HTML5 media players and modern streaming platforms",
@@ -1235,9 +1235,9 @@ const techEntries = [
   title: "Physical Media Rentals",
   slug: "physical-media-rentals",
   image: "/images/vhs rental store.jpg",
-  shortDescription: "Friday night wasn’t complete without a trip to the video store.",
+  shortDescription: "The Friday night pilgrimage. Popcorn carpets, late fees, and the thrill of snagging the last copy of anything good.",
   longDescription:
-    "Blockbuster. Hollywood Video. Family-owned joints with carpets that smelled like popcorn and ambition. Physical media rentals were a whole vibe.\n\nYou’d wander the aisles, judge covers, fight for the last copy of *The Matrix*, and maybe grab a Butterfinger at checkout. The late fees were real. The memories? Even more so.",
+    "Physical media rentals: the original Netflix and chill, but with more fluorescent lighting and the smell of stale popcorn. You’d wander the aisles, judge movies by their covers, and pray nobody else grabbed the last copy of your pick.\n\nLate fees were brutal, but the anticipation was half the fun. RIP, Blockbuster—gone but never forgotten by your wallet."
   yearIntroduced: 1970,
   peakEra: "1980s to 2000s",
   replacedBy: "Streaming and digital rentals",
@@ -1264,9 +1264,9 @@ const techEntries = [
   title: "The Under Construction GIF",
   slug: "under-construction-gif",
   image: "/images/under_costruction-removebg-preview.png",
-  shortDescription: "If your webpage didn’t have this, was it even a webpage?",
+  shortDescription: "The blinking GIF that promised greatness. Spoiler: the page was never finished.",
   longDescription:
-    "Ah yes, the blinking jackhammer guy. A staple of Geocities, Angelfire, and every page that dreamed of being something… someday.\n\nThe ‘Under Construction’ GIF was the neon sticky note of the early web. No updates? No problem. Toss in a GIF and let the world know greatness was coming. Eventually.",
+    "The Under Construction GIF: the digital equivalent of ‘BRB, maybe never.’ If your site didn’t have a jackhammer guy, did you even code?\n\nIt was the universal excuse for unfinished business and the reason the early web looked like a construction zone run by caffeinated raccoons."
   yearIntroduced: 1990,
   peakEra: "1990s to early 2000s",
   replacedBy: "Modern placeholder pages and polished launch messaging",
@@ -1293,9 +1293,9 @@ const techEntries = [
   title: "Trackball Mouse",
   slug: "trackball-mouse",
   image: "/images/trackball_-removebg-preview.png",
-  shortDescription: "Spin the ball, steer your destiny. Or at least your cursor.",
+  shortDescription: "The mouse for rebels and thumb wrestlers. Spin to win, or just to confuse your coworkers.",
   longDescription:
-    "The trackball mouse was part controller, part conversation piece. Instead of dragging a mouse, you spun the ball like a tiny arcade game.\n\nPopular with graphic designers and office rebels, it offered precision — and occasional wrist confusion. It still has fans today, but most folks moved on to scroll wheels and touchpads. RIP, thumb calluses.",
+    "Trackball mouse: for people who thought regular mice were too mainstream. You spun the ball, steered your destiny, and occasionally launched your cursor into another dimension.\n\nLoved by designers, feared by the uninitiated, and responsible for more thumb workouts than any gym membership."
   yearIntroduced: 1946,
   peakEra: "1990s to early 2000s",
   replacedBy: "Optical mice and touchpads",
@@ -1322,9 +1322,9 @@ const techEntries = [
   title: "Internet Explorer 6",
   slug: "internet-explorer-6",
   image: "/images/internet_explorer_logo_6.webp",
-  shortDescription: "The browser you loved to hate — but only because you had to use it.",
+  shortDescription: "The browser that haunted your dreams and broke your websites. Used only because you had no choice.",
   longDescription:
-    "IE6 was the browser that came with your PC, whether you wanted it or not. It was slow, insecure, and incompatible with half the web — but it was *there*.\n\nReleased in 2001, IE6 stuck around for way too long thanks to corporate IT inertia and lack of competition. It gave developers nightmares and security teams headaches. If you ever had to write a CSS hack just for IE6, you deserve a medal.",
+    "Internet Explorer 6: the browser that came pre-installed and refused to leave. It broke websites, broke spirits, and made developers cry in at least three languages.\n\nIf you ever wrote a CSS hack for IE6, you’ve earned a lifetime supply of sympathy cards."
   yearIntroduced: 2001,
   peakEra: "Early to late 2000s",
   replacedBy: "Modern browsers like Firefox, Chrome, and later IE versions",
@@ -1351,9 +1351,9 @@ const techEntries = [
   title: "Digital Picture Frame",
   slug: "digital-picture-frame",
   image: "/images/digital_picture_frame-removebg-preview.png",
-  shortDescription: "Because grandma needed a slideshow… but techier.",
+  shortDescription: "The gift for every grandparent with too many grandkids and not enough shelf space. Slideshow or bust.",
   longDescription:
-    "Digital picture frames were supposed to modernize your mantle. Load in a memory card, and boom — a never-ending slideshow of slightly oversharpened photos.\n\nThey felt futuristic in the 2000s but often had clunky interfaces and screens that washed out in sunlight. Still, they were a staple gift for birthdays, holidays, and grandparents with too many grandkids to frame.",
+    "Digital picture frames: the gadget that let you show off 500 photos of your cat without printing a single one. Plug in a memory card, squint at the washed-out screen, and pretend you’re living in the future.\n\nPerfect for birthdays, holidays, and anyone who thinks scrolling is too much work."
   yearIntroduced: 1990,
   peakEra: "2000s to early 2010s",
   replacedBy: "Smart displays, tablets, and cloud photo apps",
@@ -1380,9 +1380,9 @@ const techEntries = [
   title: "MiniDisc",
   slug: "minidisc",
   image: "/images/minidisc-removebg-preview.png",
-  shortDescription: "The forgotten middle child between CDs and MP3s.",
+  shortDescription: "The music format nobody remembers, but audiophiles swear was the chosen one.",
   longDescription:
-    "MiniDiscs were compact, rewritable, and durable — a perfect bridge between analog and digital music. But somehow, they just never caught on.\n\nReleased by Sony in 1992, MiniDiscs had all the makings of a hit. But with CDs dominating and MP3s on the rise, it got lost in the shuffle. Audiophiles still praise it, but the rest of us barely knew it existed.",
+    "MiniDisc: the tiny disc that tried to be cool but got friend-zoned by the music industry. Compact, rewritable, and tough as nails, but somehow always the third wheel.\n\nIf you owned one, you’re either a tech hipster or Sony’s favorite customer."
   yearIntroduced: 1992,
   peakEra: "1990s to early 2000s",
   replacedBy: "MP3 players and other digital audio formats",
@@ -1409,9 +1409,9 @@ const techEntries = [
   title: "Flash Website Intros",
   slug: "flash-intros",
   image: "/images/flash_website_intros.png",
-  shortDescription: "Skip Intro? Please. This was the *main event* in 2003.",
+  shortDescription: "The reason you waited 30 seconds to see a logo explode. Skip Intro? Not in 2003.",
   longDescription:
-    "Flash intros were the overdramatic red carpet of early websites. Animated logos, swooshing text, epic soundtracks — and a loading bar that took forever.\n\nThey were flashy (literally), unnecessary, and extremely cool at the time. But they died with the fall of Flash, taking autoplay audio and unnecessary wait times with them. A beautiful, bloated chapter in web history.",
+    "Flash website intros: the digital equivalent of rolling out the red carpet for your logo. Swooshes, explosions, and a loading bar that made you question your life choices.\n\nThey were unnecessary, over-the-top, and the main reason you learned to hate autoplay audio. RIP, Flash—you were too much, and we loved you for it."
   yearIntroduced: 1990,
   peakEra: "Late 1990s to mid-2000s",
   replacedBy: "Faster web design and modern motion UI",
@@ -1438,9 +1438,9 @@ const techEntries = [
     title: "Zune",
     slug: "zune",
     image: "/images/Zune-removebg-preview.png",
-    shortDescription: "Microsoft’s cool MP3 player that arrived to the party right as the DJ went home.",
+    shortDescription: "The MP3 player that showed up fashionably late and still brought snacks. Zune nation forever.",
     longDescription:
-      "Zune actually slapped — clean UI, great sound, even wireless sharing (that no one used). But going toe‑to‑toe with the iPod is like arm‑wrestling a bulldozer.\n\nLaunched in 2006, Zune tried playlists, social features, and bold colors. Fans loved it; the market shrugged. Today it’s a cult classic and a reminder that good products still need a lucky timeline.",
+      "Zune: the underdog MP3 player with a killer UI, bold colors, and wireless sharing nobody used. It was the cool kid who transferred schools right before prom.\n\nFans loved it, the market shrugged, and now it’s a cult classic for people who like rooting for the lovable loser."
     yearIntroduced: 2006,
     peakEra: "Late 2000s",
     replacedBy: "Smartphones and streaming devices",
@@ -1467,9 +1467,9 @@ const techEntries = [
     title: "Netscape Navigator",
     slug: "netscape-navigator",
     image: "/images/netscape.jpeg",
-    shortDescription: "The browser that taught the web how to web — before IE ‘borrowed’ its lunch.",
+    shortDescription: "The browser that built the web, then got mugged by Internet Explorer. Legends never really 404.",
     longDescription:
-      "If you clicked around the early internet, you probably did it in Netscape. Animated GIFs! Under construction signs! Right‑click, view source!\n\nReleased in 1994, it dominated until Microsoft bundled Internet Explorer with Windows. Netscape faded, but its codebase lived on as Mozilla and Firefox. Legends never really 404.",
+      "Netscape Navigator: the browser that taught the world to surf, right-click, and view source like a boss. It was the king until IE showed up with a Windows bundle and a steel chair.\n\nNetscape faded, but its code lives on in Firefox—and in the hearts of everyone who remembers the wild, weird, wonderful web."
     yearIntroduced: 1994,
     peakEra: "Mid-1990s",
     replacedBy: "Internet Explorer and later Mozilla Firefox",
@@ -1612,9 +1612,9 @@ const techEntries = [
     title: "Vine",
     slug: "vine",
     image: "/images/vine-removebg-preview.png",
-    shortDescription: "Six seconds of pure chaos that launched a thousand memes (and careers).",
-    longDescription:
-      "Vine distilled comedy into micro‑bursts: perfect loops, weird timing, and quotable audio. ‘Road work ahead?’ ‘I sure hope it does.’\n\nAcquired by Twitter, it peaked fast and vanished in 2016 — but its DNA lives in TikTok, Reels, and your brain’s meme folder.",
+      shortDescription: "Six seconds to become a legend or a meme. Blink and you missed it—just like Vine itself.",
+      longDescription:
+        "Vine: the app that crammed chaos, comedy, and viral fame into six seconds flat. You’d loop, laugh, and quote ‘Road work ahead?’ until your friends begged you to stop.\n\nIt burned bright, died young, and left a meme-shaped hole in the internet’s heart. TikTok owes it everything."
     yearIntroduced: 2013,
     peakEra: "2013 to 2016",
     replacedBy: "TikTok, Reels, and short-form social video",
@@ -1641,9 +1641,9 @@ const techEntries = [
     title: "LimeWire",
     slug: "limewire",
     image: "/images/limewire-removebg-preview.png",
-    shortDescription: "Where you got that one song… and probably three viruses named after it.",
-    longDescription:
-      "Peer‑to‑peer file sharing at its most chaotic. You’d search for a track, download five fakes, and hope the sixth wasn’t a trojan.\n\nFrom the early 2000s until legal hammers fell, LimeWire was digital piracy’s messy middle child — and a rite of passage for many.",
+      shortDescription: "The wild west of music downloads. For every hit, you got a virus and a life lesson.",
+      longDescription:
+        "LimeWire: where you searched for your favorite song, downloaded five viruses, and maybe—just maybe—got the track you wanted. It was digital Russian roulette for music fans.\n\nIt was sketchy, legendary, and the reason your family computer needed so many repairs."
     yearIntroduced: 2000,
     peakEra: "Early to late 2000s",
     replacedBy: "Legal streaming and digital music stores",
@@ -1670,9 +1670,9 @@ const techEntries = [
     title: "Yahoo Messenger",
     slug: "yahoo-messenger",
     image: "/images/yahoo_messenger-removebg-preview.png",
-    shortDescription: "BRB, away message set to mysterious lyrics and something about pizza.",
-    longDescription:
-      "Yahoo Messenger was the purple portal to late‑night chats, status games, and that one friend who *always* buzzed you.\n\nLaunched in 1998, it rode the wave of early IM culture with emoticons, webcams, and chat rooms galore. It faded as phones took over, but for a while, your buddy list was the internet.",
+      shortDescription: "The purple chat box of late-night drama, pizza plans, and way too many buzzes.",
+      longDescription:
+        "Yahoo Messenger: where you set your status to song lyrics, spammed your friends with buzzes, and lived for the chaos of group chats.\n\nIt was the purple portal to all-nighters, webcam weirdness, and the golden age of emoticons."
     yearIntroduced: 1998,
     peakEra: "Late 1990s to mid-2000s",
     replacedBy: "Mobile messaging apps and social platforms",
@@ -1699,9 +1699,9 @@ const techEntries = [
     title: "ICQ",
     slug: "icq",
     image: "/images/icq-removebg-preview.png",
-    shortDescription: "Uh‑oh! The OG instant messenger with a sound you can still hear in your soul.",
-    longDescription:
-      "ICQ was instant messaging before instant messaging was cool. You had a UIN number, a weird flower icon, and the ‘uh‑oh’ that announced every new message.\n\nBorn in 1996, it pioneered features we take for granted today: file transfers, histories, statuses. It never fully vanished — but its golden age is pure 90s internet.",
+      shortDescription: "Uh-oh! The chat app that made every message sound like a cartoon disaster.",
+      longDescription:
+        "ICQ: the OG instant messenger with a flower icon, a user number longer than your phone bill, and the ‘uh-oh’ that haunted your dreams.\n\nIt was the birthplace of online chat chaos, and if you remember your UIN, you’re officially internet vintage."
     yearIntroduced: 1996,
     peakEra: "Late 1990s to early 2000s",
     replacedBy: "Later messaging platforms and mobile chat",
@@ -1728,9 +1728,9 @@ const techEntries = [
     title: "AltaVista",
     slug: "altavista",
     image: "/images/Altavista_logo-removebg-preview.png",
-    shortDescription: "Once upon a time, this *was* how you found things online.",
-    longDescription:
-      "AltaVista felt like hacking the universe: type words, get webpages — fast. It was the default in computer labs and libraries before Google ate everyone’s lunch.\n\nLaunched in 1995, it introduced powerful search and translation. But branding flips and portal bloat slowed it down. By 2013, the lights went out for good.",
+      shortDescription: "Before Google, there was AltaVista. It found stuff, then got lost itself.",
+      longDescription:
+        "AltaVista: the search engine that made you feel like a hacker just for typing words and hitting enter. It was fast, powerful, and the king of the computer lab—until Google showed up and ate its lunch.\n\nPour one out for the OG search wizard."
     yearIntroduced: 1995,
     peakEra: "Mid-1990s to early 2000s",
     replacedBy: "Google and newer search engines",
@@ -1757,9 +1757,9 @@ const techEntries = [
     title: "Friendster",
     slug: "friendster",
     image: "/images/Friendster-removebg-preview.png",
-    shortDescription: "Pre‑Facebook social networking where everyone was ‘single’ and photobooth pics reigned.",
-    longDescription:
-      "Friendster was the proto‑social network: profiles, testimonials, drama. It taught us how online popularity worked — and how sites crumble when scale hits.\n\nLaunched in 2002, it exploded, then buckled under growth and competition. It later pivoted to gaming, but by then the party had moved.",
+      shortDescription: "The social network where everyone was single, photobooth pics ruled, and drama was mandatory.",
+      longDescription:
+        "Friendster: the site that taught us how to collect friends, write testimonials, and break the internet with too much popularity.\n\nIt was the rough draft for MySpace and Facebook, and the birthplace of online relationship status anxiety."
     yearIntroduced: 2002,
     peakEra: "2003 to 2005",
     replacedBy: "MySpace and Facebook",
@@ -1786,9 +1786,9 @@ const techEntries = [
     title: "Nokia N‑Gage",
     slug: "nokia-n-gage",
     image: "/images/Nokia-N-Gage-removebg-preview.png",
-    shortDescription: "Part phone, part game console, all taco. Side‑talking legend.",
-    longDescription:
-      "The N‑Gage tried to merge Game Boy fun with Nokia durability. You got swappable game cards, Bluetooth multiplayer — and jokes about holding a taco to your head.\n\nReleased in 2003, it was ambitious but awkward. Gamers wanted buttons; callers wanted comfort. It’s a meme now, but a lovable one.",
+      shortDescription: "The phone that doubled as a game console and a taco. Side-talking required, dignity optional.",
+      longDescription:
+        "Nokia N-Gage: the mutant child of a Game Boy and a phone, shaped like a taco and ready for side-talking glory. You swapped games, played multiplayer, and looked absolutely ridiculous doing it.\n\nIt’s a meme, a legend, and proof that sometimes weird is wonderful."
     yearIntroduced: 2003,
     peakEra: "2003 to 2005",
     replacedBy: "Nintendo handhelds and later gaming phones",
@@ -1815,9 +1815,9 @@ const techEntries = [
     title: "Palm Pre",
     slug: "palm-pre",
     image: "/images/Palm_Pre-removebg-preview.png",
-    shortDescription: "Swipe cards, wireless charging, and webOS magic — a gem that arrived too soon.",
-    longDescription:
-      "The Palm Pre introduced card‑based multitasking and inductive charging before it was cool. webOS was slick, thoughtful, and way ahead of its time.\n\nLaunched in 2009, it couldn’t out‑market iPhone and Android. But designers still borrow its ideas. Pour one out for Synergy.",
+      shortDescription: "The phone that swiped before swiping was cool. Too smart for its own good.",
+      longDescription:
+        "Palm Pre: the phone that brought card multitasking, wireless charging, and webOS magic to the party—then got ignored by everyone chasing iPhones.\n\nIt was ahead of its time, underappreciated, and still the blueprint for features your phone brags about now."
     yearIntroduced: 2009,
     peakEra: "2009 to early 2010s",
     replacedBy: "iPhone and Android smartphones",
@@ -1844,9 +1844,9 @@ const techEntries = [
     title: "Google Wave",
     slug: "google-wave",
     image: "/images/google_wave-removebg-preview.png",
-    shortDescription: "Email, chat, docs — all at once! Also, confusion — all at once.",
-    longDescription:
-      "Google Wave tried to reinvent online collaboration with live‑updating threads you could edit mid‑conversation. Powerful, wild, and… hard to explain to your team.\n\nLaunched in 2009 and sunset in 2010, it left behind ideas that reappeared in modern tools. Visionary, but a tough UX sell.",
+      shortDescription: "The app that did everything at once—except make sense. Collaboration chaos, guaranteed.",
+      longDescription:
+        "Google Wave: the tool that mashed up email, chat, docs, and confusion into one ambitious soup. It was powerful, wild, and impossible to explain to your boss.\n\nIt died fast, but its weird ideas live on in every app that tries to do too much."
     yearIntroduced: 2009,
     peakEra: "2009 to 2010",
     replacedBy: "Modern collaborative chat and document tools",
@@ -1873,9 +1873,9 @@ const techEntries = [
     title: "Windows Media Center",
     slug: "windows-media-center",
     image: "/images/Windows_Media_Center-removebg-preview.png",
-    shortDescription: "Big‑screen DVR vibes for your PC — green glow included.",
-    longDescription:
-      "Media Center turned Windows into a living‑room DVR: TV tuners, EPGs, recordings, the whole couch potato stack.\n\nBundled with certain Windows editions from 2002 onward, it peaked in the HTPC era before streaming and smart TVs made it feel extra. Still missed by home theater nerds.",
+      shortDescription: "The reason your PC glowed green and pretended to be a TV. DVR dreams, nerd reality.",
+      longDescription:
+        "Windows Media Center: the app that turned your PC into a living room king. TV tuners, recordings, and a green glow that said, ‘I’m serious about my couch time.’\n\nIt was peak home theater nerd energy—until streaming made it all look like extra credit."
     yearIntroduced: 2002,
     peakEra: "2000s to early 2010s",
     replacedBy: "Streaming platforms, smart TVs, and dedicated DVRs",
@@ -1902,9 +1902,9 @@ const techEntries = [
     title: "SmartMedia Card",
     slug: "smartmedia-card",
     image: "/images/SmartMedia_Card_-removebg-preview.png",
-    shortDescription: "Paper‑thin camera storage with a talent for getting lost in your bag.",
-    longDescription:
-      "SmartMedia was an ultra‑thin flash card used in early digital cameras. Lightweight, fragile, and ready to corrupt at the worst time.\n\nPopular around the late 90s/early 2000s, it eventually lost to SD cards, which were smaller, sturdier, and less dramatic.",
+      shortDescription: "The memory card that vanished in your bag and your camera. Blink and it’s gone.",
+      longDescription:
+        "SmartMedia: the paper-thin card that held your vacation pics, your hopes, and your panic when it corrupted. It was light, fragile, and always ready to disappear when you needed it most.\n\nSD cards won, but SmartMedia gets points for drama."
     yearIntroduced: 1995,
     peakEra: "Late 1990s to early 2000s",
     replacedBy: "SD cards",
@@ -1931,9 +1931,9 @@ const techEntries = [
     title: "Windows Movie Maker",
     slug: "windows-movie-maker",
     image: "/images/Windows_Live_Movie_Maker_logo-removebg-preview.png",
-    shortDescription: "Where every school project got star wipes and Arial Black titles.",
-    longDescription:
-      "Movie Maker made editing feel possible: trim, drag, add a corny transition, export, win the class. It was basic — and perfect for its moment.\n\nBundled with Windows in the 2000s, it turned a generation into amateur editors before phones took over the job.",
+      shortDescription: "The birthplace of star wipes, Arial Black, and Oscar-worthy school projects.",
+      longDescription:
+        "Windows Movie Maker: the video editor that made everyone a director, even if your masterpiece was just your dog sneezing. Drag, drop, star wipe, and export—instant glory.\n\nIt was basic, beautiful, and the reason your family endured so many awkward slideshows."
     yearIntroduced: 2000,
     peakEra: "2000s to early 2010s",
     replacedBy: "Phone video editors and more advanced desktop apps",
@@ -1960,9 +1960,9 @@ const techEntries = [
     title: "Winamp",
     slug: "winamp",
     image: "/images/Winamp.PNG",
-    shortDescription: "The MP3 player that whipped the llama’s ass and your desktop into shape.",
-    longDescription:
-      "Winamp made listening to MP3s feel like an event. You loaded a playlist, picked an aggressively shiny skin, and watched the visualizer do its little cosmic dance while pretending you were basically your own radio station.\n\nLaunched in the late 90s, Winamp became one of the defining media players of the early download era. It was fast, customizable, and beloved by people who liked their software with a little personality. Streaming eventually made local media players less central, but Winamp still lives in the brains of anyone who ever spent way too long arranging an MP3 folder.",
+      shortDescription: "The MP3 player that whipped the llama’s ass and your desktop into a rave.",
+      longDescription:
+        "Winamp: the music player that turned your computer into a nightclub. Pick a skin, crank the visualizer, and pretend you were DJing for the universe.\n\nIt was fast, weird, and the reason your MP3 folder was a sacred mess. Long live the llama."
     yearIntroduced: 1997,
     peakEra: "Late 1990s to mid-2000s",
     replacedBy: "Streaming apps and built-in media players",
@@ -1989,9 +1989,9 @@ const techEntries = [
     title: "Motorola RAZR",
     slug: "motorola-razr",
     image: "/images/motorola-razr-v3-8768-removebg-preview.png",
-    shortDescription: "The flip phone that looked expensive, felt cool, and made hanging up feel theatrical.",
-    longDescription:
-      "The Motorola RAZR was not just a phone. It was a fashion statement with antenna energy. It was razor-thin, metallic, and cool enough to make people flip it open and closed even when nobody had texted.\n\nReleased in the mid-2000s, the RAZR became one of the most iconic phones of the pre-smartphone era. It mixed style and status in a way most phones only dreamed about. Then touchscreens arrived and suddenly everybody wanted a slab instead of a shiny little clamshell. Tragic, honestly.",
+      shortDescription: "The phone that made hanging up dramatic and flipping it open an Olympic sport.",
+      longDescription:
+        "Motorola RAZR: the phone that made you feel like a secret agent every time you answered a call. Razor-thin, shiny, and cooler than you’ll ever be.\n\nIt was the ultimate flex—until touchscreens ruined all the fun."
     yearIntroduced: 2004,
     peakEra: "Mid-2000s",
     replacedBy: "iPhone and touchscreen smartphones",
@@ -2018,9 +2018,9 @@ const techEntries = [
     title: "Portable DVD Player",
     slug: "portable-dvd-player",
     image: "/images/port_dvd-removebg-preview.png",
-    shortDescription: "The backseat movie machine that made long car rides feel briefly civilized.",
-    longDescription:
-      "Portable DVD players were the travel-tech flex of the 2000s. You popped one open in the car, on a plane, or in a waiting room and suddenly the whole vibe changed from 'boring errand' to 'private screening of Shrek 2.'\n\nThey boomed in the years before tablets took over, giving families and frequent travelers a fold-up little movie theater wherever they went. Batteries were questionable, screens were not exactly cinematic, and somebody always forgot the charger, but for a while these things absolutely put in work.",
+      shortDescription: "The backseat cinema that made road trips bearable and siblings temporarily civil.",
+      longDescription:
+        "Portable DVD player: the gadget that turned car rides into movie marathons and made you the MVP of every family vacation. Batteries were a gamble, screens were tiny, but for a while, this was luxury.\n\nIf you forgot the charger, you learned about heartbreak early."
     yearIntroduced: 1998,
     peakEra: "Early to late 2000s",
     replacedBy: "Tablets, smartphones, and streaming",
@@ -2047,9 +2047,9 @@ const techEntries = [
     title: "Tamagotchi",
     slug: "tamagotchi",
     image: "/images/tamagotchi-removebg-preview.png",
-    shortDescription: "A tiny egg that beeped for food, attention, and occasional emotional damage.",
-    longDescription:
-      "Tamagotchis were digital pets that somehow turned a keychain into a lifestyle. You fed them, cleaned up after them, panicked when they beeped in class, and learned way too young that even pixel creatures can judge your commitment.\n\nFirst released in the late 90s, Tamagotchi became a full-blown phenomenon. It mixed toy culture, low-stakes responsibility, and tiny-screen obsession into one weirdly powerful package. Today it reads like an early warning sign for notification addiction, but a very cute one.",
+      shortDescription: "The digital pet that beeped for food, love, and your undivided guilt.",
+      longDescription:
+        "Tamagotchi: the keychain egg that turned you into a helicopter parent for a pixel blob. Feed it, clean it, panic when it beeps in class, and mourn when it inevitably dies.\n\nIt was adorable, demanding, and the reason you have trust issues with notifications."
     yearIntroduced: 1996,
     peakEra: "Late 1990s to early 2000s",
     replacedBy: "Mobile games and app-based virtual pets",
@@ -2076,9 +2076,9 @@ const techEntries = [
     title: "Winamp Skins",
     slug: "winamp-skins",
     image: "/images/winskin.jpeg",
-    shortDescription: "Because the music player was fine, but what if it also looked like chrome lava from outer space?",
-    longDescription:
-      "Winamp skins were peak desktop customization sickness. The default player was never enough. You had to make it translucent, metallic, radioactive, or shaped like something that clearly hated usability.\n\nThey thrived in the era when customizing software felt like a personality test. People downloaded skins by the thousand, traded them across forums and fan sites, and proudly sacrificed readability for vibes. It was messy, expressive, and very much the point.",
+      shortDescription: "The reason your music player looked like a spaceship, a lava lamp, or a fever dream.",
+      longDescription:
+        "Winamp skins: the ultimate desktop fashion statement. Why settle for normal when you could make your player look like alien chrome or radioactive goo?\n\nIf you could still find the play button, you weren’t trying hard enough."
     yearIntroduced: 1998,
     peakEra: "Late 1990s to mid-2000s",
     replacedBy: "Cleaner app design and standardized streaming interfaces",
@@ -2105,9 +2105,9 @@ const techEntries = [
     title: "Adobe Flash Player",
     slug: "adobe-flash-player",
     image: "/images/Adobe_Flash_Player.png",
-    shortDescription: "The plugin that powered half the web — and crashed the other half.",
-    longDescription:
-      "Flash gave us games, cartoons, and weird interactive websites with loading bars that lied. It also gave us pop‑ups, battery drain, and security holes.\n\nFrom the late 90s to the 2010s, Flash ruled rich media. Then HTML5 arrived, mobile said ‘nope,’ and the plugin rode into the sunset in 2020.",
+      shortDescription: "The plugin that made the web fun, weird, and occasionally explode. RIP, browser crashes.",
+      longDescription:
+        "Adobe Flash Player: the reason the web was full of games, cartoons, and pop-ups that crashed your browser. It was wild, creative, and a security nightmare.\n\nFlash ruled, then HTML5 and mobile said ‘nope.’ Gone, but never forgotten by anyone who waited for a loading bar to lie to them."
     yearIntroduced: 1996,
     peakEra: "Late 1990s to 2010s",
     replacedBy: "HTML5, JavaScript, and modern web media standards",

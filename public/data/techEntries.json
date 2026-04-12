@@ -2,16 +2,16 @@
   {
     "image": "/images/Compact_Disc_image.png",
     "title": "Compact Disc",
-    "description": "A popular digital storage medium from the late 20th century, used for music, data, and software."
+    "description": "The shiny frisbee your parents used to listen to music, install games, or desperately try to burn a mix for their crush. Scratches? Just blow on it and pray."
   },
   {
     "image": "/images/Floppy_disk_2009_G1_image.jpg",
     "title": "Floppy Disk",
-    "description": "A magnetic storage device once widely used for transferring files and booting systems."
+    "description": "That weird save icon in your app? It was a real thing! Held 1.44MB—just enough for one pixel of a TikTok. Also doubled as a wobbly ninja star."
   },
   {
     "image": "/images/napster_logo_1585915729_image.png",
     "title": "Napster",
-    "description": "A peer-to-peer file sharing service that revolutionized digital music access before being shut down."
+    "description": "The OG music pirate ship. Made your dial-up scream for hours just to download one song, then got sunk by angry rock stars."
   }
 ]
