@@ -425,7 +425,7 @@ const techEntries = [
   image: "/images/sidekick-removebg-preview.png",
   shortDescription: "The phone that made you feel like a secret agent—if secret agents mostly gossiped on AIM and flipped their screens for dramatic effect.",
   longDescription:
-    "The T-Mobile Sidekick: part phone, part fidget toy, all drama. That snap-open screen was pure theater, and the keyboard was built for maximum gossip velocity.\n\nIt was the ultimate flex for MySpace royalty and anyone who wanted to text like a hacker in a Disney Channel movie. The Sidekick didn’t just walk so smartphones could run—it swiveled, snapped, and spilled all the tea first."
+    "The T-Mobile Sidekick: part phone, part fidget toy, all drama. That snap-open screen was pure theater, and the keyboard was built for maximum gossip velocity.\n\nIt was the ultimate flex for MySpace royalty and anyone who wanted to text like a hacker in a Disney Channel movie. The Sidekick didn’t just walk so smartphones could run—it swiveled, snapped, and spilled all the tea first.",
   yearIntroduced: 2002,
   peakEra: "Early to late 2000s",
   replacedBy: "iPhone and Android smartphones",
@@ -454,7 +454,7 @@ const techEntries = [
   image: "/images/aim-removebg-preview.png",
   shortDescription: "The OG drama machine. If you didn’t have a cryptic away message, did you even exist?",
   longDescription:
-    "AIM: where friendships were made, hearts were broken, and away messages were the original subtweets. You’d log in, hear that door creak, and instantly know who was online, who was ignoring you, and who was about to drop a lyric bomb.\n\nIt was the birthplace of internet slang, buddy list politics, and the art of pretending you were busy. RIP, AIM—you were the digital cafeteria table we all needed."
+    "AIM: where friendships were made, hearts were broken, and away messages were the original subtweets. You’d log in, hear that door creak, and instantly know who was online, who was ignoring you, and who was about to drop a lyric bomb.\n\nIt was the birthplace of internet slang, buddy list politics, and the art of pretending you were busy. RIP, AIM—you were the digital cafeteria table we all needed.",
   yearIntroduced: 1997,
   peakEra: "Late 1990s to mid-2000s",
   replacedBy: "Social messaging apps and mobile chat",
@@ -483,7 +483,7 @@ const techEntries = [
   image: "/images/windows_95-removebg-preview.png",
   shortDescription: "Insert disk, cross fingers, and prepare to duel your PC’s mood swings. The original IT panic button.",
   longDescription:
-    "The Windows 95 startup disk: one floppy, infinite anxiety. You’d pop it in, pray it wasn’t corrupted, and answer cryptic questions like you were defusing a bomb.\n\nIt was the difference between glory and despair, and the reason every 90s kid learned to fear the phrase ‘Non-system disk or disk error.’"
+    "The Windows 95 startup disk: one floppy, infinite anxiety. You’d pop it in, pray it wasn’t corrupted, and answer cryptic questions like you were defusing a bomb.\n\nIt was the difference between glory and despair, and the reason every 90s kid learned to fear the phrase ‘Non-system disk or disk error.’",
   yearIntroduced: 1995,
   peakEra: "Mid-1990s to early 2000s",
   replacedBy: "Recovery partitions, USB installers, and built-in repair tools",
@@ -773,7 +773,7 @@ const techEntries = [
   image: "/images/blackberry-removebg-preview.png",
   shortDescription: "The phone that made you feel like a CEO, even if you were just texting your mom. That keyboard? Legendary.",
   longDescription:
-    "BlackBerry: the phone that turned everyone into a power user (or at least made you look busy). That keyboard was so good, people still dream about it.\n\nIt was the original ‘I’m important’ device—until touchscreens took over and the blinking red light became a ghost of productivity past."
+    "BlackBerry: the phone that turned everyone into a power user (or at least made you look busy). That keyboard was so good, people still dream about it.\n\nIt was the original ‘I’m important’ device—until touchscreens took over and the blinking red light became a ghost of productivity past.",
   yearIntroduced: 1999,
   peakEra: "2000s to early 2010s",
   replacedBy: "iPhone and Android smartphones",
@@ -1208,7 +1208,7 @@ const techEntries = [
   image: "/images/real player.png",
   shortDescription: "The video player that made ‘buffering’ a lifestyle. Installed toolbars you didn’t even know you didn’t want.",
   longDescription:
-    "RealPlayer: the OG streaming app that turned every video into a suspense thriller—would it play, or would you stare at a spinning circle forever? It came with bonus toolbars, pop-ups, and a window so tiny you needed a microscope.\n\nIt was revolutionary, infuriating, and the reason you learned to say ‘buffering’ with feeling."
+    "RealPlayer: the OG streaming app that turned every video into a suspense thriller—would it play, or would you stare at a spinning circle forever? It came with bonus toolbars, pop-ups, and a window so tiny you needed a microscope.\n\nIt was revolutionary, infuriating, and the reason you learned to say ‘buffering’ with feeling.",
   yearIntroduced: 1995,
   peakEra: "Late 1990s to early 2000s",
   replacedBy: "HTML5 media players and modern streaming platforms",
