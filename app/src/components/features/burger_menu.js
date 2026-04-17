@@ -86,10 +86,11 @@ export default function BurgerMenu() {
             position: 'absolute',
             width: '100%',
             height: '4px',
-            backgroundColor: 'var(--ota-accent)',
+            backgroundColor: '#00eaff',
             borderRadius: '2px',
             opacity: isOpen ? 0 : 1,
             transition: 'opacity 0.3s ease-in-out',
+            boxShadow: '0 0 8px 2px #00eaff88, 0 0 2px 0 #00eaff',
           }}
         />
         <span
@@ -143,7 +144,7 @@ export default function BurgerMenu() {
             <li
               onClick={() => setShowCategories(!showCategories)}
               style={{
-                fontFamily: '"Courier New", Courier, monospace',
+                fontFamily: 'inherit',
                 fontWeight: 'normal',
                 fontSize: '0.9rem',
                 letterSpacing: '0.5px',
@@ -189,7 +190,7 @@ export default function BurgerMenu() {
               <>
                 <li
                   style={{
-                    fontFamily: '"Courier New", Courier, monospace',
+                    fontFamily: 'inherit',
                     fontWeight: 'normal',
                     fontSize: '0.9rem',
                     letterSpacing: '0.5px',
@@ -203,7 +204,7 @@ export default function BurgerMenu() {
                     style={{
                       textDecoration: 'none',
                       color: '#555',
-                      fontFamily: '"Courier New", Courier, monospace',
+                      fontFamily: 'inherit',
                       fontSize: '0.9rem',
                       letterSpacing: '0.5px',
                       textTransform: 'uppercase',
@@ -226,7 +227,7 @@ export default function BurgerMenu() {
                 </li>
                 <li
                   style={{
-                    fontFamily: '"Courier New", Courier, monospace',
+                    fontFamily: 'inherit',
                     fontWeight: 'normal',
                     fontSize: '0.9rem',
                     letterSpacing: '0.5px',
@@ -240,7 +241,7 @@ export default function BurgerMenu() {
                     style={{
                       textDecoration: 'none',
                       color: '#555',
-                      fontFamily: '"Courier New", Courier, monospace',
+                      fontFamily: 'inherit',
                       fontSize: '0.9rem',
                       letterSpacing: '0.5px',
                       textTransform: 'uppercase',
@@ -263,7 +264,7 @@ export default function BurgerMenu() {
                 </li>
                 <li
                   style={{
-                    fontFamily: '"Courier New", Courier, monospace',
+                    fontFamily: 'inherit',
                     fontWeight: 'normal',
                     fontSize: '0.9rem',
                     letterSpacing: '0.5px',
@@ -277,7 +278,7 @@ export default function BurgerMenu() {
                     style={{
                       textDecoration: 'none',
                       color: '#555',
-                      fontFamily: '"Courier New", Courier, monospace',
+                      fontFamily: 'inherit',
                       fontSize: '0.9rem',
                       letterSpacing: '0.5px',
                       textTransform: 'uppercase',
@@ -339,7 +340,7 @@ export default function BurgerMenu() {
                 */}
                 <li
                   style={{
-                    fontFamily: '"Courier New", Courier, monospace',
+                    fontFamily: 'inherit',
                     fontWeight: 'normal',
                     fontSize: '0.9rem',
                     letterSpacing: '0.5px',
@@ -353,7 +354,7 @@ export default function BurgerMenu() {
                     style={{
                       textDecoration: 'none',
                       color: '#555',
-                      fontFamily: '"Courier New", Courier, monospace',
+                      fontFamily: 'inherit',
                       fontSize: '0.9rem',
                       letterSpacing: '0.5px',
                       textTransform: 'uppercase',
@@ -583,7 +584,7 @@ export default function BurgerMenu() {
             <li
               onClick={() => setShowExplore(!showExplore)}
               style={{
-                fontFamily: '"Courier New", Courier, monospace',
+                fontFamily: 'inherit',
                 fontWeight: 'normal',
                 fontSize: '0.9rem',
                 letterSpacing: '0.5px',
@@ -629,12 +630,12 @@ export default function BurgerMenu() {
               <>
                 <li
                   style={{
-                    fontFamily: '"Courier New", Courier, monospace',
+                    fontFamily: 'inherit',
                     fontWeight: 'normal',
                     fontSize: '0.9rem',
                     letterSpacing: '0.5px',
                     textTransform: 'uppercase',
-                    color: 'black',
+                    color: '#555',
                   }}
                 >
                   <Link
@@ -643,7 +644,7 @@ export default function BurgerMenu() {
                     style={{
                       textDecoration: 'none',
                       color: 'black',
-                      fontFamily: '"Courier New", Courier, monospace',
+                      fontFamily: 'inherit',
                       fontSize: '0.9rem',
                       letterSpacing: '0.5px',
                       textTransform: 'uppercase',
@@ -666,12 +667,12 @@ export default function BurgerMenu() {
                 </li>
                 <li
                   style={{
-                    fontFamily: '"Courier New", Courier, monospace',
+                    fontFamily: 'inherit',
                     fontWeight: 'normal',
                     fontSize: '0.9rem',
                     letterSpacing: '0.5px',
                     textTransform: 'uppercase',
-                    color: 'black',
+                    color: '#555',
                   }}
                 >
                   <Link
@@ -680,7 +681,7 @@ export default function BurgerMenu() {
                     style={{
                       textDecoration: 'none',
                       color: 'black',
-                      fontFamily: '"Courier New", Courier, monospace',
+                      fontFamily: 'inherit',
                       fontSize: '0.9rem',
                       letterSpacing: '0.5px',
                       textTransform: 'uppercase',
@@ -707,7 +708,7 @@ export default function BurgerMenu() {
             <li
               onClick={() => setShowAbout(!showAbout)}
               style={{
-                fontFamily: '"Courier New", Courier, monospace',
+                fontFamily: 'inherit',
                 fontWeight: 'normal',
                 fontSize: '0.9rem',
                 letterSpacing: '0.5px',
@@ -753,12 +754,12 @@ export default function BurgerMenu() {
               <>
                 <li
                   style={{
-                    fontFamily: '"Courier New", Courier, monospace',
+                    fontFamily: 'inherit',
                     fontWeight: 'normal',
                     fontSize: '0.9rem',
                     letterSpacing: '0.5px',
                     textTransform: 'uppercase',
-                    color: 'black',
+                    color: '#555',
                   }}
                 >
                   <Link
@@ -767,7 +768,7 @@ export default function BurgerMenu() {
                     style={{
                       textDecoration: 'none',
                       color: 'black',
-                      fontFamily: '"Courier New", Courier, monospace',
+                      fontFamily: 'inherit',
                       fontSize: '0.9rem',
                       letterSpacing: '0.5px',
                       textTransform: 'uppercase',
@@ -790,12 +791,12 @@ export default function BurgerMenu() {
                 </li>
                 <li
                   style={{
-                    fontFamily: '"Courier New", Courier, monospace',
+                    fontFamily: 'inherit',
                     fontWeight: 'normal',
                     fontSize: '0.9rem',
                     letterSpacing: '0.5px',
                     textTransform: 'uppercase',
-                    color: 'black',
+                    color: '#555',
                   }}
                 >
                   <Link
@@ -804,7 +805,7 @@ export default function BurgerMenu() {
                     style={{
                       textDecoration: 'none',
                       color: 'black',
-                      fontFamily: '"Courier New", Courier, monospace',
+                      fontFamily: 'inherit',
                       fontSize: '0.9rem',
                       letterSpacing: '0.5px',
                       textTransform: 'uppercase',
@@ -827,12 +828,12 @@ export default function BurgerMenu() {
                 </li>
                 <li
                   style={{
-                    fontFamily: '"Courier New", Courier, monospace',
+                    fontFamily: 'inherit',
                     fontWeight: 'normal',
                     fontSize: '0.9rem',
                     letterSpacing: '0.5px',
                     textTransform: 'uppercase',
-                    color: 'black',
+                    color: '#555',
                   }}
                 >
                   <Link
@@ -841,7 +842,7 @@ export default function BurgerMenu() {
                     style={{
                       textDecoration: 'none',
                       color: 'black',
-                      fontFamily: '"Courier New", Courier, monospace',
+                      fontFamily: 'inherit',
                       fontSize: '0.9rem',
                       letterSpacing: '0.5px',
                       textTransform: 'uppercase',
@@ -864,12 +865,12 @@ export default function BurgerMenu() {
                 </li>
                 <li
                   style={{
-                    fontFamily: '"Courier New", Courier, monospace',
+                    fontFamily: 'inherit',
                     fontWeight: 'normal',
                     fontSize: '0.9rem',
                     letterSpacing: '0.5px',
                     textTransform: 'uppercase',
-                    color: 'black',
+                    color: '#555',
                   }}
                 >
                                     <Link
@@ -878,7 +879,7 @@ export default function BurgerMenu() {
                     style={{
                       textDecoration: 'none',
                       color: 'black',
-                      fontFamily: '"Courier New", Courier, monospace',
+                      fontFamily: 'inherit',
                       fontSize: '0.9rem',
                       letterSpacing: '0.5px',
                       textTransform: 'uppercase',
@@ -901,12 +902,12 @@ export default function BurgerMenu() {
                 </li>
                 <li
                   style={{
-                    fontFamily: '"Courier New", Courier, monospace',
+                    fontFamily: 'inherit',
                     fontWeight: 'normal',
                     fontSize: '0.9rem',
                     letterSpacing: '0.5px',
                     textTransform: 'uppercase',
-                    color: 'black',
+                    color: '#555',
                   }}
                 >
                   <a
@@ -917,7 +918,7 @@ export default function BurgerMenu() {
                     style={{
                       textDecoration: 'none',
                       color: 'black',
-                      fontFamily: '"Courier New", Courier, monospace',
+                      fontFamily: 'inherit',
                       fontSize: '0.9rem',
                       letterSpacing: '0.5px',
                       textTransform: 'uppercase',

@@ -32,6 +32,19 @@ export default function Footer() {
     <div className="footer-shell">
       <footer className="footer">
         <div className="footer-panel">
+          {/* Grey top border accent to match hero section */}
+          <div style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            width: '100%',
+            height: '4px',
+            background: '#b0b0b0',
+            borderTopLeftRadius: 28,
+            borderTopRightRadius: 28,
+            zIndex: 2,
+            opacity: 1
+          }} />
           <div className="footer-top">
             <div className="footer-top-inner">
               <p className="footer-prompt">
@@ -121,11 +134,11 @@ export default function Footer() {
           width: min(1200px, 100%);
           margin: 0 auto;
           overflow: hidden;
-          border: 1px solid var(--ota-line);
+          border: 1.5px solid #b0b0b0;
           border-radius: 28px;
           background:
-            linear-gradient(180deg, rgba(255, 255, 255, 0.95), rgba(246, 250, 253, 0.92));
-          box-shadow: var(--ota-shadow);
+            linear-gradient(180deg, rgba(255,255,255,0.97), rgba(230,250,255,0.93) 80%, rgba(220,245,255,0.92) 100%);
+          box-shadow: 0 0 32px 0 #00eaff22, 0 2px 24px 0 #00334d22;
         }
 
         .footer-panel::before {
@@ -140,12 +153,7 @@ export default function Footer() {
 
         .footer-panel::after {
           content: "";
-          position: absolute;
-          top: 0;
-          left: 0;
-          right: 0;
-          height: 4px;
-          background: linear-gradient(90deg, var(--ota-accent), rgba(197, 111, 82, 0.85));
+          display: none;
         }
 
         .footer-top,
@@ -175,10 +183,11 @@ export default function Footer() {
 
         .footer-prompt {
           margin: 0;
-          color: var(--ota-ink);
+          color: #888;
           font-size: clamp(0.95rem, 2vw, 1.05rem);
           line-height: 1.6;
           text-align: center;
+          text-shadow: none;
         }
 
         .footer-form {
@@ -194,12 +203,12 @@ export default function Footer() {
           min-width: min(320px, 100%);
           max-width: 100%;
           padding: 0.85rem 1rem;
-          border: 1px solid var(--ota-line);
+          border: 1.5px solid #b0b0b0;
           border-radius: 999px;
-          background: rgba(255, 255, 255, 0.9);
-          color: var(--ota-ink);
+          background: rgba(255,255,255,0.92);
+          color: #222;
           font-size: 0.95rem;
-          box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7);
+          box-shadow: 0 0 8px #00eaff11 inset;
         }
 
         .footer-input:focus {
@@ -210,33 +219,35 @@ export default function Footer() {
 
         .footer-button {
           padding: 0.85rem 1.2rem;
-          border: 1px solid rgba(47, 93, 98, 0.16);
+          border: 1.5px solid #b0b0b0;
           border-radius: 999px;
-          background: linear-gradient(135deg, var(--ota-accent), #3e7b85);
-          color: #fff;
+          background: #f6fafd;
+          color: #222;
           font-size: 0.95rem;
           font-weight: 700;
           cursor: pointer;
-          transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
-          box-shadow: 0 12px 24px rgba(44, 103, 112, 0.18);
+          transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease, background 0.2s, color 0.2s;
+          box-shadow: none;
+          text-shadow: none;
         }
 
         .footer-button:hover {
-          transform: translateY(-1px);
-          filter: brightness(1.03);
+          background: #e6e6e6;
+          color: #000;
         }
 
         .footer-status {
-          color: var(--ota-accent);
+          color: #00eaff;
           font-size: 0.9rem;
           font-weight: 700;
           text-align: center;
+          text-shadow: 0 0 6px #00eaff88;
         }
 
         .footer-bottom {
           padding: 1.25rem 1.5rem 1.75rem;
-          border-top: 1px solid rgba(70, 76, 67, 0.08);
-          background: linear-gradient(180deg, rgba(255, 255, 255, 0.4), rgba(235, 242, 246, 0.6));
+          border-top: 1.5px solid #b0b0b0;
+          background: linear-gradient(180deg, rgba(255,255,255,0.85), rgba(230,250,255,0.82));
         }
 
         .footer-bottom-inner {
@@ -263,23 +274,26 @@ export default function Footer() {
           width: 42px;
           height: 42px;
           border-radius: 999px;
-          border: 1px solid rgba(47, 93, 98, 0.12);
-          background: rgba(255, 255, 255, 0.82);
-          color: var(--ota-accent);
-          transition: transform 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+          border: 1.5px solid #b0b0b0;
+          background: #f6fafd;
+          color: #888;
+          box-shadow: none;
+          transition: transform 0.2s, border-color 0.2s, background-color 0.2s, color 0.2s;
         }
 
         .social-icon:hover {
-          transform: translateY(-1px);
-          border-color: rgba(47, 93, 98, 0.24);
-          background: var(--ota-accent-soft);
+          transform: translateY(-1px) scale(1.08);
+          border-color: #888;
+          background: #e6e6e6;
+          color: #222;
         }
 
         .footer-link,
         .footer-copy,
         .footer-separator {
-          color: var(--ota-muted);
+          color: #222;
           font-size: 0.9rem;
+          text-shadow: none;
         }
 
         .footer-link {
@@ -288,11 +302,19 @@ export default function Footer() {
         }
 
         .footer-link:hover {
-          color: var(--ota-accent);
+          color: #00eaff;
+          text-shadow: 0 0 8px #00eaff;
         }
 
         .footer-copy {
           text-align: center;
+          font-family: inherit;
+          font-weight: 400;
+          font-size: 0.9rem;
+          letter-spacing: 0;
+          color: #888;
+          text-shadow: none;
+          margin-top: 1.5rem;
         }
 
         @media (max-width: 767px) {

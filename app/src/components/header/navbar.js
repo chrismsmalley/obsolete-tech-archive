@@ -37,7 +37,8 @@ export default function Navbar() {
           aria-label="Go to homepage"
           className="logo-font"
           style={{
-            fontSize: 'clamp(1.2rem, 5vw, 1.55rem)',
+            display: 'flex',
+            alignItems: 'center',
             textDecoration: 'none',
             color: 'inherit',
             margin: 0,
@@ -45,7 +46,13 @@ export default function Navbar() {
             padding: '4px 0',
           }}
         >
-          <span className="logo-mark" aria-hidden="true">OT</span>
+          <img
+            src="/images/ot_logo-removebg-preview.png"
+            alt="Obsolete Tech Archive logo"
+            width={36}
+            height={36}
+            style={{ display: 'inline-block', verticalAlign: 'middle', marginRight: '0.5rem', borderRadius: '7px', background: '#fff' }}
+          />
         </Link>
         <div className="burger-wrapper">
           <BurgerMenu />

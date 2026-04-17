@@ -23,7 +23,7 @@ export default function TechCard(props) {
             className="tech-card"
           >
             <div className="tech-card__media">
-              <div className="tech-card__media-inner">
+              <div className="tech-card__media-inner aspect-ratio-fallback">
                 <Image
                   src={props.image}
                   alt={props.title}
@@ -38,6 +38,7 @@ export default function TechCard(props) {
                     height: '100%',
                     objectFit: 'contain',
                   }}
+                  priority={props.index === 0}
                 />
               </div>
             </div>
@@ -108,6 +109,22 @@ export default function TechCard(props) {
           justify-content: center;
           overflow: hidden;
           position: relative;
+        }
+        /* Aspect ratio fallback for image container */
+        .aspect-ratio-fallback {
+          aspect-ratio: 4 / 3;
+          /* Fallback for browsers without aspect-ratio */
+          height: 0;
+          padding-bottom: 75%;
+          position: relative;
+        }
+        .aspect-ratio-fallback > :global(img),
+        .aspect-ratio-fallback > .tech-card__image {
+          position: absolute !important;
+          top: 0;
+          left: 0;
+          width: 100% !important;
+          height: 100% !important;
         }
 
         .tech-card__media-inner::after {
