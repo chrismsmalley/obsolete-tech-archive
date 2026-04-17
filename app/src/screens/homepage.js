@@ -112,27 +112,14 @@ function Homepage() {
            <section className="homepage-hero">
              <div className="homepage-hero-panel">
                <div className="homepage-intro">
-                 <div className="homepage-kicker" style={{
-                   fontSize: "0.82rem",
-                   letterSpacing: "0.22em",
-                   textTransform: "uppercase",
-                   color: "#888",
-                   fontWeight: 700,
-                   marginBottom: "1.2rem",
-                   marginTop: 0,
-                   textAlign: "center",
-                   opacity: 0.85,
-                   userSelect: "none"
-                 }}>
-                   CURATED ARCHIVE OF RETIRED TECH
-                 </div>
+                 <p className="homepage-kicker">Curated Archive of Retired Tech</p>
                  <div style={{
                    display: "flex",
                    flexDirection: "column",
                    alignItems: "center",
                    marginBottom: "2rem"
                  }}>
-                   <div className="eighties-hero-heading" style={{ position: "relative", display: "inline-block", width: 620, minWidth: 0, padding: 0, overflow: "visible" }}>
+                   <div className="eighties-hero-heading" style={{ position: "relative", display: "inline-block", width: 620, height: 200, minWidth: 0, padding: 0, overflow: "visible" }}>
                      <svg
                        width="620"
                        height="200"
