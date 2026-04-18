@@ -2,6 +2,7 @@ import './globals.css';
 import Navbar from './src/components/header/navbar';
 import Footer from './src/components/footer/footer';
 import CookieBanner from './src/components/banner/CookieBanner';
+import { Analytics } from '@vercel/analytics/next';
 
 export const metadata = {
   title: 'Obsolete Tech Archive',
@@ -52,6 +53,7 @@ export default function RootLayout({ children }) {
           <Footer />
           <CookieBanner />
         </div>
+        <Analytics />
       </body>
     </html>
   );
