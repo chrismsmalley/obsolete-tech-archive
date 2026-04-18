@@ -113,9 +113,6 @@ export default function TechCard(props) {
         /* Aspect ratio fallback for image container */
         .aspect-ratio-fallback {
           aspect-ratio: 4 / 3;
-          /* Fallback for browsers without aspect-ratio */
-          height: 0;
-          padding-bottom: 75%;
           position: relative;
         }
         .aspect-ratio-fallback > :global(img),
@@ -228,13 +225,23 @@ export default function TechCard(props) {
             flex: 0 0 auto;
             width: 100%;
             max-width: 100%;
-            height: 160px;
+            height: 38vw;
+            min-height: 180px;
+            max-height: 260px;
             border-right: none;
             border-radius: 8px;
           }
 
           .tech-card__media-inner {
             padding: 8px;
+            height: 100%;
+            min-height: 0;
+          }
+          /* Remove aspect-ratio fallback height/padding for mobile */
+          .aspect-ratio-fallback {
+            aspect-ratio: 4 / 3;
+            height: 100%;
+            padding-bottom: 0;
           }
 
           .tech-card__media-inner::after {

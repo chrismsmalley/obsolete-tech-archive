@@ -189,13 +189,13 @@ function Homepage() {
                        </text>
                      </svg>
                      <h1
+                       className="homepage-title"
                        style={{
                          position: "relative",
                          zIndex: 1,
                          color: "#e6faff",
                          fontFamily: "Times New Roman, Times, serif",
                          fontWeight: 900,
-                         fontSize: "clamp(3.5rem, 10vw, 7rem)",
                          letterSpacing: "0.08em",
                          margin: 0,
                          textAlign: "center",
@@ -495,7 +495,7 @@ function Homepage() {
               marginBottom: "2rem"
             }}>
               {/* Logo removed from here, now in header */}
-              <div className="eighties-hero-heading" style={{ position: "relative", display: "inline-block", width: 620, height: 200, minWidth: 0, padding: 0, overflow: "visible" }}>
+                   <div className="eighties-hero-heading">
                 {/* SVG: neon text with trailing extrusion highlights */}
                 <svg
                   width="620"
