@@ -9,9 +9,7 @@ export default function sitemap() {
     '/contact',
     '/submit',
     '/privacy_policy',
-    '/newsletter',
     '/cookie',
-    '/random',
   ].map((path, index) => ({
     url: `${SITE_URL}${path}`,
     lastModified: new Date(),

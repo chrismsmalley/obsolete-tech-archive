@@ -1,6 +1,8 @@
 import { techEntries } from '@/app/src/data/techEntries';
 import SlugClientPage from '@/app/src/screens/SlugClientPage';
 
+const EDITORIAL_UPDATED_ISO = '2026-04-22';
+
 export async function generateMetadata({ params }) {
   const { slug } = await params;
   const tech = techEntries.find((entry) => entry.slug === slug);
@@ -24,9 +26,11 @@ export async function generateMetadata({ params }) {
   return {
     title,
     description,
+    authors: [{ name: 'Obsolete Tech Archive Editorial Desk' }],
     alternates: {
       canonical: url,
     },
+    keywords: [tech.title, tech.category, tech.replacedBy, tech.peakEra].filter(Boolean),
     openGraph: {
       title,
       description,
@@ -34,6 +38,8 @@ export async function generateMetadata({ params }) {
       type: 'article',
       siteName: 'Obsolete Tech Archive',
       images: [image],
+      authors: ['Obsolete Tech Archive Editorial Desk'],
+      modifiedTime: EDITORIAL_UPDATED_ISO,
     },
     twitter: {
       card: 'summary_large_image',

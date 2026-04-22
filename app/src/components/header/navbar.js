@@ -1,5 +1,6 @@
 'use client';
 import React, { Suspense } from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import BurgerMenu from '../features/burger_menu';
 import ArchiveSearch from '../search/ArchiveSearch';
@@ -39,13 +40,14 @@ export default function Navbar() {
             padding: '4px 0',
           }}
           >
-            <img
+            <Image
               src="/images/ot_logo-removebg-preview.png"
               alt="Obsolete Tech Archive logo"
               width={36}
-            height={36}
-            style={{ display: 'inline-block', verticalAlign: 'middle', marginRight: '0.5rem', borderRadius: '7px', background: '#fff' }}
-          />
+              height={36}
+              priority
+              style={{ display: 'inline-block', verticalAlign: 'middle', marginRight: '0.5rem', borderRadius: '7px', background: '#fff' }}
+            />
         </Link>
           <div className="navbar-search">
             <Suspense fallback={<div className="navbar-search__fallback" aria-hidden="true" />}>

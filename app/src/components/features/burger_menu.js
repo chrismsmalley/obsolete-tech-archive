@@ -662,43 +662,6 @@ export default function BurgerMenu() {
                 >
                   <Link
                     role="menuitem"
-                    href="/newsletter"
-                    style={{
-                      textDecoration: 'none',
-                      color: 'black',
-                      fontFamily: 'inherit',
-                      fontSize: '0.9rem',
-                      letterSpacing: '0.5px',
-                      textTransform: 'uppercase',
-                      padding: '0.25rem 0.5rem',
-                      display: 'inline-block',
-                      transition: 'color 0.2s ease, transform 0.2s ease',
-                    }}
-                    onClick={() => setIsOpen(false)}
-                    onMouseEnter={e => {
-                      e.currentTarget.style.color = '#2f4f4f';
-                      e.currentTarget.style.transform = 'translateX(5px)';
-                    }}
-                    onMouseLeave={e => {
-                      e.currentTarget.style.color = 'black';
-                      e.currentTarget.style.transform = 'translateX(0)';
-                    }}
-                  >
-                    Newsletter
-                  </Link>
-                </li>
-                <li
-                  style={{
-                    fontFamily: 'inherit',
-                    fontWeight: 'normal',
-                    fontSize: '0.9rem',
-                    letterSpacing: '0.5px',
-                    textTransform: 'uppercase',
-                    color: '#555',
-                  }}
-                >
-                  <Link
-                    role="menuitem"
                     href="/submit"
                     style={{
                       textDecoration: 'none',

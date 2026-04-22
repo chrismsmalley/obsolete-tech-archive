@@ -84,10 +84,26 @@ function normalizeFacts(entry) {
   return facts;
 }
 
+function normalizeSources(entry) {
+  if (!Array.isArray(entry.sources)) {
+    return [];
+  }
+
+  return entry.sources
+    .filter((source) => source && source.title && source.url)
+    .map((source) => ({
+      title: source.title,
+      url: source.url,
+      publisher: source.publisher || "",
+      note: source.note || "",
+    }));
+}
+
 export function normalizeTechEntry(entry) {
   return {
     ...entry,
     sections: normalizeSections(entry),
     facts: normalizeFacts(entry),
+    sources: normalizeSources(entry),
   };
 }
