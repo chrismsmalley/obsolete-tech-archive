@@ -1,6 +1,7 @@
 'use client';
 import Link from 'next/link';
-import React, { useState, useEffect, useRef } from 'react';
+import React, { Suspense, useState, useEffect, useRef } from 'react';
+import ArchiveSearch from '../search/ArchiveSearch';
 
 export default function BurgerMenu() {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,6 +21,13 @@ export default function BurgerMenu() {
     setIsOpen(!isOpen);
   };
 
+  const closeMenu = () => {
+    setIsOpen(false);
+    setShowCategories(false);
+    setShowExplore(false);
+    setShowAbout(false);
+  };
+
   useEffect(() => {
     function handleClickOutside(event) {
       if (
@@ -28,10 +36,7 @@ export default function BurgerMenu() {
         toggleRef.current &&
         !toggleRef.current.contains(event.target)
       ) {
-        setIsOpen(false);
-        setShowCategories(false);
-        setShowExplore(false);
-        setShowAbout(false);
+        closeMenu();
       }
     }
     document.addEventListener('mousedown', handleClickOutside);
@@ -140,6 +145,23 @@ export default function BurgerMenu() {
             `}
           </style>
           <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
+            <li style={{ marginBottom: '0.9rem' }}>
+              <Suspense fallback={null}>
+                <ArchiveSearch
+                  liveOnHome={false}
+                  onNavigate={closeMenu}
+                  placeholder="Dig up a dusty title..."
+                  variant="menu"
+                />
+              </Suspense>
+            </li>
+            <li
+              aria-hidden="true"
+              style={{
+                marginBottom: '0.95rem',
+                borderBottom: '1px solid rgba(47, 93, 98, 0.12)',
+              }}
+            />
             {/* Categories Section */}
             <li
               onClick={() => setShowCategories(!showCategories)}

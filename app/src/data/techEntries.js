@@ -2129,6 +2129,151 @@ const techEntries = [
       }
     ],
     category: "Web Culture"
+  },
+  {
+    title: "Fax Machine",
+    slug: "fax-machine",
+    image: "/images/faxmachine-removebg-preview.png",
+      shortDescription: "The office box that screamed documents through a phone line like that was a normal thing to do.",
+      longDescription:
+        "Fax machine: the workplace MVP that turned paper into angry robot noises and somehow counted as instant communication. If you spent the 80s or 90s waiting by one, you know the exact sound of administrative suspense.\n\nModern fax systems took off in the 1960s and became office royalty in the 1980s and 1990s, letting businesses send signed forms, contracts, and grainy pages without trusting the postal service to move with urgency. Then email, scanners, and PDFs showed up and politely informed the fax machine that its drama was no longer required.",
+    yearIntroduced: 1964,
+    peakEra: "1980s to 1990s",
+    replacedBy: "Email, scanners, and PDFs",
+    sections: [
+      {
+        heading: "What It Was",
+        body: "The fax machine scanned a page, converted it into signals, and sent it over a phone line to another machine that spat the page back out on the other end. It was basically teleportation for paperwork, if teleportation came with beeping and toner."
+      },
+      {
+        heading: "Why It Mattered",
+        body: "For offices, law firms, doctors, and anybody else trapped in document hell, faxing felt fast and impressively modern. You could move signed pages across cities in minutes instead of waiting days and pretending that was acceptable."
+      },
+      {
+        heading: "Why It Faded",
+        body: [
+          "Once email attachments, scanners, and digital signatures became ordinary, dedicated fax hardware started looking like a very loud middleman.",
+          "It still hangs on in a few industries, which is either a testament to reliability or proof that some workflows simply refuse to die with dignity."
+        ]
+      }
+    ],
+    category: "Office"
+  },
+  {
+    title: "Answering Machine",
+    slug: "answering-machine",
+    image: "/images/answering_machine-removebg-preview.png",
+      shortDescription: "The plastic little gatekeeper that recorded your missed calls, your relatives, and occasionally your family drama.",
+      longDescription:
+        "Answering machine: the countertop voicemail box that let your house screen calls before ghosting people became elegant. Tiny tapes, blinking lights, and one outgoing message that somehow represented the whole family.\n\nConsumer answering machines became common in the 1970s and absolutely owned the 1980s and 1990s, recording messages onto cassette or microcassette tapes when nobody picked up. Eventually voicemail, cell phones, and visual inboxes took over, and the blinking red light retired from active duty.",
+    yearIntroduced: 1971,
+    peakEra: "1980s to early 2000s",
+    replacedBy: "Voicemail and smartphones",
+    sections: [
+      {
+        heading: "What It Was",
+        body: "An answering machine was a home phone sidekick that answered calls after a few rings and recorded whatever the caller had to say. It turned missed calls into little audio time capsules, which was great unless the message was just someone breathing and hanging up."
+      },
+      {
+        heading: "Why It Mattered",
+        body: "It gave households a way to catch messages without being physically attached to the phone at all times, which felt incredibly civilized. It also introduced the art of screening calls by listening from the next room like a tiny domestic spy."
+      },
+      {
+        heading: "Why It Disappeared",
+        body: [
+          "Network voicemail and mobile phones made standalone recording boxes feel redundant fast, especially once messages lived with the phone number instead of the kitchen counter.",
+          "Still, the answering machine remains iconic because no modern voicemail system has matched the raw personality of a handmade family greeting and a tape hiss intro."
+        ]
+      }
+    ],
+    category: "Communication"
+  },
+  {
+    title: "Car Phone",
+    slug: "car-phone",
+    image: "/images/carphone_man-removebg-preview.png",
+      shortDescription: "The dashboard flex that made you look rich, important, and deeply committed to taking calls in traffic.",
+      longDescription:
+        "Car phone: the peak pre-smartphone power move. Big handset, expensive service, and the unmistakable energy of someone who wanted the freeway to double as an office.\n\nMobile car-based telephone service dates back to the 1940s, but car phones became a full-blown status symbol in the 1980s and early 1990s. Once handheld cellular phones got smaller, cheaper, and less absurdly tied to one vehicle, the car phone got pushed out of the driver’s seat.",
+    yearIntroduced: 1946,
+    peakEra: "1980s to early 1990s",
+    replacedBy: "Handheld cell phones and smartphones",
+    sections: [
+      {
+        heading: "What It Was",
+        body: "A car phone was a mobile telephone installed in a vehicle, usually with a handset mounted near the dashboard and electronics tucked elsewhere in the car. It made calling on the road possible long before a phone could casually live in your pocket."
+      },
+      {
+        heading: "Why It Mattered",
+        body: "For business users and wealthy early adopters, it represented freedom, convenience, and a lot of flexing. Being reachable from the road felt futuristic in an era when most people still had one phone glued to a wall at home."
+      },
+      {
+        heading: "Why It Went Away",
+        body: [
+          "As cellular technology improved, portable handsets made more sense than paying premium money for a phone bolted to a single car.",
+          "Car phones survive in memory because they captured that glorious period when mobile communication still looked expensive, dramatic, and a little bit ridiculous."
+        ]
+      }
+    ],
+    category: "Mobile"
+  },
+  {
+    title: "Dedicated Word Processor",
+    slug: "dedicated-word-processor",
+    image: "/images/word_processor-removebg-preview.png",
+      shortDescription: "The almost-computer that let offices edit text in peace before PCs showed up and ate its lunch.",
+      longDescription:
+        "Dedicated word processor: the machine for people who wanted all the thrills of typing, editing, and printing without having to deal with a full computer acting precious. It was the bridge between the typewriter and the beige-box takeover.\n\nWord processing systems gained traction in the 1970s and became office staples in the 1980s, especially in businesses that needed cleaner editing and more efficient document production. Then personal computers and software like WordPerfect and Microsoft Word arrived with more flexibility, and the single-purpose writing box got quietly escorted offstage.",
+    yearIntroduced: 1976,
+    peakEra: "Late 1970s to 1980s",
+    replacedBy: "Personal computers and word processing software",
+    sections: [
+      {
+        heading: "What It Was",
+        body: "A dedicated word processor was a purpose-built electronic writing machine designed for drafting, editing, storing, and printing documents. It gave offices text manipulation without requiring everyone to learn a full general-purpose computer."
+      },
+      {
+        heading: "Why It Mattered",
+        body: "Compared with typewriters, these systems made corrections, revisions, and document reuse dramatically easier, which was a huge deal for offices drowning in memos and correspondence. They helped normalize the idea that text could live on a screen before it hit paper."
+      },
+      {
+        heading: "Why It Got Replaced",
+        body: [
+          "Once PCs became affordable and versatile, it was hard to justify a machine that mostly did one thing when a computer could handle documents, spreadsheets, databases, and whatever else management had just discovered.",
+          "Dedicated word processors still matter because they trained offices to expect editable digital documents before the personal computer fully took over the building."
+        ]
+      }
+    ],
+    category: "Office"
+  },
+  {
+    title: "Overhead Projector",
+    slug: "overhead-projector",
+    image: "/images/projector-removebg-preview.png",
+      shortDescription: "The classroom spotlight machine that turned transparent sheets into presentations and your teacher into a silhouette.",
+      longDescription:
+        "Overhead projector: the humming lecture-room legend that blasted transparency sheets onto a wall while someone with a marker wrote in real time like they were performing analog PowerPoint. Half presentation tool, half accidental stage lighting.\n\nOverhead projectors became widespread in schools, offices, and churches in the mid-20th century and stayed dominant for decades because they were simple, bright, and easy to use. Digital projectors, presentation software, and large displays eventually replaced them, leaving behind a whole generation that still associates warm plastic smells with learning.",
+    yearIntroduced: 1940,
+    peakEra: "1960s to 1990s",
+    replacedBy: "Digital projectors and flat-panel displays",
+    sections: [
+      {
+        heading: "What It Was",
+        body: "An overhead projector shined light through transparent sheets and threw the enlarged image onto a screen or wall for a room full of people to see. It made presentations possible with nothing more exotic than a bulb, a lens, and some transparencies."
+      },
+      {
+        heading: "Why It Mattered",
+        body: "Teachers and office presenters loved it because you could prepare visual material ahead of time or scribble on it live while pretending that counted as improvisation. It was reliable, readable, and dramatically easier to manage than a lot of earlier projection setups."
+      },
+      {
+        heading: "Why It Became Obsolete",
+        body: [
+          "Once laptops and digital projectors made slides easier to edit, store, and transport, stacks of transparency sheets started feeling very last-century very quickly.",
+          "The overhead projector still owns a weird little corner of memory because it made presentations feel physical, clunky, and strangely theatrical in the best possible way."
+        ]
+      }
+    ],
+    category: "Office"
   }
 ];
 

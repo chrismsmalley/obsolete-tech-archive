@@ -7,11 +7,23 @@ import { techEntries } from "../data/techEntries";
 import Link from "next/link";
 import TechCard from "../components/cards/techCard";
 
+const SEARCH_EVENT_NAME = "ota:search-query-change";
+
+function scrollToArchiveResults() {
+  const resultsElement = document.getElementById("archive-results");
+  if (!resultsElement) return;
+
+  requestAnimationFrame(() => {
+    resultsElement.scrollIntoView({ behavior: "smooth", block: "start" });
+  });
+}
+
 function Homepage() {
   const entries = Array.isArray(techEntries) ? techEntries : [];
   const [currentPage, setCurrentPage] = useState(1);
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [sort, setSort] = useState("recent");
+  const [searchQuery, setSearchQuery] = useState("");
 
   // const [showBanner, setShowBanner] = useState(true);
 
@@ -38,14 +50,34 @@ function Homepage() {
   useEffect(() => {
     const category = searchParams.get("filterCategory");
     const sortParam = searchParams.get("sort");
+    const q = searchParams.get("q");
     setSelectedCategory(category || null);
     setSort(sortParam || "recent");
+    setSearchQuery((q || "").trim());
     setCurrentPage(1);
   }, [searchParams]);
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, [currentPage]);
+
+  useEffect(() => {
+    function handleSearchQueryChange(event) {
+      const nextQuery = event?.detail?.query ?? "";
+      setSearchQuery(nextQuery);
+      setCurrentPage(1);
+
+      if (event?.detail?.scrollToResults) {
+        scrollToArchiveResults();
+      }
+    }
+
+    window.addEventListener(SEARCH_EVENT_NAME, handleSearchQueryChange);
+
+    return () => {
+      window.removeEventListener(SEARCH_EVENT_NAME, handleSearchQueryChange);
+    };
+  }, []);
 
   const entriesPerPage = 8;
   const filteredEntries = selectedCategory
@@ -60,7 +92,15 @@ function Homepage() {
       })
     : entries;
 
-  let sortedEntries = [...filteredEntries];
+  const titleFilteredEntries = searchQuery
+    ? filteredEntries.filter((entry) =>
+        String(entry.title || "")
+          .toLowerCase()
+          .includes(searchQuery.toLowerCase())
+      )
+    : filteredEntries;
+
+  let sortedEntries = [...titleFilteredEntries];
   if (sort === "recent") {
     sortedEntries.sort((a, b) => new Date(b.date) - new Date(a.date));
   } else if (sort === "alpha") {
@@ -379,6 +419,35 @@ function Homepage() {
         max-width: 1200px;
         margin-left: auto;
         margin-right: auto;
+        scroll-margin-top: 6.5rem;
+      }
+
+      .results-summary__query {
+        color: var(--ota-accent);
+        font-weight: 700;
+      }
+
+      .empty-state {
+        width: min(720px, 100%);
+        margin: 2rem auto 0;
+        padding: 1.75rem 1.5rem;
+        border: 1px solid var(--ota-line);
+        border-radius: 22px;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(248, 251, 254, 0.95));
+        box-shadow: var(--ota-shadow);
+        text-align: center;
+      }
+
+      .empty-state h2 {
+        margin: 0 0 0.65rem;
+        color: #2f302b;
+        font-size: clamp(1.25rem, 2vw, 1.55rem);
+      }
+
+      .empty-state p {
+        margin: 0;
+        color: var(--ota-muted);
+        line-height: 1.6;
       }
 
       @media (min-width: 768px) {
@@ -828,30 +897,46 @@ function Homepage() {
         </div>
       </section>
       )}
-      <div className="techcard-container">
-        {paginatedEntries.map((entry, index) => {
-          const slug = entry.slug || (entry.title || "").toLowerCase().replace(/\s+/g, "-").replace(/[^a-z0-9-]/g, "");
-          return (
-            <React.Fragment key={slug}>
-              <Link
-                href={`/tech/${slug}`}
-                style={{ textDecoration: "none", color: "inherit", width: "100%" }}
-              >
-                <TechCard
-                  title={entry.title || "No title"}
-                  description={entry.shortDescription ?? ""}
-                  category={Array.isArray(entry.category) ? entry.category[0] : entry.category}
-                  image={(entry.image || "/images/placeholder.png").replace(/^\/images\/+/, "/images/")}
-                  layout="horizontal"
-                  index={index}
-                />
-              </Link>
-            </React.Fragment>
-          );
-        })}
+      <div id="archive-results" className="techcard-container">
+        {paginatedEntries.length > 0 ? (
+          paginatedEntries.map((entry, index) => {
+            const slug = entry.slug || (entry.title || "").toLowerCase().replace(/\s+/g, "-").replace(/[^a-z0-9-]/g, "");
+            return (
+              <React.Fragment key={slug}>
+                <Link
+                  href={`/tech/${slug}`}
+                  style={{ textDecoration: "none", color: "inherit", width: "100%" }}
+                >
+                  <TechCard
+                    title={entry.title || "No title"}
+                    description={entry.shortDescription ?? ""}
+                    category={Array.isArray(entry.category) ? entry.category[0] : entry.category}
+                    image={(entry.image || "/images/placeholder.png").replace(/^\/images\/+/, "/images/")}
+                    layout="horizontal"
+                    index={index}
+                  />
+                </Link>
+              </React.Fragment>
+            );
+          })
+        ) : (
+          <div className="empty-state">
+            <h2>No title matches</h2>
+            <p>
+              Nothing in the archive currently matches
+              {searchQuery ? (
+                <> <span className="results-summary__query">&quot;{searchQuery}&quot;</span>.</>
+              ) : (
+                " that search."
+              )}
+              Try a shorter title fragment like &quot;pag&quot; or clear the search.
+            </p>
+          </div>
+        )}
       </div>
 
       {/* Pagination controls */}
+      {totalPages > 1 && (
       <div style={{ display: "flex", justifyContent: "center", margin: "2.5rem 0 0" }}>
         {Array.from({ length: totalPages }, (_, i) => {
           const page = i + 1;
@@ -878,6 +963,7 @@ function Homepage() {
           </button>
         )}
       </div>
+      )}
     </main>
     </>
   );
