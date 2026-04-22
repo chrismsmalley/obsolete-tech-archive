@@ -96,7 +96,7 @@ function Homepage() {
     ? filteredEntries.filter((entry) =>
         String(entry.title || "")
           .toLowerCase()
-          .includes(searchQuery.toLowerCase())
+          .includes(searchQuery.toLowerCase()),
       )
     : filteredEntries;
 
@@ -109,13 +109,13 @@ function Homepage() {
 
   const paginatedEntries = sortedEntries.slice(
     (currentPage - 1) * entriesPerPage,
-    currentPage * entriesPerPage
+    currentPage * entriesPerPage,
   );
   const totalPages = Math.ceil(sortedEntries.length / entriesPerPage);
 
   return (
     <>
-    <style jsx>{`
+      <style jsx>{`
       /* VT323 font import removed, reverting to previous style */
       @keyframes fadeIn {
         from { opacity: 0; }
@@ -535,8 +535,8 @@ function Homepage() {
         outline-offset: 2px;
       }
     `}</style>
-    <main className="homepage-main">
-      {/* {showBanner && (
+      <main className="homepage-main">
+        {/* {showBanner && (
         <div className="temp-banner" role="status" aria-live="polite">
           <p className="temp-banner__text">
             💾 Pardon the dial‑up vibes — this page is a bit of a hot mess. We’re tuning it up to make it cleaner and better soon.
@@ -552,101 +552,358 @@ function Homepage() {
           </button>
         </div>
       )} */}
-      {currentPage === 1 && (
-      <section className="homepage-hero">
-        <div className="homepage-hero-panel">
-          <div className="homepage-intro">
-            <p className="homepage-kicker">Curated Archive of Retired Tech</p>
-            <div style={{
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              marginBottom: "2rem"
-            }}>
-              {/* Logo removed from here, now in header */}
-                   <div className="eighties-hero-heading">
-                {/* SVG: neon text with trailing extrusion highlights */}
-                <svg
-                  width="620"
-                  height="200"
-                  viewBox="0 0 620 200"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
+        {currentPage === 1 && (
+          <section className="homepage-hero">
+            <div className="homepage-hero-panel">
+              <div className="homepage-intro">
+                <p className="homepage-kicker">
+                  Curated Archive of Retired Tech
+                </p>
+                <div
                   style={{
-                    position: "absolute",
-                    top: 0,
-                    left: 0,
-                    width: "100%",
-                    height: "100%",
-                    zIndex: 0,
-                    pointerEvents: "none",
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "center",
+                    marginBottom: "2rem",
                   }}
                 >
-                  <defs>
-                    {/* Neon blue glow with reduced opacity */}
-                    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
-                      <feDropShadow dx="0" dy="0" stdDeviation="8" floodColor="#00eaff" floodOpacity="0.7" />
-                      <feGaussianBlur stdDeviation="8" />
-                    </filter>
-                    {/* Subtle dark drop shadow for legibility */}
-                    <filter id="shadow" x="-40%" y="-40%" width="180%" height="180%">
-                      <feDropShadow dx="0" dy="6" stdDeviation="6" floodColor="#001a2e" floodOpacity="0.45" />
-                    </filter>
-                  </defs>
-                  {/* 80s-style sharp streaks: trailing effect is lighter blue, main text is darker blue */}
-                  {[
-                    { dx: -8, dy: 12, opacity: 0.18, color: '#b3f0ff', blur: 0 },
-                    { dx: -16, dy: 24, opacity: 0.13, color: '#80eaff', blur: 0 },
-                    { dx: -24, dy: 36, opacity: 0.09, color: '#4dd2ff', blur: 0 },
-                    { dx: -32, dy: 48, opacity: 0.06, color: '#1ac6ff', blur: 0 },
-                    { dx: -40, dy: 60, opacity: 0.04, color: '#00eaff', blur: 0 },
-                  ].map((trail, idx) => (
-                    <g key={idx}>
+                  {/* Logo removed from here, now in header */}
+                  <div className="eighties-hero-heading">
+                    {/* SVG: neon text with trailing extrusion highlights */}
+                    <svg
+                      width="620"
+                      height="200"
+                      viewBox="0 0 620 200"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      style={{
+                        position: "absolute",
+                        top: 0,
+                        left: 0,
+                        width: "100%",
+                        height: "100%",
+                        zIndex: 0,
+                        pointerEvents: "none",
+                      }}
+                    >
+                      <defs>
+                        {/* Neon blue glow with reduced opacity */}
+                        <filter
+                          id="glow"
+                          x="-30%"
+                          y="-30%"
+                          width="160%"
+                          height="160%"
+                        >
+                          <feDropShadow
+                            dx="0"
+                            dy="0"
+                            stdDeviation="8"
+                            floodColor="#00eaff"
+                            floodOpacity="0.7"
+                          />
+                          <feGaussianBlur stdDeviation="8" />
+                        </filter>
+                        {/* Subtle dark drop shadow for legibility */}
+                        <filter
+                          id="shadow"
+                          x="-40%"
+                          y="-40%"
+                          width="180%"
+                          height="180%"
+                        >
+                          <feDropShadow
+                            dx="0"
+                            dy="6"
+                            stdDeviation="6"
+                            floodColor="#001a2e"
+                            floodOpacity="0.45"
+                          />
+                        </filter>
+                      </defs>
+                      {/* 80s-style sharp streaks: trailing effect is lighter blue, main text is darker blue */}
+                      {[
+                        {
+                          dx: -8,
+                          dy: 12,
+                          opacity: 0.18,
+                          color: "#b3f0ff",
+                          blur: 0,
+                        },
+                        {
+                          dx: -16,
+                          dy: 24,
+                          opacity: 0.13,
+                          color: "#80eaff",
+                          blur: 0,
+                        },
+                        {
+                          dx: -24,
+                          dy: 36,
+                          opacity: 0.09,
+                          color: "#4dd2ff",
+                          blur: 0,
+                        },
+                        {
+                          dx: -32,
+                          dy: 48,
+                          opacity: 0.06,
+                          color: "#1ac6ff",
+                          blur: 0,
+                        },
+                        {
+                          dx: -40,
+                          dy: 60,
+                          opacity: 0.04,
+                          color: "#00eaff",
+                          blur: 0,
+                        },
+                      ].map((trail, idx) => (
+                        <g key={idx}>
+                          <text
+                            x="50%"
+                            y={88 + trail.dy}
+                            textAnchor="middle"
+                            fontFamily="'Times New Roman', Times, serif"
+                            fontWeight="900"
+                            fontSize="98"
+                            letterSpacing="0.08em"
+                            fill="transparent"
+                            stroke={trail.color}
+                            strokeWidth="2.5"
+                            style={{
+                              paintOrder: "stroke fill",
+                              filter: trail.blur
+                                ? `blur(${trail.blur}px)`
+                                : "none",
+                              opacity: trail.opacity,
+                              transform: `translate(${-trail.dx}px, 0)`,
+                            }}
+                          >
+                            OBSOLETE
+                          </text>
+                          <text
+                            x="50%"
+                            y={178 + trail.dy}
+                            textAnchor="middle"
+                            fontFamily="'Times New Roman', Times, serif"
+                            fontWeight="900"
+                            fontSize="98"
+                            letterSpacing="0.08em"
+                            fill="transparent"
+                            stroke={trail.color}
+                            strokeWidth="2.5"
+                            style={{
+                              paintOrder: "stroke fill",
+                              filter: trail.blur
+                                ? `blur(${trail.blur}px)`
+                                : "none",
+                              opacity: trail.opacity,
+                              transform: `translate(${-trail.dx}px, 0)`,
+                            }}
+                          >
+                            TECH
+                          </text>
+                        </g>
+                      ))}
+                      {/* Neon trailing effect: multiple blurred text layers (centered) */}
+                      {[20, 10, 5].map((blur, idx) => (
+                        <g key={blur}>
+                          <text
+                            x="50%"
+                            y="88"
+                            textAnchor="middle"
+                            fontFamily="'Times New Roman', Times, serif"
+                            fontWeight="900"
+                            fontSize="98"
+                            letterSpacing="0.08em"
+                            fill="transparent"
+                            stroke="#00eaff"
+                            strokeWidth="2.5"
+                            style={{
+                              paintOrder: "stroke fill",
+                              filter: `blur(${blur}px)`,
+                              opacity: 0.18 + 0.13 * (2 - idx),
+                            }}
+                          >
+                            OBSOLETE
+                          </text>
+                          <text
+                            x="50%"
+                            y="178"
+                            textAnchor="middle"
+                            fontFamily="'Times New Roman', Times, serif"
+                            fontWeight="900"
+                            fontSize="98"
+                            letterSpacing="0.08em"
+                            fill="transparent"
+                            stroke="#00eaff"
+                            strokeWidth="2.5"
+                            style={{
+                              paintOrder: "stroke fill",
+                              filter: `blur(${blur}px)`,
+                              opacity: 0.18 + 0.13 * (2 - idx),
+                            }}
+                          >
+                            TECH
+                          </text>
+                        </g>
+                      ))}
+                      {/* Main neon text: all legibility improvements */}
+                      {/* 1. Subtle dark drop shadow */}
                       <text
                         x="50%"
-                        y={88 + trail.dy}
+                        y="88"
                         textAnchor="middle"
                         fontFamily="'Times New Roman', Times, serif"
                         fontWeight="900"
                         fontSize="98"
                         letterSpacing="0.08em"
-                        fill="transparent"
-                        stroke={trail.color}
-                        strokeWidth="2.5"
+                        fill="none"
+                        stroke="#001a2e"
+                        strokeWidth="7"
                         style={{
-                          paintOrder: 'stroke fill',
-                          filter: trail.blur ? `blur(${trail.blur}px)` : 'none',
-                          opacity: trail.opacity,
-                          transform: `translate(${-trail.dx}px, 0)`
+                          paintOrder: "stroke fill",
+                          filter: "url(#shadow)",
+                          opacity: 0.7,
                         }}
                       >
                         OBSOLETE
                       </text>
                       <text
                         x="50%"
-                        y={178 + trail.dy}
+                        y="178"
                         textAnchor="middle"
                         fontFamily="'Times New Roman', Times, serif"
                         fontWeight="900"
                         fontSize="98"
                         letterSpacing="0.08em"
-                        fill="transparent"
-                        stroke={trail.color}
-                        strokeWidth="2.5"
+                        fill="none"
+                        stroke="#001a2e"
+                        strokeWidth="7"
                         style={{
-                          paintOrder: 'stroke fill',
-                          filter: trail.blur ? `blur(${trail.blur}px)` : 'none',
-                          opacity: trail.opacity,
-                          transform: `translate(${-trail.dx}px, 0)`
+                          paintOrder: "stroke fill",
+                          filter: "url(#shadow)",
+                          opacity: 0.7,
                         }}
                       >
                         TECH
                       </text>
-                    </g>
-                  ))}
-                  {/* Neon trailing effect: multiple blurred text layers (centered) */}
-                  {[20, 10, 5].map((blur, idx) => (
-                    <g key={blur}>
+                      {/* 2. Thicker neon blue outline with glow */}
+                      <g className="neon-glow-anim">
+                        <text
+                          x="50%"
+                          y="88"
+                          textAnchor="middle"
+                          fontFamily="'Times New Roman', Times, serif"
+                          fontWeight="900"
+                          fontSize="98"
+                          letterSpacing="0.08em"
+                          fill="none"
+                          stroke="#00eaff"
+                          strokeWidth="5"
+                          style={{
+                            paintOrder: "stroke fill",
+                            filter: "url(#glow)",
+                            opacity: 1,
+                          }}
+                        >
+                          OBSOLETE
+                        </text>
+                        <text
+                          x="50%"
+                          y="178"
+                          textAnchor="middle"
+                          fontFamily="'Times New Roman', Times, serif"
+                          fontWeight="900"
+                          fontSize="98"
+                          letterSpacing="0.08em"
+                          fill="none"
+                          stroke="#00eaff"
+                          strokeWidth="5"
+                          style={{
+                            paintOrder: "stroke fill",
+                            filter: "url(#glow)",
+                            opacity: 1,
+                          }}
+                        >
+                          TECH
+                        </text>
+                      </g>
+
+                      {/* 3. Off-white fill for less glare */}
+                      <text
+                        x="50%"
+                        y="88"
+                        textAnchor="middle"
+                        fontFamily="'Times New Roman', Times, serif"
+                        fontWeight="900"
+                        fontSize="98"
+                        letterSpacing="0.08em"
+                        fill="#e6faff"
+                        stroke="none"
+                        style={{
+                          paintOrder: "stroke fill",
+                          opacity: 1,
+                        }}
+                      >
+                        OBSOLETE
+                      </text>
+                      <text
+                        x="50%"
+                        y="178"
+                        textAnchor="middle"
+                        fontFamily="'Times New Roman', Times, serif"
+                        fontWeight="900"
+                        fontSize="98"
+                        letterSpacing="0.08em"
+                        fill="#e6faff"
+                        stroke="none"
+                        style={{
+                          paintOrder: "stroke fill",
+                          opacity: 1,
+                        }}
+                      >
+                        TECH
+                      </text>
+                      {/* 4. Thin inner dark stroke for definition */}
+                      <text
+                        x="50%"
+                        y="88"
+                        textAnchor="middle"
+                        fontFamily="'Times New Roman', Times, serif"
+                        fontWeight="900"
+                        fontSize="98"
+                        letterSpacing="0.08em"
+                        fill="none"
+                        stroke="#00334d"
+                        strokeWidth="1.2"
+                        style={{
+                          paintOrder: "stroke fill",
+                          opacity: 0.85,
+                        }}
+                      >
+                        OBSOLETE
+                      </text>
+                      <text
+                        x="50%"
+                        y="178"
+                        textAnchor="middle"
+                        fontFamily="'Times New Roman', Times, serif"
+                        fontWeight="900"
+                        fontSize="98"
+                        letterSpacing="0.08em"
+                        fill="none"
+                        stroke="#00334d"
+                        strokeWidth="1.2"
+                        style={{
+                          paintOrder: "stroke fill",
+                          opacity: 0.85,
+                        }}
+                      >
+                        TECH
+                      </text>
+                      {/* Main neon text, always on top, two lines, larger */}
                       <text
                         x="50%"
                         y="88"
@@ -659,9 +916,8 @@ function Homepage() {
                         stroke="#00eaff"
                         strokeWidth="2.5"
                         style={{
-                          paintOrder: 'stroke fill',
-                          filter: `blur(${blur}px)`,
-                          opacity: 0.18 + 0.13 * (2 - idx),
+                          paintOrder: "stroke fill",
+                          filter: "none",
                         }}
                       >
                         OBSOLETE
@@ -678,296 +934,144 @@ function Homepage() {
                         stroke="#00eaff"
                         strokeWidth="2.5"
                         style={{
-                          paintOrder: 'stroke fill',
-                          filter: `blur(${blur}px)`,
-                          opacity: 0.18 + 0.13 * (2 - idx),
+                          paintOrder: "stroke fill",
+                          filter: "none",
                         }}
                       >
                         TECH
                       </text>
-                    </g>
-                  ))}
-                  {/* Main neon text: all legibility improvements */}
-                  {/* 1. Subtle dark drop shadow */}
-                  <text
-                    x="50%"
-                    y="88"
-                    textAnchor="middle"
-                    fontFamily="'Times New Roman', Times, serif"
-                    fontWeight="900"
-                    fontSize="98"
-                    letterSpacing="0.08em"
-                    fill="none"
-                    stroke="#001a2e"
-                    strokeWidth="7"
-                    style={{
-                      paintOrder: 'stroke fill',
-                      filter: 'url(#shadow)',
-                      opacity: 0.7,
-                    }}
-                  >
-                    OBSOLETE
-                  </text>
-                  <text
-                    x="50%"
-                    y="178"
-                    textAnchor="middle"
-                    fontFamily="'Times New Roman', Times, serif"
-                    fontWeight="900"
-                    fontSize="98"
-                    letterSpacing="0.08em"
-                    fill="none"
-                    stroke="#001a2e"
-                    strokeWidth="7"
-                    style={{
-                      paintOrder: 'stroke fill',
-                      filter: 'url(#shadow)',
-                      opacity: 0.7,
-                    }}
-                  >
-                    TECH
-                  </text>
-                  {/* 2. Thicker neon blue outline with glow */}
-                  <g className="neon-glow-anim">
-                    <text
-                      x="50%"
-                      y="88"
-                      textAnchor="middle"
-                      fontFamily="'Times New Roman', Times, serif"
-                      fontWeight="900"
-                      fontSize="98"
-                      letterSpacing="0.08em"
-                      fill="none"
-                      stroke="#00eaff"
-                      strokeWidth="5"
-                      style={{
-                        paintOrder: 'stroke fill',
-                        filter: 'url(#glow)',
-                        opacity: 1,
-                      }}
-                    >
-                      OBSOLETE
-                    </text>
-                    <text
-                      x="50%"
-                      y="178"
-                      textAnchor="middle"
-                      fontFamily="'Times New Roman', Times, serif"
-                      fontWeight="900"
-                      fontSize="98"
-                      letterSpacing="0.08em"
-                      fill="none"
-                      stroke="#00eaff"
-                      strokeWidth="5"
-                      style={{
-                        paintOrder: 'stroke fill',
-                        filter: 'url(#glow)',
-                        opacity: 1,
-                      }}
-                    >
-                      TECH
-                    </text>
-                  </g>
-
-                  {/* 3. Off-white fill for less glare */}
-                  <text
-                    x="50%"
-                    y="88"
-                    textAnchor="middle"
-                    fontFamily="'Times New Roman', Times, serif"
-                    fontWeight="900"
-                    fontSize="98"
-                    letterSpacing="0.08em"
-                    fill="#e6faff"
-                    stroke="none"
-                    style={{
-                      paintOrder: 'stroke fill',
-                      opacity: 1,
-                    }}
-                  >
-                    OBSOLETE
-                  </text>
-                  <text
-                    x="50%"
-                    y="178"
-                    textAnchor="middle"
-                    fontFamily="'Times New Roman', Times, serif"
-                    fontWeight="900"
-                    fontSize="98"
-                    letterSpacing="0.08em"
-                    fill="#e6faff"
-                    stroke="none"
-                    style={{
-                      paintOrder: 'stroke fill',
-                      opacity: 1,
-                    }}
-                  >
-                    TECH
-                  </text>
-                  {/* 4. Thin inner dark stroke for definition */}
-                  <text
-                    x="50%"
-                    y="88"
-                    textAnchor="middle"
-                    fontFamily="'Times New Roman', Times, serif"
-                    fontWeight="900"
-                    fontSize="98"
-                    letterSpacing="0.08em"
-                    fill="none"
-                    stroke="#00334d"
-                    strokeWidth="1.2"
-                    style={{
-                      paintOrder: 'stroke fill',
-                      opacity: 0.85,
-                    }}
-                  >
-                    OBSOLETE
-                  </text>
-                  <text
-                    x="50%"
-                    y="178"
-                    textAnchor="middle"
-                    fontFamily="'Times New Roman', Times, serif"
-                    fontWeight="900"
-                    fontSize="98"
-                    letterSpacing="0.08em"
-                    fill="none"
-                    stroke="#00334d"
-                    strokeWidth="1.2"
-                    style={{
-                      paintOrder: 'stroke fill',
-                      opacity: 0.85,
-                    }}
-                  >
-                    TECH
-                  </text>
-                  {/* Main neon text, always on top, two lines, larger */}
-                  <text
-                    x="50%"
-                    y="88"
-                    textAnchor="middle"
-                    fontFamily="'Times New Roman', Times, serif"
-                    fontWeight="900"
-                    fontSize="98"
-                    letterSpacing="0.08em"
-                    fill="transparent"
-                    stroke="#00eaff"
-                    strokeWidth="2.5"
-                    style={{
-                      paintOrder: 'stroke fill',
-                      filter: 'none',
-                    }}
-                  >
-                    OBSOLETE
-                  </text>
-                  <text
-                    x="50%"
-                    y="178"
-                    textAnchor="middle"
-                    fontFamily="'Times New Roman', Times, serif"
-                    fontWeight="900"
-                    fontSize="98"
-                    letterSpacing="0.08em"
-                    fill="transparent"
-                    stroke="#00eaff"
-                    strokeWidth="2.5"
-                    style={{
-                      paintOrder: 'stroke fill',
-                      filter: 'none',
-                    }}
-                  >
-                    TECH
-                  </text>
-                </svg>
+                    </svg>
+                  </div>
+                </div>
+                <p
+                  className="homepage-subtext"
+                  style={{
+                    lineHeight: "1.7",
+                    maxWidth: "900px",
+                    padding: "0 1rem",
+                    margin: "0 auto",
+                  }}
+                >
+                  Obsolete Tech Archive is your totally rad digital museum for
+                  the weird, wild, and wonderful gadgets that once ruled our
+                  bedrooms and basements. From blink-and-you-missed-it handhelds
+                  to gnarly game consoles, dead media formats, and tech
+                  experiments that probably shouldn’t have left the lab, we’re
+                  here to celebrate the bold, the bizarre, and the “what were
+                  they thinking?” moments of tech history. Every artifact is a
+                  blast from the past—reminding us how far we’ve come, and how
+                  much fun we had getting here. Whether you’re a nostalgia
+                  junkie, a curious explorer, or just here for the retro vibes,
+                  Obsolete Tech Archive is your backstage pass to the gadgets
+                  that defined—and then totally ghosted—the tech scene.
+                </p>
+                <div className="homepage-rule" />
               </div>
             </div>
-            <p
-              className="homepage-subtext"
-              style={{
-                lineHeight: "1.7",
-                maxWidth: "900px",
-                padding: "0 1rem",
-                margin: "0 auto"
-              }}
-            >
-              Obsolete Tech Archive is your totally rad digital museum for the weird, wild, and wonderful gadgets that once ruled our bedrooms and basements. From blink-and-you-missed-it handhelds to gnarly game consoles, dead media formats, and tech experiments that probably shouldn’t have left the lab, we’re here to celebrate the bold, the bizarre, and the “what were they thinking?” moments of tech history. Every artifact is a blast from the past—reminding us how far we’ve come, and how much fun we had getting here. Whether you’re a nostalgia junkie, a curious explorer, or just here for the retro vibes, Obsolete Tech Archive is your backstage pass to the gadgets that defined—and then totally ghosted—the tech scene.
-            </p>
-            <div className="homepage-rule" />
-          </div>
+          </section>
+        )}
+        <div id="archive-results" className="techcard-container">
+          {paginatedEntries.length > 0 ? (
+            paginatedEntries.map((entry, index) => {
+              const slug =
+                entry.slug ||
+                (entry.title || "")
+                  .toLowerCase()
+                  .replace(/\s+/g, "-")
+                  .replace(/[^a-z0-9-]/g, "");
+              return (
+                <React.Fragment key={slug}>
+                  <Link
+                    href={`/tech/${slug}`}
+                    style={{
+                      textDecoration: "none",
+                      color: "inherit",
+                      width: "100%",
+                    }}
+                  >
+                    <TechCard
+                      title={entry.title || "No title"}
+                      description={entry.shortDescription ?? ""}
+                      category={
+                        Array.isArray(entry.category)
+                          ? entry.category[0]
+                          : entry.category
+                      }
+                      image={(entry.image || "/images/placeholder.png").replace(
+                        /^\/images\/+/,
+                        "/images/",
+                      )}
+                      layout="horizontal"
+                      index={index}
+                    />
+                  </Link>
+                </React.Fragment>
+              );
+            })
+          ) : (
+            <div className="empty-state">
+              <h2>No title matches</h2>
+              <p>
+                Nothing in the archive currently matches
+                {searchQuery ? (
+                  <>
+                    {" "}
+                    <span className="results-summary__query">
+                      &quot;{searchQuery}&quot;
+                    </span>
+                    .
+                  </>
+                ) : (
+                  " that search."
+                )}
+                Try a shorter title fragment like &quot;pag&quot; or clear the
+                search.
+              </p>
+            </div>
+          )}
         </div>
-      </section>
-      )}
-      <div id="archive-results" className="techcard-container">
-        {paginatedEntries.length > 0 ? (
-          paginatedEntries.map((entry, index) => {
-            const slug = entry.slug || (entry.title || "").toLowerCase().replace(/\s+/g, "-").replace(/[^a-z0-9-]/g, "");
-            return (
-              <React.Fragment key={slug}>
-                <Link
-                  href={`/tech/${slug}`}
-                  style={{ textDecoration: "none", color: "inherit", width: "100%" }}
+
+        {/* Pagination controls */}
+        {totalPages > 1 && (
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              margin: "2.5rem 0 0",
+            }}
+          >
+            {Array.from({ length: totalPages }, (_, i) => {
+              const page = i + 1;
+              return (
+                <button
+                  key={page}
+                  onClick={() => setCurrentPage(page)}
+                  className={`pager-link${currentPage === page ? " pager-link--active" : ""}`}
+                  aria-current={currentPage === page ? "page" : undefined}
+                  disabled={currentPage === page}
+                  style={{ margin: "0 0.25rem" }}
                 >
-                  <TechCard
-                    title={entry.title || "No title"}
-                    description={entry.shortDescription ?? ""}
-                    category={Array.isArray(entry.category) ? entry.category[0] : entry.category}
-                    image={(entry.image || "/images/placeholder.png").replace(/^\/images\/+/, "/images/")}
-                    layout="horizontal"
-                    index={index}
-                  />
-                </Link>
-              </React.Fragment>
-            );
-          })
-        ) : (
-          <div className="empty-state">
-            <h2>No title matches</h2>
-            <p>
-              Nothing in the archive currently matches
-              {searchQuery ? (
-                <> <span className="results-summary__query">&quot;{searchQuery}&quot;</span>.</>
-              ) : (
-                " that search."
-              )}
-              Try a shorter title fragment like &quot;pag&quot; or clear the search.
-            </p>
+                  {page}
+                </button>
+              );
+            })}
+
+            {currentPage < totalPages && (
+              <button
+                onClick={() =>
+                  setCurrentPage((p) => Math.min(p + 1, totalPages))
+                }
+                className="pager-link"
+              >
+                Next →
+              </button>
+            )}
           </div>
         )}
-      </div>
-
-      {/* Pagination controls */}
-      {totalPages > 1 && (
-      <div style={{ display: "flex", justifyContent: "center", margin: "2.5rem 0 0" }}>
-        {Array.from({ length: totalPages }, (_, i) => {
-          const page = i + 1;
-          return (
-            <button
-              key={page}
-              onClick={() => setCurrentPage(page)}
-              className={`pager-link${currentPage === page ? " pager-link--active" : ""}`}
-              aria-current={currentPage === page ? "page" : undefined}
-              disabled={currentPage === page}
-              style={{ margin: "0 0.25rem" }}
-            >
-              {page}
-            </button>
-          );
-        })}
-
-        {currentPage < totalPages && (
-          <button
-            onClick={() => setCurrentPage(p => Math.min(p + 1, totalPages))}
-            className="pager-link"
-          >
-            Next →
-          </button>
-        )}
-      </div>
-      )}
-    </main>
+      </main>
     </>
   );
-  }
+}
 
 export default function HomepageWrapper() {
   return (

@@ -505,7 +505,6 @@ export default function SlugClientPage({ slug }) {
               align-items: flex-start;
               width: 100%;
               padding: 3rem 1rem 4rem;
-              margin-top: 1rem;
               box-sizing: border-box;
             }
 
@@ -516,11 +515,12 @@ export default function SlugClientPage({ slug }) {
               padding: 2.25rem;
               border-radius: 28px;
               border: 1px solid var(--ota-line);
-              background: linear-gradient(
-                180deg,
-                rgba(255, 255, 255, 0.96),
-                rgba(248, 251, 254, 0.94)
-              );
+              background:
+                linear-gradient(
+                  180deg,
+                  rgba(255, 255, 255, 0.92),
+                  rgba(250, 252, 255, 0.9)
+                );
               box-shadow: var(--ota-shadow);
               overflow: hidden;
             }
@@ -533,14 +533,15 @@ export default function SlugClientPage({ slug }) {
               background:
                 radial-gradient(
                   circle at top right,
-                  rgba(47, 93, 98, 0.1),
+                  rgba(47, 93, 98, 0.12),
                   transparent 30%
                 ),
                 radial-gradient(
                   circle at bottom left,
                   rgba(197, 111, 82, 0.08),
-                  transparent 24%
-                );
+                  transparent 26%
+                ),
+                linear-gradient(transparent, rgba(255, 255, 255, 0.22));
             }
 
             .artifact-card::after {
@@ -550,11 +551,10 @@ export default function SlugClientPage({ slug }) {
               left: 0;
               right: 0;
               height: 4px;
-              background: linear-gradient(
-                90deg,
-                var(--ota-accent),
-                rgba(197, 111, 82, 0.82)
-              );
+              background: none;
+              box-shadow:
+                0 2px 12px 0 rgba(44, 103, 112, 0.1),
+                0 1.5px 0 0 rgba(0, 0, 0, 0.06);
             }
 
             .pager-link {

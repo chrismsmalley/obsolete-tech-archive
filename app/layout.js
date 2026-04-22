@@ -45,6 +45,13 @@ export const themeColor = '#f7f3eb';
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1718924103860171"
+          crossOrigin="anonymous"
+        />
+      </head>
       <body>
         <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
           <Navbar />
