@@ -97,6 +97,11 @@ export default function Navbar() {
           .navbar-search {
             display: none;
           }
+
+          .burger-wrapper {
+            margin-left: auto;
+            padding-right: 0.25rem;
+          }
         }
       `}</style>
     </>

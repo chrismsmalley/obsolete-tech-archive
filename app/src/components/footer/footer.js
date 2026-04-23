@@ -104,7 +104,7 @@ export default function Footer() {
               </div>
 
               <div className="footer-links">
-                <a href="/privacy_policy" className="footer-link">Privacy Policy</a>
+                <a href="/privacy_policy" className="footer-link footer-link-plain">Privacy Policy</a>
                 <span className="footer-separator">|</span>
                 <Link href="/contact" className="footer-link">Contact</Link>
               </div>
@@ -299,6 +299,10 @@ export default function Footer() {
         .footer-link {
           font-weight: 600;
           transition: color 0.2s ease;
+        }
+
+        .footer-link-plain {
+          font-weight: 400;
         }
 
         .footer-link:hover {

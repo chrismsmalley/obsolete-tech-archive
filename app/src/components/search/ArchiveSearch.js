@@ -254,6 +254,22 @@ export default function ArchiveSearch({
         .archive-search--menu {
           width: 100%;
         }
+
+        .archive-search--menu .archive-search__input {
+          font-size: 0.9rem;
+          padding-left: 0.9rem;
+          padding-right: 2.8rem;
+        }
+
+        .archive-search--menu .archive-search__field--has-clear .archive-search__input {
+          padding-right: 4.9rem;
+        }
+
+        @media (max-width: 768px) {
+          .archive-search--menu .archive-search__input {
+            font-size: 0.85rem;
+          }
+        }
       `}</style>
     </>
   );

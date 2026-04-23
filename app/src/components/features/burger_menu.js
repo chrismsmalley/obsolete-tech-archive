@@ -120,7 +120,7 @@ export default function BurgerMenu() {
             right: isMobile ? '1rem' : 'auto',
             left: isMobile ? 'auto' : 'auto',
             transform: 'none',
-            width: isMobile ? '220px' : 'auto',
+            width: isMobile ? 'min(320px, calc(100vw - 2rem))' : 'auto',
             backgroundColor: 'white',
             borderRadius: '8px',
             border: '1px solid #ccc',
@@ -145,23 +145,27 @@ export default function BurgerMenu() {
             `}
           </style>
           <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
-            <li style={{ marginBottom: '0.9rem' }}>
-              <Suspense fallback={null}>
-                <ArchiveSearch
-                  liveOnHome={false}
-                  onNavigate={closeMenu}
-                  placeholder="Dig up a dusty title..."
-                  variant="menu"
+            {isMobile ? (
+              <>
+                <li style={{ marginBottom: '0.9rem' }}>
+                  <Suspense fallback={null}>
+                    <ArchiveSearch
+                      liveOnHome={false}
+                      onNavigate={closeMenu}
+                      placeholder="Dig up a dusty title..."
+                      variant="menu"
+                    />
+                  </Suspense>
+                </li>
+                <li
+                  aria-hidden="true"
+                  style={{
+                    marginBottom: '0.95rem',
+                    borderBottom: '1px solid rgba(47, 93, 98, 0.12)',
+                  }}
                 />
-              </Suspense>
-            </li>
-            <li
-              aria-hidden="true"
-              style={{
-                marginBottom: '0.95rem',
-                borderBottom: '1px solid rgba(47, 93, 98, 0.12)',
-              }}
-            />
+              </>
+            ) : null}
             {/* Categories Section */}
             <li
               onClick={() => setShowCategories(!showCategories)}
