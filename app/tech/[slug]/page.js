@@ -1,4 +1,5 @@
 import { techEntries } from '@/app/src/data/techEntries';
+import { SITE_URL } from '@/app/src/lib/site';
 import SlugClientPage from '@/app/src/screens/SlugClientPage';
 
 const EDITORIAL_UPDATED_ISO = '2026-04-22';
@@ -21,7 +22,7 @@ export async function generateMetadata({ params }) {
   const description = tech.shortDescription || tech.longDescription || 'Explore a retired piece of tech history.';
   const image = tech.image || '/images/OT image.png';
   const title = `${tech.title} | Obsolete Tech Archive`;
-  const url = `https://obsoletetecharchive.com/tech/${tech.slug}`;
+  const url = `${SITE_URL}/tech/${tech.slug}`;
 
   return {
     title,

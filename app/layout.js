@@ -2,11 +2,12 @@ import './globals.css';
 import Navbar from './src/components/header/navbar';
 import Footer from './src/components/footer/footer';
 import CookieBanner from './src/components/banner/CookieBanner';
+import { SITE_URL } from './src/lib/site';
 
 export const metadata = {
   title: 'Obsolete Tech Archive',
   description: 'Unearth forgotten gadgets, doomed devices, and digital flops in this digital museum of obsolete technology.',
-  metadataBase: new URL('https://obsoletetecharchive.com'),
+  metadataBase: new URL(SITE_URL),
   icons: {
     icon: '/images/OT image.png',
   },
@@ -19,10 +20,13 @@ export const metadata = {
   ],
   authors: [{ name: 'Obsolete Tech Archive Team' }],
   robots: 'index, follow',
+  alternates: {
+    canonical: '/',
+  },
   openGraph: {
     title: 'Obsolete Tech Archive',
     description: 'Explore a digital museum of forgotten gadgets and obsolete tech that shaped the past.',
-    url: 'https://obsoletetecharchive.com',
+    url: SITE_URL,
     type: 'website',
     siteName: 'Obsolete Tech Archive',
     images: ['/images/OT image.png']

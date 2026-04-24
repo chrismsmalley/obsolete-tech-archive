@@ -1,25 +1,27 @@
 import { techEntries } from './src/data/techEntries';
-
-const SITE_URL = 'https://obsoletetecharchive.com';
+import { SITE_URL } from './src/lib/site';
+const STATIC_ROUTES = [
+  { path: '', changeFrequency: 'weekly', priority: 1 },
+  { path: '/about', changeFrequency: 'monthly', priority: 0.7 },
+  { path: '/contact', changeFrequency: 'monthly', priority: 0.7 },
+  { path: '/submit', changeFrequency: 'monthly', priority: 0.7 },
+  { path: '/privacy_policy', changeFrequency: 'monthly', priority: 0.7 },
+  { path: '/cookie', changeFrequency: 'monthly', priority: 0.7 },
+];
 
 export default function sitemap() {
-  const staticRoutes = [
-    '',
-    '/about',
-    '/contact',
-    '/submit',
-    '/privacy_policy',
-    '/cookie',
-  ].map((path, index) => ({
+  const lastModified = new Date();
+
+  const staticRoutes = STATIC_ROUTES.map(({ path, changeFrequency, priority }) => ({
     url: `${SITE_URL}${path}`,
-    lastModified: new Date(),
-    changeFrequency: path === '' ? 'weekly' : 'monthly',
-    priority: index === 0 ? 1 : 0.7,
+    lastModified,
+    changeFrequency,
+    priority,
   }));
 
   const techRoutes = techEntries.map((entry) => ({
     url: `${SITE_URL}/tech/${entry.slug}`,
-    lastModified: new Date(),
+    lastModified,
     changeFrequency: 'monthly',
     priority: 0.8,
   }));

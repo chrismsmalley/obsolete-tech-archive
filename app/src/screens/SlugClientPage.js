@@ -4,9 +4,9 @@ import Link from "next/link";
 import React from "react";
 import { useRouter } from "next/navigation";
 import { techEntries } from "@/app/src/data/techEntries";
+import { SITE_URL } from "@/app/src/lib/site";
 import { normalizeTechEntry } from "@/app/src/lib/techContent";
 
-const SITE_URL = "https://obsoletetecharchive.com";
 const EDITORIAL_UPDATED_LABEL = "April 22, 2026";
 const EDITORIAL_UPDATED_ISO = "2026-04-22";
 const RELATED_CARD_LIMIT = 4;

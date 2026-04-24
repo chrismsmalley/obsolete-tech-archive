@@ -1,10 +1,12 @@
+import { SITE_URL } from './src/lib/site';
+
 export default function robots() {
   return {
     rules: {
       userAgent: '*',
       allow: '/',
     },
-    sitemap: 'https://obsoletetecharchive.com/sitemap.xml',
-    host: 'https://obsoletetecharchive.com',
+    sitemap: `${SITE_URL}/sitemap.xml`,
+    host: SITE_URL,
   };
 }
