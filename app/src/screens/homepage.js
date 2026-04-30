@@ -93,11 +93,17 @@ function Homepage() {
     : entries;
 
   const titleFilteredEntries = searchQuery
-    ? filteredEntries.filter((entry) =>
-        String(entry.title || "")
-          .toLowerCase()
-          .includes(searchQuery.toLowerCase()),
-      )
+    ? filteredEntries.filter((entry) => {
+        const q = searchQuery.toLowerCase();
+        const category = Array.isArray(entry.category)
+          ? entry.category.join(" ")
+          : String(entry.category || "");
+        return (
+          String(entry.title || "").toLowerCase().includes(q) ||
+          String(entry.shortDescription || "").toLowerCase().includes(q) ||
+          category.toLowerCase().includes(q)
+        );
+      })
     : filteredEntries;
 
   let sortedEntries = [...titleFilteredEntries];
@@ -257,7 +263,7 @@ function Homepage() {
                      margin: "0 auto"
                    }}
                  >
-                   Obsolete Tech Archive is your totally rad digital museum for the weird, wild, and wonderful gadgets that once ruled our bedrooms and basements. From blink-and-you-missed-it handhelds to gnarly game consoles, dead media formats, and tech experiments that probably shouldn’t have left the lab, we’re here to celebrate the bold, the bizarre, and the “what were they thinking?” moments of tech history. Every artifact is a blast from the past—reminding us how far we’ve come, and how much fun we had getting here. Whether you’re a nostalgia junkie, a curious explorer, or just here for the retro vibes, Obsolete Tech Archive is your backstage pass to the gadgets that defined—and then totally ghosted—the tech scene.
+                   A digital museum for gadgets that ruled, flopped, and disappeared. Browse the bold, the bizarre, and the “what were they thinking?” moments of tech history.
                  </p>
                  <div className="homepage-rule" style={{
                    width: "min(180px, 40%)",

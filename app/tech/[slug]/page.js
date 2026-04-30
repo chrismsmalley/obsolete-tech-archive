@@ -2,6 +2,10 @@ import { techEntries } from '@/app/src/data/techEntries';
 import { SITE_URL } from '@/app/src/lib/site';
 import SlugClientPage from '@/app/src/screens/SlugClientPage';
 
+export function generateStaticParams() {
+  return techEntries.map((entry) => ({ slug: entry.slug }));
+}
+
 const EDITORIAL_UPDATED_ISO = '2026-04-22';
 
 export async function generateMetadata({ params }) {

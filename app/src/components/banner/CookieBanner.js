@@ -26,7 +26,7 @@ export default function CookieBanner() {
     >
       <div className="cookie-content">
         <span className="cookie-text">
-          We use cookies to improve your experience and help us understand how people still love old tech.{' '}
+          This site uses third-party cookies to serve ads.{' '}
           <a href="/cookie" className="cookie-link">Learn more</a>.
         </span>
         <button onClick={handleAccept} className="cookie-button">Accept</button>
