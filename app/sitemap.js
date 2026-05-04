@@ -1,5 +1,8 @@
 import { techEntries } from './src/data/techEntries';
 import { SITE_URL } from './src/lib/site';
+
+export const dynamic = 'force-static';
+
 const STATIC_ROUTES = [
   { path: '', changeFrequency: 'weekly', priority: 1 },
   { path: '/about', changeFrequency: 'monthly', priority: 0.7 },
