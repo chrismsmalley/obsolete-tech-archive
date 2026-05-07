@@ -4,6 +4,7 @@ import Link from "next/link";
 import React from "react";
 import { useRouter } from "next/navigation";
 import { techEntries } from "@/app/src/data/techEntries";
+import TitleGem from "@/app/src/components/entries/TitleGem";
 import { SITE_URL } from "@/app/src/lib/site";
 import { normalizeTechEntry } from "@/app/src/lib/techContent";
 
@@ -34,6 +35,10 @@ function splitParagraphs(text) {
     .split(/\n\s*\n/)
     .map((paragraph) => paragraph.trim())
     .filter(Boolean);
+}
+
+function isLeadCalloutParagraph(paragraph) {
+  return paragraph === "★ First-ever community submission! ★";
 }
 
 function countWords(tech) {
@@ -209,6 +214,10 @@ export default function SlugClientPage({ slug }) {
   const primaryCategory = getPrimaryCategory(tech);
   const browseLaneHref = buildArchiveCategoryHref(primaryCategory);
   const leadParagraphs = splitParagraphs(tech.longDescription);
+  const leadCalloutParagraphs = leadParagraphs.filter(isLeadCalloutParagraph);
+  const leadBodyParagraphs = leadParagraphs.filter(
+    (paragraph) => !isLeadCalloutParagraph(paragraph),
+  );
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -252,7 +261,10 @@ export default function SlugClientPage({ slug }) {
           <div className="artifact-hero">
             <div className="artifact-copy">
               <span className="artifact-kicker">{tech.category}</span>
-              <h1 className="artifact-title">{tech.title}</h1>
+              <div className="artifact-title-row">
+                <h1 className="artifact-title">{tech.title}</h1>
+                <TitleGem gem={tech.titleGem} />
+              </div>
               <div
                 className="artifact-editorial-meta"
                 aria-label="Entry metadata"
@@ -282,9 +294,20 @@ export default function SlugClientPage({ slug }) {
               className="artifact-lead"
               aria-label="Artifact description"
             >
-              {leadParagraphs.map((paragraph, index) => (
-                <p key={`${tech.slug}-lead-${index}`}>{paragraph}</p>
-              ))}
+              {[...leadCalloutParagraphs, ...leadBodyParagraphs].map(
+                (paragraph, index) => (
+                <p
+                  key={`${tech.slug}-lead-${index}`}
+                  className={
+                    isLeadCalloutParagraph(paragraph)
+                      ? "artifact-lead-callout"
+                      : undefined
+                  }
+                >
+                  {paragraph}
+                </p>
+                ),
+              )}
             </section>
           )}
 
@@ -620,8 +643,16 @@ export default function SlugClientPage({ slug }) {
               text-transform: uppercase;
             }
 
-            .artifact-title {
+            .artifact-title-row {
+              display: flex;
+              align-items: flex-start;
+              gap: 0.85rem;
+              flex-wrap: wrap;
               margin: 1rem 0 0.85rem;
+            }
+
+            .artifact-title {
+              margin: 0;
               color: var(--ota-ink);
               font-size: clamp(2rem, 4vw, 3rem);
               line-height: 1.08;
@@ -711,6 +742,28 @@ export default function SlugClientPage({ slug }) {
 
             .artifact-lead :global(p:last-child) {
               margin-bottom: 0;
+            }
+
+            .artifact-lead :global(.artifact-lead-callout) {
+              text-align: center;
+              font-weight: 800;
+              color: #8a6400;
+              white-space: pre-line;
+              letter-spacing: 0.01em;
+              animation: callout-glow 2.8s ease-in-out infinite;
+            }
+
+            @keyframes callout-glow {
+              0%, 100% {
+                filter: drop-shadow(0 0 1px rgba(255, 200, 30, 0.1));
+                color: #8a6400;
+              }
+              50% {
+                filter:
+                  drop-shadow(0 0 5px rgba(255, 210, 40, 1))
+                  drop-shadow(0 0 12px rgba(255, 180, 0, 0.75));
+                color: #b87c00;
+              }
             }
 
             .artifact-section {
@@ -994,6 +1047,10 @@ export default function SlugClientPage({ slug }) {
 
               .artifact-title {
                 font-size: 2rem;
+              }
+
+              .artifact-title-row {
+                gap: 0.7rem;
               }
 
               .artifact-section-header {

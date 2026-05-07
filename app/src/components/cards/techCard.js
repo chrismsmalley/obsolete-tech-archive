@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import React from 'react';
+import TitleGem from '../entries/TitleGem';
 
 export default function TechCard(props) {
   return (
@@ -47,7 +48,10 @@ export default function TechCard(props) {
               <div className="tech-card__meta">
                 <span className="tech-card__badge">{props.category || 'Archive'}</span>
               </div>
-              <h2 className="tech-card__title">{props.title}</h2>
+              <div className="tech-card__title-row">
+                <h2 className="tech-card__title">{props.title}</h2>
+                <TitleGem gem={props.titleGem} compact />
+              </div>
               <p className="tech-card__description">{props.description}</p>
             </div>
           </div>
@@ -187,9 +191,17 @@ export default function TechCard(props) {
           text-transform: uppercase;
         }
 
+        .tech-card__title-row {
+          display: flex;
+          align-items: flex-start;
+          gap: 0.65rem;
+          margin-bottom: 0.5rem;
+          flex-wrap: wrap;
+        }
+
         .tech-card__title {
           margin-top: 0;
-          margin-bottom: 0.5rem;
+          margin-bottom: 0;
           color: #2f302b;
           font-size: clamp(1.55rem, 2vw, 1.75rem);
           font-weight: 600;
@@ -208,7 +220,7 @@ export default function TechCard(props) {
           font-size: 1rem;
           line-height: 1.6;
           display: -webkit-box;
-          -webkit-line-clamp: 2;
+          -webkit-line-clamp: 3;
           -webkit-box-orient: vertical;
         }
 

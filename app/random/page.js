@@ -3,24 +3,18 @@
 'use client';
 import { useEffect } from 'react';
 import { useRouter } from 'next/navigation';
+import { techEntries } from '@/app/src/data/techEntries';
 
 export default function RandomEntryPage() {
   const router = useRouter();
 
   useEffect(() => {
-    async function fetchAndRedirect() {
-      try {
-        const response = await fetch('/data/techEntries.json');
-        const data = await response.json();
-        const slugs = data.map(entry => entry.slug);
-        const randomSlug = slugs[Math.floor(Math.random() * slugs.length)];
-        router.push(`/tech/${randomSlug}`);
-      } catch (error) {
-        console.error('Error fetching tech entries:', error);
-      }
-    }
+    const slugs = techEntries.map((entry) => entry.slug).filter(Boolean);
+    const randomSlug = slugs[Math.floor(Math.random() * slugs.length)];
 
-    fetchAndRedirect();
+    if (randomSlug) {
+      router.push(`/tech/${randomSlug}`);
+    }
   }, [router]);
 
   return <p style={{ padding: '2rem' }}>Finding a random artifact...</p>;

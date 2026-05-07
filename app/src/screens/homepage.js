@@ -20,6 +20,7 @@ function scrollToArchiveResults() {
 
 function Homepage() {
   const entries = Array.isArray(techEntries) ? techEntries : [];
+  const entrySourceOrder = new Map(entries.map((entry, index) => [entry, index]));
   const [currentPage, setCurrentPage] = useState(1);
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [sort, setSort] = useState("recent");
@@ -108,7 +109,22 @@ function Homepage() {
 
   let sortedEntries = [...titleFilteredEntries];
   if (sort === "recent") {
-    sortedEntries.sort((a, b) => new Date(b.date) - new Date(a.date));
+    sortedEntries.sort((a, b) => {
+      const leftTimestamp = Date.parse(a.addedOn || a.date || "");
+      const rightTimestamp = Date.parse(b.addedOn || b.date || "");
+      const leftHasTimestamp = Number.isFinite(leftTimestamp);
+      const rightHasTimestamp = Number.isFinite(rightTimestamp);
+
+      if (leftHasTimestamp && rightHasTimestamp && rightTimestamp !== leftTimestamp) {
+        return rightTimestamp - leftTimestamp;
+      }
+
+      if (leftHasTimestamp !== rightHasTimestamp) {
+        return leftHasTimestamp ? -1 : 1;
+      }
+
+      return (entrySourceOrder.get(a) || 0) - (entrySourceOrder.get(b) || 0);
+    });
   } else if (sort === "alpha") {
     sortedEntries.sort((a, b) => (a.title || "").localeCompare(b.title || ""));
   }
@@ -997,6 +1013,7 @@ function Homepage() {
                   >
                     <TechCard
                       title={entry.title || "No title"}
+                      titleGem={entry.titleGem}
                       description={entry.shortDescription ?? ""}
                       category={
                         Array.isArray(entry.category)
