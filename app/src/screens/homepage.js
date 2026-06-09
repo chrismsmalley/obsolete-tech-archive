@@ -2,12 +2,12 @@
 "use client";
 import React, { useState, useEffect, Suspense } from "react";
 import Image from "next/image";
-import { useSearchParams } from "next/navigation";
 import { techEntries } from "../data/techEntries";
 import Link from "next/link";
 import TechCard from "../components/cards/techCard";
 
 const SEARCH_EVENT_NAME = "ota:search-query-change";
+const HISTORY_EVENT_NAME = "ota:history-change";
 
 function scrollToArchiveResults() {
   const resultsElement = document.getElementById("archive-results");
@@ -16,6 +16,24 @@ function scrollToArchiveResults() {
   requestAnimationFrame(() => {
     resultsElement.scrollIntoView({ behavior: "smooth", block: "start" });
   });
+}
+
+function readHomepageFiltersFromLocation() {
+  if (typeof window === "undefined") {
+    return {
+      category: null,
+      sort: "recent",
+      query: "",
+    };
+  }
+
+  const params = new URLSearchParams(window.location.search);
+
+  return {
+    category: params.get("filterCategory") || null,
+    sort: params.get("sort") || "recent",
+    query: (params.get("q") || "").trim(),
+  };
 }
 
 function Homepage() {
@@ -47,16 +65,41 @@ function Homepage() {
   //   }
   // };
 
-  const searchParams = useSearchParams();
   useEffect(() => {
-    const category = searchParams.get("filterCategory");
-    const sortParam = searchParams.get("sort");
-    const q = searchParams.get("q");
-    setSelectedCategory(category || null);
-    setSort(sortParam || "recent");
-    setSearchQuery((q || "").trim());
-    setCurrentPage(1);
-  }, [searchParams]);
+    function syncFiltersFromLocation() {
+      const nextState = readHomepageFiltersFromLocation();
+      setSelectedCategory(nextState.category);
+      setSort(nextState.sort);
+      setSearchQuery(nextState.query);
+      setCurrentPage(1);
+    }
+
+    const originalPushState = window.history.pushState.bind(window.history);
+    const originalReplaceState = window.history.replaceState.bind(window.history);
+
+    window.history.pushState = function pushState(...args) {
+      const result = originalPushState(...args);
+      window.dispatchEvent(new Event(HISTORY_EVENT_NAME));
+      return result;
+    };
+
+    window.history.replaceState = function replaceState(...args) {
+      const result = originalReplaceState(...args);
+      window.dispatchEvent(new Event(HISTORY_EVENT_NAME));
+      return result;
+    };
+
+    syncFiltersFromLocation();
+    window.addEventListener("popstate", syncFiltersFromLocation);
+    window.addEventListener(HISTORY_EVENT_NAME, syncFiltersFromLocation);
+
+    return () => {
+      window.history.pushState = originalPushState;
+      window.history.replaceState = originalReplaceState;
+      window.removeEventListener("popstate", syncFiltersFromLocation);
+      window.removeEventListener(HISTORY_EVENT_NAME, syncFiltersFromLocation);
+    };
+  }, []);
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
