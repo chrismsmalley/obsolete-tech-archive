@@ -5,6 +5,7 @@ import Image from "next/image";
 import { techEntries } from "../data/techEntries";
 import Link from "next/link";
 import TechCard from "../components/cards/techCard";
+import TitleGem from "../components/entries/TitleGem";
 
 const SEARCH_EVENT_NAME = "ota:search-query-change";
 const HISTORY_EVENT_NAME = "ota:history-change";
@@ -212,137 +213,6 @@ function Homepage() {
         97%  { opacity: 0.3; }
         100% { opacity: 0.92; }
       }
-       <main className="homepage-main">
-         {currentPage === 1 && (
-           <section className="homepage-hero">
-             <div className="homepage-hero-panel">
-               <div className="homepage-intro">
-                 <p className="homepage-kicker">Curated Archive of Retired Tech</p>
-                 <div style={{
-                   display: "flex",
-                   flexDirection: "column",
-                   alignItems: "center",
-                   marginBottom: "2rem"
-                 }}>
-                   <div className="eighties-hero-heading" style={{ position: "relative", display: "inline-block", width: 620, height: 200, minWidth: 0, padding: 0, overflow: "visible" }}>
-                     <svg
-                       width="620"
-                       height="200"
-                       viewBox="0 0 620 200"
-                       fill="none"
-                       xmlns="http://www.w3.org/2000/svg"
-                       style={{
-                         position: "absolute",
-                         top: 0,
-                         left: 0,
-                         width: "100%",
-                         height: "100%",
-                         zIndex: 0,
-                         pointerEvents: "none",
-                         transform: "translate(-120px, -120px) scale(1.35) skewX(-16deg)",
-                         opacity: 1,
-                       }}
-                     >
-                       <defs>
-                         <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
-                           <feDropShadow dx="0" dy="0" stdDeviation="8" floodColor="#00eaff" floodOpacity="0.7" />
-                           <feGaussianBlur stdDeviation="8" />
-                         </filter>
-                         <filter id="shadow" x="-40%" y="-40%" width="180%" height="180%">
-                           <feDropShadow dx="0" dy="6" stdDeviation="6" floodColor="#001a2e" floodOpacity="0.45" />
-                         </filter>
-                       </defs>
-                       <text
-                         className="neon-glow-anim neon-glow-obs"
-                         x="50%"
-                         y="88"
-                         textAnchor="middle"
-                         fontFamily="'Times New Roman', Times, serif"
-                         fontWeight="900"
-                         fontSize="98"
-                         letterSpacing="0.08em"
-                         fill="none"
-                         stroke="#00eaff"
-                         strokeWidth="5"
-                         style={{
-                           paintOrder: "stroke fill",
-                           filter: "url(#glow)",
-                           opacity: 1,
-                         }}
-                       >
-                         OBSOLETE
-                       </text>
-                       <text
-                         className="neon-glow-anim neon-glow-tech"
-                         x="50%"
-                         y="178"
-                         textAnchor="middle"
-                         fontFamily="'Times New Roman', Times, serif"
-                         fontWeight="900"
-                         fontSize="98"
-                         letterSpacing="0.08em"
-                         fill="none"
-                         stroke="#00eaff"
-                         strokeWidth="5"
-                         style={{
-                           paintOrder: "stroke fill",
-                           filter: "url(#glow)",
-                           opacity: 1,
-                         }}
-                       >
-                         TECH
-                       </text>
-                     </svg>
-                     <h1
-                       className="homepage-title"
-                       style={{
-                         position: "relative",
-                         zIndex: 1,
-                         color: "#e6faff",
-                         fontFamily: "Times New Roman, Times, serif",
-                         fontWeight: 900,
-                         letterSpacing: "0.08em",
-                         margin: 0,
-                         textAlign: "center",
-                         textTransform: "uppercase",
-                         pointerEvents: "auto",
-                         background: "none",
-                       }}
-                     >
-                       OBSOLETE<br />TECH
-                     </h1>
-                   </div>
-                 </div>
-                 <p
-                   className="homepage-subtext"
-                   style={{
-                     lineHeight: "1.7",
-                     maxWidth: "900px",
-                     padding: "0 1rem",
-                     margin: "0 auto"
-                   }}
-                 >
-                   A digital museum for gadgets that ruled, flopped, and disappeared. Browse the bold, the bizarre, and the “what were they thinking?” moments of tech history.
-                 </p>
-                 <div className="homepage-rule" style={{
-                   width: "min(180px, 40%)",
-                   height: "3px",
-                   margin: "1.75rem auto 0",
-                   background: "#b0b0b0",
-                   boxShadow: "none",
-                   borderRadius: "2px"
-                 }} />
-               </div>
-             </div>
-           </section>
-         )}
-        font-family: "Courier New", Courier, monospace !important;
-        visibility: visible !important;
-        position: relative;
-        line-height: 1.08;
-        vertical-align: bottom;
-      }
-
       @supports (width: 1ch) {
         .typing-text {
           animation:
@@ -485,6 +355,37 @@ function Homepage() {
         margin-left: auto;
         margin-right: auto;
         scroll-margin-top: 6.5rem;
+      }
+
+      .charm-guide {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 0.35rem 0.55rem;
+        width: min(1000px, 100%);
+        margin: 0 auto 1.25rem;
+        padding: 0.85rem 1rem;
+        border: 1px solid rgba(47, 93, 98, 0.12);
+        border-radius: 18px;
+        background: rgba(255, 255, 255, 0.78);
+        color: var(--ota-muted);
+        font-size: 0.9rem;
+        line-height: 1.55;
+        text-align: center;
+        box-shadow: 0 10px 22px rgba(31, 43, 54, 0.06);
+      }
+
+      .charm-guide__label {
+        color: var(--ota-ink);
+        font-weight: 700;
+      }
+
+      .charm-guide__item {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.35rem;
+        white-space: nowrap;
       }
 
       .results-summary__query {
@@ -1035,6 +936,36 @@ function Homepage() {
             </div>
           </section>
         )}
+        <div className="charm-guide" aria-label="Archive charm guide">
+          <span className="charm-guide__label">
+            Tiny badges, big bragging rights:
+          </span>
+          <span className="charm-guide__item">
+            <TitleGem
+              compact
+              gem={{
+                kind: "floppy",
+                tone: "gold",
+                label: "Floppy of Honor",
+                ariaLabel: "Floppy of Honor badge for the first community suggestion",
+              }}
+            />
+            first community suggestion
+          </span>
+          <span aria-hidden="true">•</span>
+          <span className="charm-guide__item">
+            <TitleGem
+              compact
+              gem={{
+                kind: "suggestion-slip",
+                tone: "gold",
+                label: "User Suggestion",
+                ariaLabel: "User suggestion badge",
+              }}
+            />
+            reader-suggested relic
+          </span>
+        </div>
         <div id="archive-results" className="techcard-container">
           {paginatedEntries.length > 0 ? (
             paginatedEntries.map((entry, index) => {

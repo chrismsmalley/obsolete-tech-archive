@@ -1,5 +1,86 @@
 const techEntries = [
   {
+    title: "Media Kit",
+    slug: "media-kit",
+    image: "/images/media-kit-presskit.png",
+    addedOn: "2026-08-06",
+    titleGem: {
+      kind: "suggestion-slip",
+      tone: "gold",
+      label: "User Suggestion",
+      ariaLabel: "User suggestion badge",
+    },
+    shortDescription:
+      "The glossy little brag folder for people who needed journalists to notice them before everyone just emailed a Dropbox link.",
+    longDescription:
+      "Before every company had a newsroom page and every indie band had a link-in-bio, there was the media kit: a folder full of photos, bios, fact sheets, press releases, logos, and just enough corporate perfume to convince a journalist there was a story in here somewhere.\n\nThe classic press kit was part homework packet, part sales pitch, and part carefully staged evidence locker. Movie studios stuffed them with production notes and stills. Record labels mailed out artist bios and glossy headshots. Companies packed them with boilerplate, executive photos, product shots, and a contact name who definitely had a fax number on their business card.\n\nThen the internet did what the internet does: it turned the folder into a PDF, the PDF into a webpage, and the webpage into a ZIP file nobody remembers downloading. The media kit did not vanish so much as lose its nice paper smell.",
+    yearIntroduced: 1968,
+    peakEra: "1970s to early 2000s",
+    replacedBy: "Online press rooms, downloadable PDFs, and brand asset pages",
+    facts: [
+      {
+        label: "Also Known As",
+        value: "Press kit",
+      },
+      {
+        label: "Typical Payload",
+        value: "Fact sheets, press releases, photos, bios, logos, and media contact info",
+      },
+    ],
+    sections: [
+      {
+        heading: "What It Was",
+        body: "A media kit was the pre-packaged proof that a product, person, movie, band, brand, or event was allegedly worth talking about. Instead of making journalists chase down basic details, it handed them the approved story, the approved photos, and the approved spelling of everyone's job title.",
+      },
+      {
+        heading: "Why It Mattered",
+        body: "In the age of print deadlines, physical mailers, press junkets, and fax machines that sounded like robots choking on receipts, a good media kit saved time. It gave reporters usable background, gave editors clean images, and gave publicists a fighting chance at controlling the narrative before someone wrote 'miscellaneous technology thing' in the caption.",
+      },
+      {
+        heading: "The Peak Folder Era",
+        body: [
+          "The fancy versions were not just paperwork. They came in embossed folders, VHS sleeves, CD-ROM pockets, glossy photo envelopes, and branded binders that looked like they had a bigger wardrobe budget than the intern delivering them.",
+          "By the 1990s and early 2000s, electronic press kits added video clips, trailers, music samples, and high-resolution files to the mix. Suddenly the humble folder had a disc tucked inside, because nothing said 'future' like a CD-ROM with a custom label.",
+        ],
+      },
+      {
+        heading: "Why It Faded",
+        body: [
+          "Once broadband, websites, cloud storage, and downloadable asset libraries became normal, shipping a physical packet of promotional material started feeling like sending a carrier pigeon wearing a lanyard.",
+          "The media kit survived, but the object changed. The modern version is usually a press page, PDF, shared folder, or brand portal. Efficient? Yes. As satisfying as opening a glossy folder full of curated hype? Not even close.",
+        ],
+      },
+      {
+        heading: "Why It Still Matters",
+        body: [
+          "The media kit helped standardize how organizations packaged themselves for public attention: tight summaries, reusable images, approved bios, and the one blessed contact who knew where the good logo files lived.",
+          "It also remains a perfect artifact of promotional culture. Equal parts useful, over-designed, and desperate to be taken seriously. In other words: marketing with pockets.",
+        ],
+      },
+    ],
+    sources: [
+      {
+        title: "Press kit",
+        publisher: "Merriam-Webster",
+        url: "https://www.merriam-webster.com/dictionary/press%20kit",
+        note: "Definition and first-known-use context",
+      },
+      {
+        title: "Press Kits",
+        publisher: "National Archives",
+        url: "https://www.archives.gov/press/press-kits",
+        note: "Examples of institutional press kits",
+      },
+      {
+        title: "Press Kit",
+        publisher: "AMW Group",
+        url: "https://amworldgroup.com/glossary/pr/press-kit",
+        note: "Overview of common press kit contents",
+      },
+    ],
+    category: "Media",
+  },
+  {
     title: "Keitai",
     slug: "keitai",
     image: "/images/Keitai.png",

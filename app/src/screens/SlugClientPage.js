@@ -468,11 +468,19 @@ export default function SlugClientPage({ slug }) {
                     key={entry.slug}
                     href={`/tech/${entry.slug}`}
                     className="artifact-related-card"
+                    prefetch={false}
+                    style={{
+                      display: "flex",
+                      flexDirection: "column",
+                      alignItems: "flex-start",
+                    }}
                   >
                     <span className="artifact-related-kicker">
                       {entry.relatedReason}
                     </span>
-                    <strong>{entry.title}</strong>
+                    <strong style={{ display: "block", width: "100%" }}>
+                      {entry.title}
+                    </strong>
                     <span className="artifact-related-meta">
                       {getPrimaryCategory(entry)} • {entry.peakEra}
                     </span>
@@ -967,10 +975,13 @@ export default function SlugClientPage({ slug }) {
             }
 
             .artifact-related-grid {
-              grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+              grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             }
 
             .artifact-related-card {
+              display: flex;
+              flex-direction: column;
+              align-items: flex-start;
               text-decoration: none;
               transition:
                 transform 0.18s ease,
@@ -984,6 +995,8 @@ export default function SlugClientPage({ slug }) {
               color: var(--ota-ink);
               font-size: 1rem;
               line-height: 1.3;
+              width: 100%;
+              max-width: 100%;
             }
 
             .artifact-related-meta {
